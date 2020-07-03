@@ -2,12 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Nvba</title>
+  <title>NVBA</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#1976d2">
+  <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet"> -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
 </head>
-<body>
+<body class="mat-typography">
   <app-root></app-root>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
 </html>
+
+<style>
+  df-messenger {
+   --df-messenger-bot-message: #878fac;
+   --df-messenger-button-titlebar-color: #ff6500;
+   --df-messenger-chat-background-color: #fafafa;
+   --df-messenger-font-color: white;
+   --df-messenger-send-icon: #878fac;
+   --df-messenger-user-message: #ff944d;
+  }
+</style>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  chat-title="NVBA-Brahma (Beta)"
+  agent-id="79087622-a7ef-421e-931a-530a1e556d19" 
+  language-code="en"
+  chat-icon="assets/images/logo/Brahma.png"   
+></df-messenger>
+
+
+<div class="floatDonate">
+    <a class="" target="_blank" href="https://www.paypal.com/us/fundraiser/charity/2511674" style="cursor: pointer;"><strong>Donate</strong></a>
+</div>
+
+<div class="floatfb">
+  <a class="" target="_blank" href="https://www.facebook.com/novaba" style="cursor: pointer;">
+    <img src="assets/images/logo/fb-Logo_new.png" style="height: 40px; " >
+  </a>
+  <br />
+  <a class="" target="_blank" href="https://www.youtube.com/channel/UCbvbSyIiBYbP_vuB3qzD0Tw" style="cursor: pointer;">
+    <img src="assets/images/logo/youtube_logo.png" style="height: 44px; " >
+  </a>
+</div>
+
+<script>
+  window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+</script>

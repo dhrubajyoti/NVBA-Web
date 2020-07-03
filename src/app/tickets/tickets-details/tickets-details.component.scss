@@ -1,0 +1,64 @@
+.cart-item, .shipping-item {
+    width: 100%;
+    min-width: 400px;
+    max-width: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 32px;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    background-color: #EEEEEE;
+    span{
+        margin-left: 10px;
+    }
+    input{
+        float: right;
+    }
+}
+
+.veg-non{
+    width: 90px;
+}
+
+.card-deck{
+    margin: 40px 0 40px 0;
+}
+
+ input, optgroup, select, textarea {
+    // margin: 10px;
+    // font-family: inherit;
+    // font-size: inherit;
+    // line-height: inherit;
+    // // height: 34px;
+    // // font-size: 14px;
+    // text-align: center;
+    // vertical-align: middle;
+    // border-color: #EEEEEE;
+
+    border-radius: 5px;
+    background: rgba(109,124,144,.1);
+    width: 100%;
+    margin: 16px 5px;
+    padding: 8px 12px;
+    text-align: center;
+    border: 2px solid transparent;
+    -webkit-transition: 300ms all cubic-bezier(.4,0,.2,1);
+    transition: 300ms all cubic-bezier(.4,0,.2,1);
+    font-size: .9em;
+    // font-family: lato,sans-serif;
+    line-height: 1.8em;
+    // letter-spacing: .5px;
+    font-weight: 700;
+    color: #20292f;
+
+}
+
+
+label{
+    // margin: 14px;
+}
+
+#ticket .btn {
+    background-color: #ffbc00;
+}

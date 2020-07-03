@@ -1,0 +1,42 @@
+
+<section id="portfolio" class="clearfix">
+  <div class="container">
+    <div class="topLineFix"></div>  
+    <header class="section-header">
+      <h3 class="section-title">Login</h3>
+    </header>
+
+    <div class="row justify-content-center ">
+      <div class="d-flex flex-column col-lg-4 col-md-6">
+
+                
+        
+            <form [formGroup]="loginForm">
+              <label class="error alert alert-danger" *ngIf="errorMessage" >{{errorMessage}}</label>
+              <label class="success alert alert-success" *ngIf="successMessage" >{{successMessage}}</label>
+              <div class="form-group">
+                <label>Email address</label>
+                <input type="email" formControlName="email" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" formControlName="password">
+              </div>
+              <button type="submit" (click)="tryLogin(loginForm.value)" class="btn-get-started w-100 mb-5" >Login</button>
+            </form>
+          
+            <!-- <button type="button" class="btn btn-primary btn-block" (click)="tryFacebookLogin()">Login with Facebook</button> -->
+         
+            <button type="button" class="btn btn-danger btn-block" (click)="tryGoogleLogin()">Login with Google</button>
+          
+            <!-- <button type="button" class="btn btn-info btn-block" (click)="tryTwitterLogin()">Login with Twitter</button> -->
+          
+            <p class="m-3"><a routerLink="/register"> Don't have an NVBA ID? Create one now.</a></p>
+            <p class="m-3"><a routerLink="/forgetpassword">Forgot your password?</a></p>
+
+
+     </div>
+   </div>
+  </div>
+</section>    
+

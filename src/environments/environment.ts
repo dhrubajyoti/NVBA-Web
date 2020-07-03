@@ -3,9 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyDR90ComUId7DKFdXumxWXTfbYFKeH_neg",
+    authDomain: "novaba.firebaseapp.com",
+    databaseURL: "https://novaba.firebaseio.com",
+    projectId: "novaba",
+    storageBucket: "novaba.appspot.com",
+    messagingSenderId: "253964137737",
+    appId: "1:253964137737:web:f438052db1faa48568cfd8",
+    measurementId: "G-96GP6RS4JF"
+  }
 };
-
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
