@@ -41,7 +41,7 @@ const routes: Routes = [
   { path: "kobipronam2020", component: Kobipronam2020Component, pathMatch: 'full' },
   { path: "emailarchive", component:EmailarchiveComponent, pathMatch: 'full'},
   { path: "president", component: PresidentComponent, pathMatch: 'full'},
-  { path: '404', component: NotFoundComponent},
+  // { path: '404', component: NotFoundComponent},
   // { path: '**', redirectTo: '/404'},
 
   { path: "login", component: LoginComponent, canActivate: [AuthGuard] },

@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit, OnChanges, AfterViewChecked } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, from } from 'rxjs';
 import { CartService } from '../../services/cart.service';
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss']
 })
-export class CartComponent implements OnInit, OnChanges {
+export class CartComponent implements OnInit, OnChanges, AfterViewChecked {
 
   dataObject :any=[];
   checkObject :any=[];
@@ -19,26 +19,27 @@ export class CartComponent implements OnInit, OnChanges {
 
 
 
-  private _jsonURL = '/assets/data/products.json';
-   constructor(private http: HttpClient, private cs: CartService, public router: Router) {}
-   
-   ngOnInit(): void {
+  private _jsonURLcart = '/assets/data/products.json';
+   constructor(private http: HttpClient, private cs: CartService, public router: Router) {
     this.cs.currentCart.subscribe( cartCheck => this.cartCheck = cartCheck);
     this.getJSON().subscribe(data => {
-     console.log(data);
-     this.dataObject = data;
-     this.checkData();
-    });
+      console.log(data);
+      this.dataObject = data;
+      this.checkData();
+     });
+   }
+   
+   ngOnInit(): void {
     
   }
 
    public getJSON(): Observable<any> {
-     return this.http.get(this._jsonURL);
+     return this.http.get(this._jsonURLcart);
    }
 
    checkData(){
-    this.dataObject.forEach(value => {
-      this.cartCheck.forEach(element => {
+    [...this.dataObject].forEach(value => {
+      [...this.cartCheck].forEach(element => {
         if(value.sku === element.sku){
           value.quantity = element.quantity;
         }
@@ -51,19 +52,35 @@ export class CartComponent implements OnInit, OnChanges {
 
   
   ngOnChanges(): void{
-    //this.totalCost = this.
+
   }
 
+  ngAfterViewChecked(): void {
+    let tc = 0;
+    [...this.dataObject].forEach(value => {
+      if(value.quantity > 0){ 
+        tc += (value.price * value.quantity);
+     } 
+    });
+    this.totalCost = tc;
+  }
+
+  ngAfterViewInit(): void {
+    
+  }
+  
   addToCartobj(){
     this.cs.items = [];
-    this.dataObject.forEach(value => {
+    [...this.dataObject].forEach(value => {
       console.log(value.quantity);
       console.log(value);
       if(value.quantity > 0){ //alert(value.quantity);
        
         this.totalCost += (value.price * value.quantity);
-        value.tax = ((value.price * value.quantity) * 0.06).toFixed(2); 
+        value.tax = (value.price * value.quantity) * 0.06; 
+        value.tax = parseFloat(value.tax).toFixed(2);
         this.cs.addToCart(value);
+        console.log(value.tax);
      //   this.checkObject.push(value);
      } 
     });

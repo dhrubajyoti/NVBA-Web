@@ -35,6 +35,7 @@ export class CartService {
 
   clearCart() {
     this.items = [];
+    console.log(" Clean Cart "+this.items);
     return this.items;
   }
 

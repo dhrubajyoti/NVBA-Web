@@ -11,7 +11,8 @@
       <div>
           <div class="mb-3"><a routerLink="/kobipronam2020"  style="color: #ff6500; " ><i class="fa fa-chevron-left" aria-hidden="true"></i> Go Back</a></div>
                         <div class="table-responsive">
-                            <table class="table table-hover table-bordered">
+                            <div class="d-flex justify-content-center my-5" *ngIf="emptyCart"  >  Empty Cart </div> 
+                            <table class="table table-hover table-bordered" *ngIf="!emptyCart" >
                                 <thead>
                                 <tr>
                                     <th scope="col">Description</th>
@@ -24,28 +25,42 @@
                                 <tbody>
                                 <tr *ngFor="let item of cartCheck">
                                     <th>{{item.description}}</th>
-                                    <td>{{item.price}}</td>
+                                    <td>$ {{item.price}}</td>
                                     <td>{{ item.quantity}}</td>
                                     <!-- <td> <button class="btn btn-warning" (click)="addToCartobj(item)" >Add to Cart</button></td> -->
-                                    <td  >{{item.price * item.quantity}}</td>
+                                    <td  >$ {{item.price * item.quantity}}</td>
                                 </tr>
-                                
                                 </tbody>
-                                <!-- <thead>
+                                <thead>
                                     <tr>
                                     <th scope="col"></th>
                                     <th scope="col"></th>
+                                    <th scope="col">Subtotal</th>
+                                    <th scope="col">$ {{subtotal}}</th>
+                                    </tr>
+                                </thead>
+                                <thead>
+                                    <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Tax</th>
+                                    <th scope="col">$ {{tax}}</th>
+                                    </tr>
+                                </thead>
+                                <thead>
+                                    <tr>
+                                    <th scope="col"></th>
                                     <th scope="col"></th>
                                     <th scope="col">Total</th>
-                                    <th scope="col">{{totalCost}}</th>
+                                    <th scope="col">$ {{subtotal+tax}}</th> 
                                     </tr>
-                                </thead> -->
+                                </thead>
                             </table>
                             <!-- <div class="float-right"><button class="btn btn-warning"  >Add to Cart</button></div> -->
                             <!-- <div>
                                 {{ cartCheck | json }}
                             </div> -->
-                            <div class="d-flex justify-content-end mb-5">
+                            <div class="d-flex justify-content-end mb-5" *ngIf="!emptyCart">
                                 <div id="paypal-button-container"></div>
                             </div>
                             

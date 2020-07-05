@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { CartService} from '../../services/cart.service';
 import { from } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
 
 
 declare let paypal:any;
@@ -12,27 +13,32 @@ declare let paypal:any;
 })
 export class CheckoutComponent implements OnInit, AfterViewInit {
   cartCheck: any;
-  newList: any;
-  total: number = 0;
+  subtotal: number = 0;
+  tax: number = 0;
   addScript: boolean = false;
   paypalLoad: boolean = true;
+  emptyCart: boolean = true;
 
 
-  constructor( private cart: CartService) {}
+  constructor( private cart: CartService, private toastr: ToastrService) {}
 
   ngOnInit(): void {
     this.cart.currentCart.subscribe( cartCheck => this.cartCheck = cartCheck)
     console.log(this.cartCheck);
-    this.cartCheck.forEach(value => {
+    [...this.cartCheck].forEach(value => {
       console.log(value.quantity);
       console.log(value);
       if(value.quantity){
-       this.total += (value.price * value.quantity);
-       
+       this.subtotal += (value.price * value.quantity);
+       this.tax =  + parseFloat(value.tax).toFixed(2);
+       this.emptyCart = false;
+       console.log('this.emptyCart');
+       console.log(this.emptyCart);
      } 
     });
     console.log('Total');
-    console.log(this.total);
+    console.log(this.subtotal);
+    console.log(this.tax);
     console.log('this.cartCheck');
     console.log(this.cartCheck);
   }
@@ -76,11 +82,11 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
           transactions: [ 
             {
               "amount": {
-                "total": (this.total * 1.06),
+                "total": (this.subtotal + this.tax),
                 "currency": "USD",
                 "details": {
-                  "subtotal": this.total,
-                  "tax": (this.total * 0.06)
+                  "subtotal": this.subtotal,
+                  "tax": this.tax
                 }
               },
               "description": "Kobi Pronam Dinner.", 
@@ -96,10 +102,19 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
       return actions.payment.execute().then((payment) => {
         //Do something when payment is successful.
         console.log('Payment Done');
+        this.toastr.success('Your payment is successful.');
+        this.cart.clearCart();
+        this.cleanup();
       })
     }
   };
 
 
+  cleanup(){
+    this.cartCheck = [];
+    this.subtotal = 0;
+    this.tax= 0;
+    this.emptyCart= true;
+  }
 
 }
