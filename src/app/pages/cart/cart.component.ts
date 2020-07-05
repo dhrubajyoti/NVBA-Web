@@ -1,0 +1,79 @@
+import { Component, OnInit, OnChanges } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable, from } from 'rxjs';
+import { CartService } from '../../services/cart.service';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-cart',
+  templateUrl: './cart.component.html',
+  styleUrls: ['./cart.component.scss']
+})
+export class CartComponent implements OnInit, OnChanges {
+
+  dataObject :any=[];
+  checkObject :any=[];
+  cartObject : any=[];
+  totalCost: number = 0;
+  cartCheck: any;
+
+
+
+  private _jsonURL = '/assets/data/products.json';
+   constructor(private http: HttpClient, private cs: CartService, public router: Router) {}
+   
+   ngOnInit(): void {
+    this.cs.currentCart.subscribe( cartCheck => this.cartCheck = cartCheck);
+    this.getJSON().subscribe(data => {
+     console.log(data);
+     this.dataObject = data;
+     this.checkData();
+    });
+    
+  }
+
+   public getJSON(): Observable<any> {
+     return this.http.get(this._jsonURL);
+   }
+
+   checkData(){
+    this.dataObject.forEach(value => {
+      this.cartCheck.forEach(element => {
+        if(value.sku === element.sku){
+          value.quantity = element.quantity;
+        }
+      });
+       
+    });
+    console.log('this.dataObject - Check data');
+    console.log(this.dataObject);
+   }
+
+  
+  ngOnChanges(): void{
+    //this.totalCost = this.
+  }
+
+  addToCartobj(){
+    this.cs.items = [];
+    this.dataObject.forEach(value => {
+      console.log(value.quantity);
+      console.log(value);
+      if(value.quantity > 0){ //alert(value.quantity);
+       
+        this.totalCost += (value.price * value.quantity);
+        value.tax = ((value.price * value.quantity) * 0.06).toFixed(2); 
+        this.cs.addToCart(value);
+     //   this.checkObject.push(value);
+     } 
+    });
+    
+ //   this.cs.addToCart(this.checkObject);
+    this.router.navigate(['/checkout']);
+ //   this.router.navigate(['/heroes', { id: itemId }]);
+
+ //   item.count = 
+//    this.cartService.addToCart();
+  }
+
+}

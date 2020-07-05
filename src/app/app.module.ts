@@ -47,13 +47,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ForgetpasswordComponent } from './pages/auth/forgetpassword/forgetpassword.component';
 
 // import { NgxPayPalModule } from 'ngx-paypal';
-import { TicketsDetailsComponent } from './tickets/tickets-details/tickets-details.component';
-import { CartComponent } from './tickets/cart/cart.component';
+
 import { FormsModule } from '@angular/forms';
 import { EmailarchiveComponent } from './pages/emailarchive/emailarchive.component';
 import { PresidentComponent } from './pages/president/president.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { Kobipronam2020Component } from './pages/kobipronam2020/kobipronam2020.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -74,12 +75,12 @@ import { Kobipronam2020Component } from './pages/kobipronam2020/kobipronam2020.c
     UserComponent,
     RegisterComponent,
     ForgetpasswordComponent,
-    TicketsDetailsComponent,
-    CartComponent,
     EmailarchiveComponent,
     PresidentComponent,
     NotFoundComponent,
-    Kobipronam2020Component
+    Kobipronam2020Component,
+    CartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
