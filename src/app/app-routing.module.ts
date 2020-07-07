@@ -21,9 +21,9 @@ import { ForgetpasswordComponent } from './pages/auth/forgetpassword/forgetpassw
 import { UserResolver } from './pages/auth/user/user.resolver';
 import { AuthGuard } from './pages/auth/core/auth.guard';
 
-import { TicketsDetailsComponent } from './tickets/tickets-details/tickets-details.component';
-import { CartComponent } from './tickets/cart/cart.component';
+
 import { EmailarchiveComponent } from './pages/emailarchive/emailarchive.component';
+import { CheckoutComponent} from './pages/checkout/checkout.component';
 import { from } from 'rxjs';
 
 
@@ -41,15 +41,14 @@ const routes: Routes = [
   { path: "kobipronam2020", component: Kobipronam2020Component, pathMatch: 'full' },
   { path: "emailarchive", component:EmailarchiveComponent, pathMatch: 'full'},
   { path: "president", component: PresidentComponent, pathMatch: 'full'},
-  { path: '404', component: NotFoundComponent},
-  { path: '**', redirectTo: '/404'},
+  // { path: '404', component: NotFoundComponent},
+  // { path: '**', redirectTo: '/404'},
 
   { path: "login", component: LoginComponent, canActivate: [AuthGuard] },
   { path: "register", component: RegisterComponent, canActivate: [AuthGuard] },
   { path: "forgetpassword", component: ForgetpasswordComponent, pathMatch: 'full'},
   { path: "user", component: UserComponent,  resolve: { data: UserResolver}},
-  { path: "tickets", component: TicketsDetailsComponent,  resolve: { data: UserResolver}},
-  { path: "cart", component: CartComponent,  resolve: { data: UserResolver}} 
+  { path: "checkout", component: CheckoutComponent, pathMatch: 'full'}
 ];
 
 @NgModule({

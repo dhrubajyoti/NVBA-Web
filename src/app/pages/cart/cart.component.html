@@ -1,0 +1,38 @@
+<div class="table-responsive">
+    <table class="table table-hover table-bordered ">
+        <thead>
+          <tr>
+            <th scope="col">Description</th>
+            <th scope="col">Cost</th>
+            <th scope="col">Quantity</th>
+            <!-- <th scope="col">Add</th> -->
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of dataObject">
+            <th>{{item.description}}</th>
+            <td>$ {{item.price}}</td>
+            <td><input type="number" [(ngModel)]="item.quantity" style="width:50px" min="0" max="10" ></td>
+            <!-- <td> <button class="btn btn-warning" (click)="addToCartobj(item)" >Add to Cart</button></td> -->
+            <td  >$ {{item.price * item.quantity}}</td>
+          </tr>
+        </tbody>
+        <thead>
+            <tr>
+              <!-- <th scope="col"></th>
+              <th scope="col"></th> -->
+              <th scope="col" colspan="3" ><div class="d-flex justify-content-end">Total</div></th>
+              <!-- <th scope="col">Add</th> -->
+              <th scope="col">$ {{totalCost}}</th> 
+            </tr>
+        </thead>
+    </table>
+    <div class="float-right mb-5">
+        <button class="btn btn-warning" (click)="addToCartobj()" >Add to Cart</button>
+    </div>
+    <!-- <div>
+        {{ dataObject | json }}
+    </div> -->
+    
+  </div>
