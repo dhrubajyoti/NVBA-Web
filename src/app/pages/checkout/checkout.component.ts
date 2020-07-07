@@ -70,10 +70,10 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
   } // End of AddPaypalScript
 
   paypalConfig = {
-    env: 'sandbox',
+    env: 'production',
     client: {
       sandbox: 'AeLhWUCfC2jHOZv7b-KDfZV6R6Mig-2FklW6iIxsuI0UROww652TU9SlVPHyW1ygMGohQo21TfXUVPrz',
-      production: '<your-production-key here>'
+      production: 'AVBsfj0Jw-jl5_63BPGwuduCaKDsPvbz1pwyqECm7N5FzKEi1Q_o-xQAiM_BTzQhAW064uAPf1v9uZdS'
     },
     commit: true,
     payment: (data, actions) => {
