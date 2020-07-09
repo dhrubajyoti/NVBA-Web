@@ -12,7 +12,8 @@ import { LawComponent } from './pages/law/law.component';
 import { Saraswatipujo2020Component } from './pages/saraswatipujo2020/saraswatipujo2020.component';
 import { Kobipronam2020Component } from './pages/kobipronam2020/kobipronam2020.component';
 import { PresidentComponent } from './pages/president/president.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component'
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { NvbayouthComponent } from './pages/nvbayouth/nvbayouth.component';
 
 import { LoginComponent } from './pages/auth/login/login.component';
 import { UserComponent } from './pages/auth/user/user.component';
@@ -41,6 +42,7 @@ const routes: Routes = [
   { path: "kobipronam2020", component: Kobipronam2020Component, pathMatch: 'full' },
   { path: "emailarchive", component:EmailarchiveComponent, pathMatch: 'full'},
   { path: "president", component: PresidentComponent, pathMatch: 'full'},
+  { path: "nvbayouth", component: NvbayouthComponent, pathMatch: 'full'},
   // { path: '404', component: NotFoundComponent},
   // { path: '**', redirectTo: '/404'},
 

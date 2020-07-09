@@ -55,6 +55,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { Kobipronam2020Component } from './pages/kobipronam2020/kobipronam2020.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { NvbayouthComponent } from './pages/nvbayouth/nvbayouth.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
     NotFoundComponent,
     Kobipronam2020Component,
     CartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    NvbayouthComponent
   ],
   imports: [
     BrowserModule,

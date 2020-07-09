@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, OnChanges, AfterViewChecked, ChangeDetectorRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, from } from 'rxjs';
 import { CartService } from '../../services/cart.service';
@@ -20,7 +20,7 @@ export class CartComponent implements OnInit, OnChanges, AfterViewChecked {
 
 
   private _jsonURLcart = '/assets/data/products.json';
-   constructor(private http: HttpClient, private cs: CartService, public router: Router) {
+   constructor(private http: HttpClient, private cs: CartService, public router: Router, private cdr: ChangeDetectorRef) {
     this.cs.currentCart.subscribe( cartCheck => this.cartCheck = cartCheck);
     this.getJSON().subscribe(data => {
       console.log(data);
@@ -63,10 +63,7 @@ export class CartComponent implements OnInit, OnChanges, AfterViewChecked {
      } 
     });
     this.totalCost = tc;
-  }
-
-  ngAfterViewInit(): void {
-    
+    this.cdr.detectChanges();
   }
   
   addToCartobj(){
