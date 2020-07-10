@@ -29,20 +29,20 @@ import { from } from 'rxjs';
 
 
 const routes: Routes = [
-  { path: "", component: HomeComponent, pathMatch: 'full' },
-  { path: "home", component: HomeComponent },
-  { path: "about", component: AboutComponent, pathMatch: 'full' },
-  { path: "contactus", component: ContactusComponent, pathMatch: 'full' },
-  { path: "imagegallery", component: ImagegalleryComponent, pathMatch: 'full' },
-  { path: "magazine", component: MagazineComponent, pathMatch: 'full' },
-  { path: "history", component: HistoryComponent, pathMatch: 'full' },
-  { path: "team", component: TeamComponent,pathMatch: 'full' },
-  { path: "law", component: LawComponent, pathMatch: 'full' },
-  { path: "saraswatipujo2020", component: Saraswatipujo2020Component, pathMatch: 'full' },
-  { path: "kobipronam2020", component: Kobipronam2020Component, pathMatch: 'full' },
-  { path: "emailarchive", component:EmailarchiveComponent, pathMatch: 'full'},
-  { path: "president", component: PresidentComponent, pathMatch: 'full'},
-  { path: "nvbayouth", component: NvbayouthComponent, pathMatch: 'full'},
+  { path: "", component: HomeComponent, pathMatch: 'full', data: { animation: 'isRight' } }, 
+  { path: "home", component: HomeComponent, data: { animation: 'isRight' } },
+  { path: "about", component: AboutComponent, pathMatch: 'full', data: { animation: 'isRight' } },
+  { path: "contactus", component: ContactusComponent, pathMatch: 'full', data: { animation: 'isRight' } },
+  { path: "imagegallery", component: ImagegalleryComponent, pathMatch: 'full', data: { animation: 'isRight' } },
+  { path: "magazine", component: MagazineComponent, pathMatch: 'full', data: { animation: 'isRight' } },
+  { path: "history", component: HistoryComponent, pathMatch: 'full', data: { animation: 'isRight' } },
+  { path: "team", component: TeamComponent,pathMatch: 'full', data: { animation: 'isRight' } },
+  { path: "law", component: LawComponent, pathMatch: 'full', data: { animation: 'isRight' }  },
+  { path: "saraswatipujo2020", component: Saraswatipujo2020Component, pathMatch: 'full', data: { animation: 'isRight' } },
+  { path: "kobipronam2020", component: Kobipronam2020Component, pathMatch: 'full', data: { animation: 'isRight' } },
+  { path: "emailarchive", component:EmailarchiveComponent, pathMatch: 'full',  data: { animation: 'isRight' } },
+  { path: "president", component: PresidentComponent, pathMatch: 'full', data: { animation: 'isRight' }},
+  { path: "nvbayouth", component: NvbayouthComponent, pathMatch: 'full', data: { animation: 'isRight' }},
   // { path: '404', component: NotFoundComponent},
   // { path: '**', redirectTo: '/404'},
 
@@ -50,7 +50,7 @@ const routes: Routes = [
   { path: "register", component: RegisterComponent, canActivate: [AuthGuard] },
   { path: "forgetpassword", component: ForgetpasswordComponent, pathMatch: 'full'},
   { path: "user", component: UserComponent,  resolve: { data: UserResolver}},
-  { path: "checkout", component: CheckoutComponent, pathMatch: 'full'}
+  { path: "checkout", component: CheckoutComponent, pathMatch: 'full', data: { animation: 'isRight' }}
 ];
 
 @NgModule({
