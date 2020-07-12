@@ -1,0 +1,92 @@
+.leftcurtain{
+    width: 60%;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    position: relative;
+    z-index: 2;
+}
+ .rightcurtain{
+    width: 60%;
+    height: 100vh;
+    right: 0px;
+    top: 0px;
+    position: relative;
+    z-index: 2;
+}
+.rightcurtain img, .leftcurtain img{
+    width: 100%;
+    height: 100%;
+}
+// .logo{
+//     margin: 0px auto;
+//     margin-top: 150px;
+// }
+.rope{
+    position: absolute;
+    top: 0px;
+    left: 70%;
+    z-index: 1031;
+}
+
+.rangomancha {
+    background-image: url(../../../assets/images/stocks/theater.webp);
+    background-position: center;
+    background-size: cover;
+    background-color: #140e06;
+}
+// .video-stream .html5-main-video{
+//     max-width: 790px; max-height: 300px;
+// }
+
+.videoPC {
+    position: absolute; z-index: 1; width: 100%; padding: 26px 0 0 0; 
+} 
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .videoPosition{
+        width: 95%; 
+        height: 270px; 
+        margin: 20px auto;
+    }
+
+ }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .videoPosition{
+        width: 570px; 
+        height: 295px; 
+        margin: 100px auto;
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .videoPosition{
+        width: 730px; 
+        height: 295px; 
+        margin: 20px auto;
+    }
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .videoPosition{
+        width: 790px; 
+        height: 325px; 
+        margin: 15px auto;
+    }
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+    
+    .videoPosition{
+        width: 790px; 
+        height: 325px; 
+        margin: 15px auto;
+    }
+
+ }

@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, Navigation, NavigationEnd, RouterOutlet} from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { from, Subscription } from 'rxjs';
-import { slider, fader, stepper, transformer } from './route-animations';
+import { slider, fader, stepper, transformer, slideInAnimation } from './route-animations';
 
 
 @Component({
@@ -10,9 +10,10 @@ import { slider, fader, stepper, transformer } from './route-animations';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [ // <-- add your animations here
-    // fader,
-     slider,
-    // transformer,
+   // slideInAnimation
+     fader,
+    //  slider,
+     //transformer,
    // stepper
   ]
 })

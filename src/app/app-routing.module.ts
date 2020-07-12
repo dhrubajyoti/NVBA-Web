@@ -14,6 +14,7 @@ import { Kobipronam2020Component } from './pages/kobipronam2020/kobipronam2020.c
 import { PresidentComponent } from './pages/president/president.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { NvbayouthComponent } from './pages/nvbayouth/nvbayouth.component';
+import { RangomanchaComponent } from './pages/rangomancha/rangomancha.component';
 
 import { LoginComponent } from './pages/auth/login/login.component';
 import { UserComponent } from './pages/auth/user/user.component';
@@ -21,7 +22,6 @@ import { RegisterComponent } from './pages/auth/register/register.component';
 import { ForgetpasswordComponent } from './pages/auth/forgetpassword/forgetpassword.component';
 import { UserResolver } from './pages/auth/user/user.resolver';
 import { AuthGuard } from './pages/auth/core/auth.guard';
-
 
 import { EmailarchiveComponent } from './pages/emailarchive/emailarchive.component';
 import { CheckoutComponent} from './pages/checkout/checkout.component';
@@ -43,6 +43,7 @@ const routes: Routes = [
   { path: "emailarchive", component:EmailarchiveComponent, pathMatch: 'full',  data: { animation: 'isRight' } },
   { path: "president", component: PresidentComponent, pathMatch: 'full', data: { animation: 'isRight' }},
   { path: "nvbayouth", component: NvbayouthComponent, pathMatch: 'full', data: { animation: 'isRight' }},
+  { path: "rangomancha", component: RangomanchaComponent, pathMatch: 'full', data: { animation: 'isRight' }},
   // { path: '404', component: NotFoundComponent},
   // { path: '**', redirectTo: '/404'},
 

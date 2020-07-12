@@ -1254,6 +1254,8 @@ margin: 20px 5px;
   padding: 0 0 30px 0;
   color: #eee;
   font-size: 14px;
+  position: static;
+  bottom: 0px;
 }
 
 #footer .footer-top {
