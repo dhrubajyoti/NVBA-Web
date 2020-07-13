@@ -8,9 +8,9 @@ import {
 } from '@angular/animations';
 
 @Component({
-  selector: 'app-rangomancha',
-  templateUrl: './rangomancha.component.html',
-  styleUrls: ['./rangomancha.component.scss'],
+  selector: 'app-rangamancha',
+  templateUrl: './rangamancha.component.html',
+  styleUrls: ['./rangamancha.component.scss'],
   animations: [
     trigger('popOverState', [
       state('show', style({
@@ -36,7 +36,7 @@ import {
     ])
   ]
 })
-export class RangomanchaComponent implements OnInit {
+export class RangamanchaComponent implements OnInit {
   show = true;
   rope = true;
   constructor() { }

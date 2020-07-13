@@ -13,8 +13,8 @@ import { Saraswatipujo2020Component } from './pages/saraswatipujo2020/saraswatip
 import { Kobipronam2020Component } from './pages/kobipronam2020/kobipronam2020.component';
 import { PresidentComponent } from './pages/president/president.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { NvbayouthComponent } from './pages/nvbayouth/nvbayouth.component';
-import { RangomanchaComponent } from './pages/rangomancha/rangomancha.component';
+import { ChhotoderutsavComponent } from './pages/chhotoderutsav/chhotoderutsav.component';
+import { RangamanchaComponent } from './pages/rangamancha/rangamancha.component';
 
 import { LoginComponent } from './pages/auth/login/login.component';
 import { UserComponent } from './pages/auth/user/user.component';
@@ -42,8 +42,9 @@ const routes: Routes = [
   { path: "kobipronam2020", component: Kobipronam2020Component, pathMatch: 'full', data: { animation: 'isRight' } },
   { path: "emailarchive", component:EmailarchiveComponent, pathMatch: 'full',  data: { animation: 'isRight' } },
   { path: "president", component: PresidentComponent, pathMatch: 'full', data: { animation: 'isRight' }},
-  { path: "nvbayouth", component: NvbayouthComponent, pathMatch: 'full', data: { animation: 'isRight' }},
-  { path: "rangomancha", component: RangomanchaComponent, pathMatch: 'full', data: { animation: 'isRight' }},
+   { path: "chhotoderutsav", component: ChhotoderutsavComponent, pathMatch: 'full', data: { animation: 'isRight' }},
+  { path: "rangomancha", component: RangamanchaComponent, pathMatch: 'full', data: { animation: 'isRight' }},
+  { path: "rangamancha", component: RangamanchaComponent, pathMatch: 'full', data: { animation: 'isRight' }},
   // { path: '404', component: NotFoundComponent},
   // { path: '**', redirectTo: '/404'},
 

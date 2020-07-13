@@ -1612,7 +1612,7 @@ margin: 20px 5px;
   text-transform: 1px 1px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 2px -2px 4px rgba(0, 0, 0, 0.5);
   
-  top: 36%;
+  top: 66%;
   right: 0px;
   /* z-index: 999; */
 
@@ -1628,7 +1628,7 @@ margin: 20px 5px;
 .floatfb{
   position: fixed;
   left: -5px;
-  top: 27%;
+  top: 56%;
   z-index: 2;
   border-radius: 5px;
    /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  */

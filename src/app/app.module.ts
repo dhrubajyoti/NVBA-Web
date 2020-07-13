@@ -56,7 +56,8 @@ import { Kobipronam2020Component } from './pages/kobipronam2020/kobipronam2020.c
 import { CartComponent } from './pages/cart/cart.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { NvbayouthComponent } from './pages/nvbayouth/nvbayouth.component';
-import { RangomanchaComponent } from './pages/rangomancha/rangomancha.component';
+import { ChhotoderutsavComponent } from './pages/chhotoderutsav/chhotoderutsav.component';
+import { RangamanchaComponent } from './pages/rangamancha/rangamancha.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { RangomanchaComponent } from './pages/rangomancha/rangomancha.component'
     CartComponent,
     CheckoutComponent,
     NvbayouthComponent,
-    RangomanchaComponent
+    ChhotoderutsavComponent,
+    RangamanchaComponent
   ],
   imports: [
     BrowserModule,

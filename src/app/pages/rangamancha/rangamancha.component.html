@@ -14,7 +14,10 @@
       
          
         <!-- Curtain Start -->
-        <div class=" d-flex justify-content-between">
+        <!-- <div class=" d-flex justify-content-between absolute" style="z-index: 1;" > https://youtu.be/cRDOKewTt6k
+          <div class="backcurtain" [@popOverState]="stateName" ><img src="assets/images/stocks/backcurtain.png"/></div>
+        </div>   -->
+        <div class=" d-flex justify-content-between "  >
             <div class="leftcurtain" [@popOverState]="stateName" ><img src="assets/images/stocks/frontcurtain.jpg"/></div>
             <div class="rightcurtain" [@popOverState]="stateName"  ><img src="assets/images/stocks/frontcurtain.jpg"/></div>
             <div class="rope"  (click)="toggle()" [@popOverState]="ropeState"  >
