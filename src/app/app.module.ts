@@ -58,6 +58,7 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { NvbayouthComponent } from './pages/nvbayouth/nvbayouth.component';
 import { ChhotoderutsavComponent } from './pages/chhotoderutsav/chhotoderutsav.component';
 import { RangamanchaComponent } from './pages/rangamancha/rangamancha.component';
+import { NvbatvComponent } from './pages/nvbatv/nvbatv.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +87,8 @@ import { RangamanchaComponent } from './pages/rangamancha/rangamancha.component'
     CheckoutComponent,
     NvbayouthComponent,
     ChhotoderutsavComponent,
-    RangamanchaComponent
+    RangamanchaComponent,
+    NvbatvComponent
   ],
   imports: [
     BrowserModule,

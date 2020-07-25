@@ -15,6 +15,7 @@ import { PresidentComponent } from './pages/president/president.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ChhotoderutsavComponent } from './pages/chhotoderutsav/chhotoderutsav.component';
 import { RangamanchaComponent } from './pages/rangamancha/rangamancha.component';
+import { NvbatvComponent } from './pages/nvbatv/nvbatv.component';
 
 import { LoginComponent } from './pages/auth/login/login.component';
 import { UserComponent } from './pages/auth/user/user.component';
@@ -42,9 +43,10 @@ const routes: Routes = [
   { path: "kobipronam2020", component: Kobipronam2020Component, pathMatch: 'full', data: { animation: 'isRight' } },
   { path: "emailarchive", component:EmailarchiveComponent, pathMatch: 'full',  data: { animation: 'isRight' } },
   { path: "president", component: PresidentComponent, pathMatch: 'full', data: { animation: 'isRight' }},
-   { path: "chhotoderutsav", component: ChhotoderutsavComponent, pathMatch: 'full', data: { animation: 'isRight' }},
+  { path: "chhotoderutsav", component: ChhotoderutsavComponent, pathMatch: 'full', data: { animation: 'isRight' }},
   { path: "rangomancha", component: RangamanchaComponent, pathMatch: 'full', data: { animation: 'isRight' }},
   { path: "rangamancha", component: RangamanchaComponent, pathMatch: 'full', data: { animation: 'isRight' }},
+  { path: "nvbatv", component: NvbatvComponent, pathMatch: 'full', data: { animation: 'isRight' }},
   // { path: '404', component: NotFoundComponent},
   // { path: '**', redirectTo: '/404'},
 
