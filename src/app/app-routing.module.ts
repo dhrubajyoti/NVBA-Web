@@ -30,7 +30,7 @@ import { from } from 'rxjs';
 
 
 const routes: Routes = [
-  { path: "", component: HomeComponent, pathMatch: 'full', data: { animation: 'isRight' } }, 
+  { path: "", component: RangamanchaComponent, pathMatch: 'full', data: { animation: 'isRight' } }, 
   { path: "home", component: HomeComponent, data: { animation: 'isRight' } },
   { path: "about", component: AboutComponent, pathMatch: 'full', data: { animation: 'isRight' } },
   { path: "contactus", component: ContactusComponent, pathMatch: 'full', data: { animation: 'isRight' } },
