@@ -6,7 +6,7 @@
        "user_nicename":"contactdhrubajyoti-com",
        "user_email":"contact@dhrubajyoti.com",
        "user_url":"",
-       "user_registered":"2011-09-11 03:16:58",
+       "user_registered":"2015-09-11 03:16:58",
        "user_activation_key":"",
        "user_status":"0",
        "display_name":"Dhruba Jyoti Dey"

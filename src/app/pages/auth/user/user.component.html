@@ -1,75 +1,200 @@
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<div class="topLineFix"></div>  
 
-<section id="portfolio" class="clearfix">
-  <div class="container">
-    <div class="topLineFix"></div>  
-    <div class="container">
-      <a (click)="logout()" >Logout</a>
-    </div>
-    <header class="section-header">
-      <h3 class="section-title">User Profile</h3>
-    </header>
 
-    <div class="row justify-content-center ">
-
-      <div class="d-flex flex-column col-lg-4 col-md-6">
-        <div class="card" >
-          <img class="card-img-top image" [src]="user.image" *ngIf="user.image" alt="User image">
-          <img class="card-img-top image" src="https://via.placeholder.com/400x300" *ngIf="!user.image" alt="User image">
-          <div *ngIf='user.provider != "password"'class="card-body">
-            <h4 class="card-title">Hi, {{user.name}}</h4>
-            <p class="card-text"></p>
-          </div>
-          <div *ngIf='user.provider == "password"'class="card-body">
-            <form [formGroup]="profileForm">
-              <div class="form-group">
-                <label>Your name</label>
-                <input type="text" formControlName="name" class="form-control" required>
-              </div>
-              <!-- <div class="form-group">
-                <label>Image URL</label>
-                <input type="text" formControlName="image" class="form-control" required>
-              </div> -->
-            </form>
-            <a (click)="save(profileForm.value)" class="btn btn-primary">Save</a>
+    
+    <!-- Header -->
+    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 200px; background-image: url(./../../../../assets/images/banners/fb1.png); background-size: cover; background-position: center top;">
+      <!-- Mask -->
+      <span class="mask bg-gradient-default opacity-8"></span>
+      <!-- Header container -->
+      <div class="container d-flex align-items-center">
+        <div class="row">
+          <div class="col-lg-7 col-md-10">
+            <h1 class="display-2 text-white">Hello {{member.displayName}}</h1>
+            <p class="text-white mt-0 mb-5">Thanks for being part of the NVBA family. This is your account's profile page. You can see the membership details along with various updates.</p>
+            <!-- <a href=" " class="btn btn-primary">Edit profile</a> -->
           </div>
         </div>
+      </div>
     </div>
-
-    <div class="d-flex flex-column col-lg-8 col-md-6">
-          <div class="card" >
-            <div class="card-body">
-              <h5 class="card-title">Welcome, {{user.name}}<span *ngIf="!user.name">Guest</span></h5>
-              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-              <div class="card-text">
-                <h6>Membership Details:</h6>
-                <div>
-                  <div *ngIf="validMember; else elseBlockvalidMember">
-                    <p><b> Your NVBA Member Registration is Valid. </b></p>
-                  </div>  
-                  <ng-template #elseBlockvalidMember>
-                    <p>
-                      <b>Your NVBA Member Registration is Invalid. </b><br> 
-                      Please Register as soon as possiable.
-                    </p>
-                  </ng-template>  
-                 
-                  <p *ngIf="validMember">Next Renual Date : {{ulr.toString().split("GMT", 1)}} </p> 
+    <!-- Page content -->
+    <div class="container mt--7">
+      <div class="row">
+        <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
+          <div class="card card-profile shadow">
+            <div class="row justify-content-center">
+              <div class="col-lg-3 order-lg-2">
+                <div class="card-profile-image">
+                  <a href="#">
+                    <!-- <img src="https://demos.creative-tim.com/argon-dashboard/assets/img/theme/team-4.jpg" class="rounded-circle"> -->
+                    <img [src]="member.photoURL" *ngIf="member.photoURL" class="rounded-circle" >
+                    <img  src="https://via.placeholder.com/400x400" *ngIf="!member.photoURL" alt="user image" class="rounded-circle" >
+                  </a>
                 </div>
-                
               </div>
-              <a *ngIf="!validMember" class="btn btn-primary waves-effect">Membership Registration</a>
-              <a type="button" routerLink="/tickets" class="btn btn-primary waves-effect">Tickets for Saraswati Pujo</a>
             </div>
-            
+            <!-- <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+               <div class="d-flex justify-content-between">
+                <a href="#" class="btn btn-sm btn-info mr-4">Connect</a>
+                <a href="#" class="btn btn-sm btn-default float-right">Message</a>
+              </div> 
+            </div> -->
+            <div class="card-body pt-5 pt-md-4">
+               <!-- <div class="row">
+                <div class="col">
+                  <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+                    <div>
+                      <span class="heading">22</span>
+                      <span class="description">Friends</span>
+                    </div>
+                    <div>
+                      <span class="heading">10</span>
+                      <span class="description">Photos</span>
+                    </div>
+                    <div>
+                      <span class="heading">89</span>
+                      <span class="description">Comments</span>
+                    </div>
+                  </div>
+                </div>
+              </div>  -->
+              <p></p>
+              <div class="text-center pt-5 pb-3">
+                <h3 class="pt-5">
+                  {{member.displayName}}
+                </h3>
+                <div class="h5 font-weight-300">
+                  <i class="ni location_pin mr-2"></i>{{member.membership}}
+                </div>
+                <div class="h5 mt-4">
+                  <i class="ni business_briefcase-24 mr-2"></i>Member Since,   {{member.joined}}
+                </div>
+                <div>
+                  <i class="ni education_hat mr-2"></i>Email: <span class="font-weight-light">{{member.email}}</span> 
+                </div>
+                <!-- <hr class="my-4">
+                <p>Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music.</p>
+                <a href="">Show more</a> -->
+              </div>
+            </div>
           </div>
+        </div>
+        <div class="col-xl-8 order-xl-1">
+          <div class="card bg-secondary shadow">
+            <div class="card-header bg-white border-0">
+              <div class="row align-items-center">
+                <div class="col-8">
+                  <h3 class="mb-0">My account</h3>
+                </div>
+                <div class="col-4 text-right">
+                  <a *ngIf="!saveBtn" (click)="editdetails()" class="btn btn-sm btn-primary">Edit Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" >
+                <h6 class="heading-small text-muted mb-4">User information</h6>
+                <div class="pl-lg-4">
+                  <!-- <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-username">Username</label>
+                        <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="{{member.displayname}}">
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-email">Email address</label>
+                        <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="{{member.email}}">
+                      </div>
+                    </div>
+                  </div> -->
+                  <div class="row" *ngIf="saveBtn">
+                    <div class="col-md-12">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-address">Profile Photo URL</label>
+                        <input id="photoURL" formControlName="photoURL" class="form-control form-control-alternative" placeholder="Image Link" value="{{member.photoURL}}" type="text">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-first-name">First name</label>
+                        <input type="text" formControlName="firstname" id="firstname" class="form-control form-control-alternative" placeholder="First name" value="{{member.firstname}}">
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-last-name">Last name</label>
+                        <input type="text" formControlName="lastname" id="lastname" class="form-control form-control-alternative" placeholder="Last name" value="{{member.lastname}}">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-4">
+                <!-- Address -->
+                <h6 class="heading-small text-muted mb-4">Contact information</h6>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-address">Address</label>
+                        <input id="address1" formControlName="address1" class="form-control form-control-alternative" placeholder="Street Address" value="{{member.address1}}" type="text">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-address">Address</label>
+                        <input formControlName="address2" id="address2"  class="form-control form-control-alternative" placeholder="Apt/block/building" value="{{member.address2}}" type="text">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-city">City</label>
+                        <input type="text" id="city" formControlName="city" class="form-control form-control-alternative" placeholder="City" value="{{member.city}}">
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-country">Country</label>
+                        <input type="text" formControlName="country" id="country" class="form-control form-control-alternative" placeholder="Country" value="{{member.country}}">
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-country">Postal code</label>
+                        <input type="number" formControlName="zipcode" id="zipcode" class="form-control form-control-alternative" placeholder="{{member.zipcode}}">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12 ">
+                        <!-- <a *ngIf="saveBtn" (click)="save(profileForm.value)" class="btn btn-primary float-right">Save</a> -->
+                    </div>
+                  </div>
+                  <button *ngIf="saveBtn" type="submit" name="submit" class="btn btn-block btn-primary">Save</button> 
+
+                </div>
+                <!-- <hr class="my-4"> -->
+                <!-- Description -->
+            <!--    <h6 class="heading-small text-muted mb-4">About me</h6>
+                <div class="pl-lg-4">
+                  <div class="form-group focused">
+                    <label>About Me</label>
+                    <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
+                  </div>
+                </div> -->
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-  </div>
-
-
-
-
-  </div>
-</section>    
- 
 

@@ -54,8 +54,14 @@
                 <a href="http://novaba.org/cares/" target="_blank">NVBA Cares</a></li> -->
             </ul>
           </li>
-          <!-- <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" >
+          <!-- <li [routerLinkActive]="['active']"  [routerLinkActiveOptions]="{exact: true}" [ngClass]="{'drop-down' : member.displayName != 'Guest'}" class="" >
             <a routerLink="user">Membership</a>
+            <ul *ngIf="member.displayName != 'Guest'" >
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" >
+                <a routerLink="user" >User Details</a></li>
+              <li >
+                <a (click)="signout()" >Sign Out</a></li>
+            </ul>
           </li> -->
           <!-- <li>
             <a href="http://novaba.org/cares/" target="_blank">NVBA Cares</a>
@@ -63,11 +69,11 @@
           <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
             <a routerLink="emailarchive" >Archive</a>
           </li>  
-          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" >
+          <li [routerLinkActive]="['active']"  [routerLinkActiveOptions]="{exact: true}" >
             <a routerLink="contactus">Contact Us</a>
           </li>
           <!-- <li>
-            Hello {{member.name}}
+            Hello {{member.displayName}}
           </li> -->
         </ul>
       </nav><!-- .main-nav -->

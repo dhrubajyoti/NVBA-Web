@@ -50,10 +50,10 @@ const routes: Routes = [
   // { path: '404', component: NotFoundComponent},
   // { path: '**', redirectTo: '/404'},
 
-  { path: "login", component: LoginComponent, canActivate: [AuthGuard] },
-  { path: "register", component: RegisterComponent, canActivate: [AuthGuard] },
-  { path: "forgetpassword", component: ForgetpasswordComponent, pathMatch: 'full'},
-  { path: "user", component: UserComponent,  resolve: { data: UserResolver}},
+  { path: "login", component: LoginComponent, canActivate: [AuthGuard], data: { animation: 'isRight' } },
+  { path: "register", component: RegisterComponent, canActivate: [AuthGuard], data: { animation: 'isRight' } },
+  { path: "forgetpassword", component: ForgetpasswordComponent, pathMatch: 'full', data: { animation: 'isRight' }},
+  { path: "user", component: UserComponent,  resolve: { data: UserResolver},  data: { animation: 'isRight' }},
   { path: "checkout", component: CheckoutComponent, pathMatch: 'full', data: { animation: 'isRight' }}
 ];
 

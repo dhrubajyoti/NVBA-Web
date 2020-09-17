@@ -34,6 +34,7 @@ import { Saraswatipujo2020Component } from './pages/saraswatipujo2020/saraswatip
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 
 import { LoginComponent } from './pages/auth/login/login.component';
@@ -102,6 +103,7 @@ import { NvbatvComponent } from './pages/nvbatv/nvbatv.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule,
+    AngularFireDatabaseModule,  // Firebase database module 
     ReactiveFormsModule,
     // NgxPayPalModule,
     FormsModule,

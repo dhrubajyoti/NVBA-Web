@@ -1,0 +1,88 @@
+
+<section id="portfolio" class="clearfix">
+  <div class="container">
+    <div class="topLineFix"></div>  
+    <div class="container">
+      <a (click)="logout()" >Logout</a>
+    </div>
+    <header class="section-header">
+      <h3 class="section-title">User Profile</h3>
+    </header>
+
+    <div class="row justify-content-center ">
+
+      <div class="d-flex flex-column col-lg-4 col-md-6">
+        <div class="card" >
+          <img class="card-img-top image" [src]="user.image" *ngIf="user.image" alt="User image">
+          <img class="card-img-top image" src="https://via.placeholder.com/400x300" *ngIf="!user.image" alt="User image">
+          <div *ngIf='user.provider != "password"'class="card-body">
+            <h4 class="card-title">Hi, {{user.name}}</h4>
+            <h4 class="card-title">Your email {{user.email}}</h4>
+            <p class="card-text"></p>
+          </div>
+          <div *ngIf='user.provider == "password"'class="card-body">
+            <form [formGroup]="profileForm">
+              <div class="form-group">
+                <label>Your name</label>
+                <input type="text" formControlName="name" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label>Image URL</label>
+                <input type="text" formControlName="image" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label>Your email address:   </label>
+                {{user.email}}
+              </div>
+            </form>
+            <a (click)="save(profileForm.value)" class="btn btn-primary">Save</a>
+          </div>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column col-lg-8 col-md-6">
+          <div class="card" >
+            <div class="card-body">
+              <h5 class="card-title">Welcome, {{user.firstname}} {{user.lastname}}<span *ngIf="!user.name">Guest</span></h5>
+              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+              <div class="card-text">
+                <h6>Membership Details:</h6>
+                <div>
+                  <div *ngIf="validMember; else elseBlockvalidMember">
+                    <p><b> Your NVBA Member Registration is Valid. </b></p>
+                  </div>  
+                  <ng-template #elseBlockvalidMember>
+                    <p>
+                      <b>Your NVBA Member Registration is Invalid. </b><br> 
+                      Please Register as soon as possiable.
+                    </p>
+                  </ng-template>  
+                 
+                  <p *ngIf="validMember">Next Renual Date : {{ulr.toString().split("GMT", 1)}} </p> 
+                </div>
+                
+              </div>
+              <a *ngIf="!validMember" class="btn btn-primary waves-effect">Membership Registration</a>
+              <a type="button" routerLink="/tickets" class="btn btn-primary waves-effect">Tickets for Saraswati Pujo</a>
+            </div>
+
+
+
+            <ul>
+              <li *ngFor="let item of items | async">
+                 {{ item | json }}
+              </li>
+            </ul>
+            
+          </div>
+    </div>
+
+  </div>
+
+
+
+
+  </div>
+</section>    
+ 
+

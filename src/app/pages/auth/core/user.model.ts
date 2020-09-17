@@ -1,29 +1,110 @@
 export class FirebaseUserModel {
-  image: string;
-  name: string;
+  key: number;
+  photoURL: string;
+  displayName: string;
   provider: string;
   email: string;
+  firstname: string;
+  lastname: string;
+  address: string;
+  address1: string;
+  address2: string;
+  city: string;
+  state: string;
+  country: string;
+  zipcode: number;
+  phonenumber: number;
+  membership: string;
+  initialpayment: number;
+  fee: number;
+  term: string;
+  discount_code: string;
+  joined: string;
+  exiered: string;
+  billingFirstname: string;
+  billingLastname: string;
 
   constructor(){
-    this.image = "";
-    this.name = "";
+    this.key = 0;
+    this.photoURL = "";
+    this.displayName = "";
     this.provider = "";
     this.email = "";
+    this.firstname ="";
+    this.lastname = "";
+    this.address = "";
+    this.address1 = "";
+    this.address2 = "";
+    this.city = "";
+    this.state = "";
+    this.country = "";
+    this.zipcode = 0;
+    this.phonenumber = 0;
+    this.membership = "";
+    this.initialpayment = 0;
+    this.fee = 0;
+    this.term = "";
+    this.discount_code = "";
+    this.joined = "";
+    this.exiered = "";
+    this.billingFirstname = "";
+    this.billingLastname = "";
+
   }
 }
 
 
 export class MemberModel {
-  image: string;
-  name: string;
+  key: number;
+  photoURL: string;
+  displayName: string;
   provider: string;
   email: string;
+  firstname: string;
+  lastname: string;
+  address: string;
+  address1: string;
+  address2: string;
+  city: string;
+  state: string;
+  country: string;
+  zipcode: number;
+  phonenumber: number;
+  membership: string;
+  initialpayment: number;
+  fee: number;
+  term: string;
+  discount_code: string;
+  joined: string;
+  exiered: string;
+  billingFirstname: string;
+  billingLastname: string;
 
   constructor(){
-    this.image = "";
-    this.name = "Guest";
+    this.key = 0;
+    this.photoURL = "";
+    this.displayName = "Guest";
     this.provider = "";
     this.email = "";
+    this.firstname ="New";
+    this.lastname = "Guest";
+    this.address = "";
+    this.address1 = "";
+    this.address2 = "";
+    this.city = "";
+    this.state = "";
+    this.country = "";
+    this.zipcode = 0;
+    this.phonenumber = 0;
+    this.membership = "";
+    this.initialpayment = 0;
+    this.fee=0;
+    this.term = "";
+    this.discount_code = "";
+    this.joined = "";
+    this.exiered = "";
+    this.billingFirstname = "";
+    this.billingLastname = "";
   }
 }
 
