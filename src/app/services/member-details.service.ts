@@ -22,10 +22,9 @@ export class MemberDetailsService {
 
   }
 
-
   updateCustomer(todo: any): void {
     console.log(todo.value);
-    this.fdb.object('/Members/' + todo.value.key).update({ ...todo.value });
+    this.fdb.object('/Members/' + todo.value.id).update({ ...todo.value });
   }
 
 

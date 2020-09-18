@@ -68,22 +68,24 @@ export class UserComponent implements OnInit{
       let data = routeData['data'];
           if (data) { 
             let ind = 0;
-            // console.log(data); 
-                this.memberDetails.allMembersDetails().subscribe(record => record.find( e=> {
-                  if( e.email === data.email)
+             console.log(this.memberDetails.allMembersDetails()); 
+             this.memberDetails.allMembersDetails().subscribe(d => {
+               console.log(d);
+               d.forEach( (e, index) => {
+               //  console.log(index);
+                 if( e.email === data.email)
                   {
                     this.user = { ...data, ...e};
                     this.user.displayName = this.user.firstname +' '+this.user.lastname;
-                    this.user.key = ind;
+                    this.user.id = index;
                     console.log(this.user);
                     this.member = this.user;
                     console.log(this.member);
                     this.userService.updateMember(this.user);
-                     this.createForm(this.member.key, this.member.firstname, this.member.lastname,this.member.photoURL, this.member.address1, this.member.address2, this.member.city, this.member.state, this.member.country, this.member.zipcode );
+                     this.createForm(this.member.id, this.member.firstname, this.member.lastname,this.member.photoURL, this.member.address1, this.member.address2, this.member.city, this.member.state, this.member.country, this.member.zipcode );
                   }
-                  console.log(ind);
-                  ind++;
-                }));
+               });
+             });
           }
     });
       console.log(this.member);
@@ -142,11 +144,11 @@ export class UserComponent implements OnInit{
   // //   });
   // }
 
-  createForm(key, firstname, lastname, photoURL, address1, address2, city, state, country, zipcode) {
+  createForm(id, firstname, lastname, photoURL, address1, address2, city, state, country, zipcode) {
 
 
     this.profileForm = this.fb.group({
-      key: [key, Validators.required],
+      id: [id, Validators.required],
       firstname: [firstname, Validators.required ],
       lastname: [lastname, Validators.required ],
       photoURL: [photoURL, Validators.required ],

@@ -1,5 +1,5 @@
 export class FirebaseUserModel {
-  key: number;
+  id: number;
   photoURL: string;
   displayName: string;
   provider: string;
@@ -25,7 +25,7 @@ export class FirebaseUserModel {
   billingLastname: string;
 
   constructor(){
-    this.key = 0;
+    this.id = 0;
     this.photoURL = "";
     this.displayName = "";
     this.provider = "";
@@ -55,7 +55,7 @@ export class FirebaseUserModel {
 
 
 export class MemberModel {
-  key: number;
+  id: number;
   photoURL: string;
   displayName: string;
   provider: string;
@@ -81,7 +81,7 @@ export class MemberModel {
   billingLastname: string;
 
   constructor(){
-    this.key = 0;
+    this.id = 0;
     this.photoURL = "";
     this.displayName = "Guest";
     this.provider = "";
