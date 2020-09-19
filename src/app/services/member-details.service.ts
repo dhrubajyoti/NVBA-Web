@@ -22,11 +22,23 @@ export class MemberDetailsService {
 
   }
 
-  updateCustomer(todo: any): void {
-    console.log(todo.value);
-    this.fdb.object('/Members/' + todo.value.id).update({ ...todo.value });
+  updateCustomer(user: any): void {
+    console.log(user);
+    this.fdb.object('/Members/' + user.id).update({ ...user }).catch(error => {
+      console.log(error);
+    }).then( c => {
+      console.log("success Update");
+    });
   }
 
+  createCustomer(user:any){
+    
+    this.fdb.object('/Members/'+user.id).set({ ...user }).catch(error => {
+      console.log(error);
+    }).then( c => {
+      console.log("Success Create.");
+    });
+  }
 
   getMembersList(): AngularFireList<MemberModel> {
     return this.membersRef;
