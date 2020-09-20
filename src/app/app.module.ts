@@ -60,6 +60,7 @@ import { NvbayouthComponent } from './pages/nvbayouth/nvbayouth.component';
 import { ChhotoderutsavComponent } from './pages/chhotoderutsav/chhotoderutsav.component';
 import { RangamanchaComponent } from './pages/rangamancha/rangamancha.component';
 import { NvbatvComponent } from './pages/nvbatv/nvbatv.component';
+import { CartmemberComponent } from './pages/cartmember/cartmember.component';
 
 @NgModule({
   declarations: [
@@ -89,7 +90,8 @@ import { NvbatvComponent } from './pages/nvbatv/nvbatv.component';
     NvbayouthComponent,
     ChhotoderutsavComponent,
     RangamanchaComponent,
-    NvbatvComponent
+    NvbatvComponent,
+    CartmemberComponent
   ],
   imports: [
     BrowserModule,
@@ -114,4 +116,4 @@ import { NvbatvComponent } from './pages/nvbatv/nvbatv.component';
   providers: [AuthService, UserService, UserResolver, AuthGuard], 
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { } 

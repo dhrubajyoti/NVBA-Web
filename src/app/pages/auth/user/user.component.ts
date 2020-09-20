@@ -70,11 +70,9 @@ export class UserComponent implements OnInit{
     this.route.data.subscribe(routeData => {
       let data = routeData['data'];
           if (data) { 
-             console.log(this.memberDetails.allMembersDetails()); 
              this.memberDetails.allMembersDetails().subscribe(d => {
                console.log(d);
                d.forEach( (e, index) => {
-                this.newUserId = d.length;
                //  console.log(index);
                  if( e.email === data.email)
                   {
@@ -94,17 +92,20 @@ export class UserComponent implements OnInit{
                   }
                }
                );
+
+               // For New User 
+                if(this.newUserCheck){
+                  this.newUserId = d.length;
+                  this.member = data;
+                  console.log(this.member); 
+                  console.log(this.newUserId);
+                  this.member.displayName = this.member.firstname +' '+this.member.lastname;
+
+                  
+                    this.createForm(this.newUserId, this.member.firstname, this.member.lastname,this.member.photoURL, this.member.address1, this.member.address2, this.member.city, this.member.state, this.member.country, this.member.zipcode );
+                }
+
              });
-
-             // For New User 
-              this.member = data;
-              console.log(this.member); 
-              console.log(this.newUserId);
-              this.member.displayName = this.member.firstname +' '+this.member.lastname;
-
-              if(this.newUserCheck){
-                this.createForm(this.newUserId, this.member.firstname, this.member.lastname,this.member.photoURL, this.member.address1, this.member.address2, this.member.city, this.member.state, this.member.country, this.member.zipcode );
-              }
 
           }
     });

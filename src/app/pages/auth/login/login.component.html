@@ -3,7 +3,7 @@
   <div class="container">
     <div class="topLineFix"></div>  
     <header class="section-header">
-      <h3 class="section-title">Login</h3>
+      <h3 class="section-title">Sign In</h3>
     </header>
 
     <div class="row justify-content-center ">
@@ -22,17 +22,19 @@
                 <label>Password</label>
                 <input type="password" class="form-control" formControlName="password">
               </div>
-              <button type="submit" (click)="tryLogin(loginForm.value)" class="btn-get-started w-100 mb-5" >Login</button>
+              <div class="mb-3 w-100 align-content-end " style="text-align: end;" ><a class="mb-3 w-100"  routerLink="/forgetpassword">Forgot your password?</a></div>
+              
+              <button type="submit" (click)="tryLogin(loginForm.value)" class="btn-get-started w-100 mb-5 mt-2" >Sign In</button>
             </form>
           
             <!-- <button type="button" class="btn btn-primary btn-block" (click)="tryFacebookLogin()">Login with Facebook</button> -->
          
-            <button type="button" class="btn btn-danger btn-block" (click)="tryGoogleLogin()">Login with Google</button>
+            <button type="button" class="btn btn-default  shadow" style="color: #4081ec;" (click)="tryGoogleLogin()"> <img src="../assets/images/stocks/google.png" height="30px" > Sign In with Google</button>
           
             <!-- <button type="button" class="btn btn-info btn-block" (click)="tryTwitterLogin()">Login with Twitter</button> -->
           
-            <p class="m-3"><a routerLink="/register"> Don't have an NVBA ID? Create one now.</a></p>
-            <p class="m-3"><a routerLink="/forgetpassword">Forgot your password?</a></p>
+            <p class=" mt-3 "><a  routerLink="/register"> <b> Don't have an NVBA ID? Create one now.</b></a></p>
+            
 
 
      </div>
