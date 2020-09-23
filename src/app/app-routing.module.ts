@@ -11,6 +11,7 @@ import { TeamComponent } from './pages/team/team.component';
 import { LawComponent } from './pages/law/law.component';
 import { Saraswatipujo2020Component } from './pages/saraswatipujo2020/saraswatipujo2020.component';
 import { Kobipronam2020Component } from './pages/kobipronam2020/kobipronam2020.component';
+import { Durgapuja2020Component } from './pages/durgapuja2020/durgapuja2020.component';
 import { PresidentComponent } from './pages/president/president.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ChhotoderutsavComponent } from './pages/chhotoderutsav/chhotoderutsav.component';
@@ -41,6 +42,7 @@ const routes: Routes = [
   { path: "law", component: LawComponent, pathMatch: 'full', data: { animation: 'isRight' }  },
   { path: "saraswatipujo2020", component: Saraswatipujo2020Component, pathMatch: 'full', data: { animation: 'isRight' } },
   { path: "kobipronam2020", component: Kobipronam2020Component, pathMatch: 'full', data: { animation: 'isRight' } },
+  { path: "durgapuja2020", component: Durgapuja2020Component, pathMatch: 'full', data: { animation: 'isRight' } },
   { path: "emailarchive", component:EmailarchiveComponent, pathMatch: 'full',  data: { animation: 'isRight' } },
   { path: "president", component: PresidentComponent, pathMatch: 'full', data: { animation: 'isRight' }},
   { path: "chhotoderutsav", component: ChhotoderutsavComponent, pathMatch: 'full', data: { animation: 'isRight' }},
@@ -54,7 +56,7 @@ const routes: Routes = [
   { path: "register", component: RegisterComponent, canActivate: [AuthGuard], data: { animation: 'isRight' } },
   { path: "forgetpassword", component: ForgetpasswordComponent, pathMatch: 'full', data: { animation: 'isRight' }},
   { path: "user", component: UserComponent,  resolve: { data: UserResolver},  data: { animation: 'isRight' }},
-  { path: "checkout", component: CheckoutComponent, pathMatch: 'full', data: { animation: 'isRight' }}
+  { path: "checkout", component: CheckoutComponent, resolve: { data: UserResolver}, pathMatch: 'full', data: { animation: 'isRight' }}
 ];
 
 @NgModule({

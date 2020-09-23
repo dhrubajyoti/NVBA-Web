@@ -11,7 +11,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let item of dataObject">
-            <th>{{item.description}}</th>
+            <th><div class="smallOrangeHeader">{{item.name}}</div>{{item.description}}</th>
             <td>$ {{item.price}}</td>
             <td><input type="number" [(ngModel)]="item.quantity" style="width:50px" min="0" max="10" ></td>
             <!-- <td> <button class="btn btn-warning" (click)="addToCartobj(item)" >Add to Cart</button></td> -->

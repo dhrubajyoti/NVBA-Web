@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "buildp": "ng build --base-href /nvbaweb/ --deploy-url /nvbaweb/"
+    "buildp": "ng build --base-href /nvbaweb/ --deploy-url /nvbaweb/",
+    "buildunder": "ng build --prod --base-href /nvbaweb/"
   },
   "private": true,
   "dependencies": {

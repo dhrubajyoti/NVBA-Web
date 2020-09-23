@@ -3,7 +3,10 @@ import { Router, Navigation, NavigationEnd, RouterOutlet} from '@angular/router'
 import { filter } from 'rxjs/operators';
 import { from, Subscription } from 'rxjs';
 import { slider, fader, stepper, transformer, slideInAnimation } from './route-animations';
-
+import { UserService } from './pages/auth/core/user.service';
+import { AuthService } from './pages/auth/core/auth.service';
+import { Location } from '@angular/common';
+import { MemberModel } from './pages/auth/core/user.model';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +28,16 @@ export class AppComponent implements OnInit, OnDestroy {
 
   subscription: Subscription;
 
-  constructor(private router:Router){}
+  member: MemberModel = new MemberModel();
+  newmember: MemberModel = new MemberModel();
+  memberMenu: boolean = false;
+
+  constructor(
+    private router:Router,
+    public userService: UserService,
+    public authService: AuthService,
+    private location : Location
+    ){}
 
   ngOnInit(){
     this.subscription = this.router.events
@@ -36,14 +48,33 @@ export class AppComponent implements OnInit, OnDestroy {
       const element = document.querySelector('mat-sidenav-content') || window;
       element.scrollTo(0,0);
     });
+
+    this.userService.cast.subscribe( cast => this.member = cast);
+    console.log(this.member.email);
+    if(this.member.email){
+      console.log(this.member.email); 
+    }
+
   }
 
-  ngOnDestroy(){
-    this.subscription.unsubscribe();
-  }
-
+  
   prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  }
+
+  signout(){
+    this.authService.doLogout()
+    .then((res) => {
+      this.userService.updateMember(this.newmember);
+      this.location.back();
+    }, (error) => {
+      console.log("Logout error", error);
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+    this.member;
   }
 
 }

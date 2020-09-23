@@ -53,7 +53,16 @@
             <a routerLink="emailarchive" >Email Archive</a>
             <hr class="style1">
         </li> 
-          
+        
+        <li [routerLinkActive]="['active']"  [routerLinkActiveOptions]="{exact: true}" [ngClass]="{'drop-down' : member.displayName != 'Guest'}" class="" >
+          <a routerLink="user">Membership</a>
+          <ul *ngIf="member.displayName != 'Guest'" >
+            <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" >
+              <a routerLink="user" >User Details</a></li>
+            <li >
+              <a (click)="signout()" >Sign Out</a></li>
+          </ul>
+        </li>
         <!-- <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" (click)="sidenav.toggle()" >
           <a routerLink="user">Membership</a>
         </li>   -->

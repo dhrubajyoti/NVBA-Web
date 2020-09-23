@@ -61,6 +61,7 @@ import { ChhotoderutsavComponent } from './pages/chhotoderutsav/chhotoderutsav.c
 import { RangamanchaComponent } from './pages/rangamancha/rangamancha.component';
 import { NvbatvComponent } from './pages/nvbatv/nvbatv.component';
 import { CartmemberComponent } from './pages/cartmember/cartmember.component';
+import { Durgapuja2020Component } from './pages/durgapuja2020/durgapuja2020.component';
 
 @NgModule({
   declarations: [
@@ -91,7 +92,8 @@ import { CartmemberComponent } from './pages/cartmember/cartmember.component';
     ChhotoderutsavComponent,
     RangamanchaComponent,
     NvbatvComponent,
-    CartmemberComponent
+    CartmemberComponent,
+    Durgapuja2020Component
   ],
   imports: [
     BrowserModule,

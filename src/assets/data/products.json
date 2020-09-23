@@ -1,23 +1,84 @@
 [
     {
       
-      "name": "Veg",
-      "description": "Veg Manchurian,Veg Spring Roll, Veg Fried Rice, Veg Noodles ",
+      "name": "Saturday Adult Non-Veg",
+      "description": "Chicken Cutlet,...",
       "quantity": 0,
-      "price": 11,
+      "price": 12,
       "tax": 0.06,
-      "sku": "202001",
+      "sku": "DP202001",
       "currency": "USD"
       
     },
     {
       
-        "name": "Non-Veg",
-        "description": "Chicken Manchurian, Veg Spring Roll, Veg Fried Rice, Veg Noodles ",
+        "name": "Saturday Adult Veg",
+        "description": "Veg Cutlet, ...",
         "quantity": 0,
-        "price": 13,
+        "price": 10,
         "tax": 0.06,
-        "sku": "202002",
+        "sku": "DP202002",
         "currency": "USD"
-    }
+    },
+    {
+      
+        "name": "Saturday Kids Non-Veg",
+        "description": "Chicken Fried Rice, ...",
+        "quantity": 0,
+        "price": 8,
+        "tax": 0.06,
+        "sku": "DP202003",
+        "currency": "USD"
+    },
+    {
+      
+        "name": "Saturday Kids Veg",
+        "description": "Veg Fried Rice, ...",
+        "quantity": 0,
+        "price": 8,
+        "tax": 0.06,
+        "sku": "DP202004",
+        "currency": "USD"
+    },
+    {
+      
+        "name": "Sunday Adult Non-Veg",
+        "description": "Goat Kacchi Biryani,...",
+        "quantity": 0,
+        "price": 12,
+        "tax": 0.06,
+        "sku": "DP202005",
+        "currency": "USD"
+        
+      },
+      {
+        
+          "name": "Sunday Adult Veg",
+          "description": "Veg Paneer Biryani, ...",
+          "quantity": 0,
+          "price": 10,
+          "tax": 0.06,
+          "sku": "DP202006",
+          "currency": "USD"
+      },
+      {
+        
+          "name": "Sunday Kids Non-Veg",
+          "description": "Chicken Fried Rice, ...",
+          "quantity": 0,
+          "price": 8,
+          "tax": 0.06,
+          "sku": "DP202007",
+          "currency": "USD"
+      },
+      {
+        
+          "name": "Sunday Kids Veg",
+          "description": "Veg Fried Rice, ...",
+          "quantity": 0,
+          "price": 8,
+          "tax": 0.06,
+          "sku": "DP202008",
+          "currency": "USD"
+      }
 ]    

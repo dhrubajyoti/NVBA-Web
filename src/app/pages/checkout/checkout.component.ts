@@ -1,5 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { CartService} from '../../services/cart.service';
+import { MemberDetailsService } from './../../services/member-details.service';
 import { from } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
 
@@ -19,8 +21,14 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
   paypalLoad: boolean = true;
   emptyCart: boolean = true;
 
+  userDetails: any;
 
-  constructor( private cart: CartService, private toastr: ToastrService) {}
+  constructor( 
+    private cart: CartService, 
+    private toastr: ToastrService,
+    private ar: ActivatedRoute,
+    private mds: MemberDetailsService
+    ) {}
 
   ngOnInit(): void {
     this.cart.currentCart.subscribe( cartCheck => this.cartCheck = cartCheck)
@@ -41,6 +49,11 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
     console.log(this.tax);
     console.log('this.cartCheck');
     console.log(this.cartCheck);
+
+    this.ar.data.subscribe(routeData => {
+      this.userDetails = routeData['data'];
+      console.log(this.userDetails);
+    });
   }
 
   ngAfterViewInit(): void {
@@ -70,10 +83,10 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
   } // End of AddPaypalScript
 
   paypalConfig = {
-    env: 'production',
+    env: 'sandbox',
     client: {
       sandbox: 'AeLhWUCfC2jHOZv7b-KDfZV6R6Mig-2FklW6iIxsuI0UROww652TU9SlVPHyW1ygMGohQo21TfXUVPrz',
-      production: 'AVBsfj0Jw-jl5_63BPGwuduCaKDsPvbz1pwyqECm7N5FzKEi1Q_o-xQAiM_BTzQhAW064uAPf1v9uZdS'
+//      production: 'AVBsfj0Jw-jl5_63BPGwuduCaKDsPvbz1pwyqECm7N5FzKEi1Q_o-xQAiM_BTzQhAW064uAPf1v9uZdS'
     },
     commit: true,
     payment: (data, actions) => {
@@ -101,7 +114,19 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
     onAuthorize: (data, actions) => {
       return actions.payment.execute().then((payment) => {
         //Do something when payment is successful.
+        console.log(payment);
         console.log('Payment Done');
+        let paymentTrans = {...payment.transactions};
+      //  this.userDetails = ( paymentTrans);
+      //  let pt = {paymant:""};
+     //   let v = { ...this.userDetails, ...pt } 
+       if(!this.userDetails.payments){
+        this.userDetails.payments = [];
+        console.log('First Time');
+       }
+        
+        this.userDetails.payments.push(paymentTrans);
+        this.mds.updateCustomer(this.userDetails);
         this.toastr.success('Your payment is successful.');
         this.cart.clearCart();
         this.cleanup();
