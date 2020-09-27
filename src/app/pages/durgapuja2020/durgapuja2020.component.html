@@ -17,7 +17,7 @@
                     NVBA Is Proud To Host Durga Puja 2020 For Blissful Three Days Of Virtual Puja Celebration From October 23rd To October 25th, 2020. Our Goal Is To Provide You With The Same Feeling As In Previous Years But In A Virtual Setup.NVBA Always Plans Top-Class Entertainment Featuring The Best International And Local Artists In The Line-Up. NVBA RangaMancha Will Bring You Three Nights Of Cultural Entertainment Through Its Online Streaming Platform. 
                 </p>
                 <p>    
-                    Please Watch The Curtain-Raiser And Please Come Together And Celebrate This Event With Your Family And Friends. Please Follow Our Newsletters For Regular Updates.
+                    
                 </p>
               <!-- <p>
                 Kobi Pronam is one of NVBA's signature celebration. Every year it is celebrated to observe the birth anniversaries of great Bengali poets, Rabi Thakur (25 e Baishakh) and Kazi Nazrul (May 24th). The patrons are encouraged to participate in the event with the celebration theme.
@@ -154,20 +154,13 @@
         </div>
             
             <hr />
+
+            <button routerLink="/ordertickets" class="btn-get-started w-100 mb-5 mt-2 " > Order Your Food </button>
+            
             <!-- <p class="d-flex justify-content-center mt-4 mb-5">Our orders are now closed.</p>
              -->
              
-            <div *ngIf="this.member.membershipstatus == 'Valid'; then thenBlock else elseBlock"></div>
-            <ng-template #thenBlock>
-              <!-- <h3 class="d-flex justify-content-center mt-4" >Order Food</h3> -->
-              <button routerLink="/ordertickets" class="btn-get-started orange w-100 mb-5 mt-2" > Order Your Food </button>
-              
-            </ng-template>
-            <ng-template #elseBlock>
-              <!-- <h3 class="d-flex justify-content-center mt-4" >Order Food</h3> -->
-              <!-- <app-cartmember></app-cartmember> -->
-              <button routerLink="/ordertickets" class="btn-get-started w-100 mb-5 mt-2 " > Order Your Food </button>
-            </ng-template>
+            
           <!-- 
              <div *ngIf="this.member.membershipstatus == '' ">
                
