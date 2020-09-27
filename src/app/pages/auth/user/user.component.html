@@ -16,6 +16,10 @@
             <app-cartmember></app-cartmember>
             <!-- <a href=" " class="btn btn-primary">Edit profile</a> -->
           </div>
+          <div class="col-lg-5 col-md-2">
+            <button routerLink="/durgapujo2020" class="btn btn-block btn-primary" > Durgapuja 2020</button>
+            <button routerLink="/ordertickets" class="btn btn-block btn-primary" style="background-color: #ff8d00; "  > Order Tickets</button>
+          </div>
         </div>
       </div>
     </div>
@@ -194,7 +198,7 @@
                           <label>Recent Order</label>
                           <div *ngFor="let items of member.purchase " >
 
-                            <table class="table table-hover table-bordered mb-2"  >
+                            <table class="table table-hover table-borderless mb-2"  >
                               <tbody>
                               <tr *ngFor="let item of items ">
                                   <th><div class="smallOrangeHeader">{{item.name}}</div>{{item.description}}</th>
