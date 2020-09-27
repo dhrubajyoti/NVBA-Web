@@ -159,14 +159,14 @@
              
             <div *ngIf="this.member.membershipstatus == 'Valid'; then thenBlock else elseBlock"></div>
             <ng-template #thenBlock>
-              <h3 class="d-flex justify-content-center mt-4" >Order Food</h3>
+              <!-- <h3 class="d-flex justify-content-center mt-4" >Order Food</h3> -->
               <button routerLink="/ordertickets" class="btn-get-started orange w-100 mb-5 mt-2" > Order Your Food </button>
               
             </ng-template>
             <ng-template #elseBlock>
               <!-- <h3 class="d-flex justify-content-center mt-4" >Order Food</h3> -->
-              <app-cartmember></app-cartmember>
-              <button routerLink="/user" class="btn btn-default shadow w-100 mb-5 " style="color: #ff8d00; font-weight: bold; " > Check Your Profile </button>
+              <!-- <app-cartmember></app-cartmember> -->
+              <button routerLink="/ordertickets" class="btn-get-started w-100 mb-5 mt-2 " > Order Your Food </button>
             </ng-template>
           <!-- 
              <div *ngIf="this.member.membershipstatus == '' ">

@@ -17,8 +17,8 @@
             <!-- <a href=" " class="btn btn-primary">Edit profile</a> -->
           </div>
           <div class="col-lg-5 col-md-2">
-            <button routerLink="/durgapujo2020" class="btn btn-block btn-primary" > Durgapuja 2020</button>
-            <button routerLink="/ordertickets" class="btn btn-block btn-primary" style="background-color: #ff8d00; "  > Order Tickets</button>
+            <button routerLink="/durgapuja2020" class="btn btn-block btn-primary" > Durgapuja 2020</button>
+            <button routerLink="/ordertickets" class="btn btn-block btn-primary" style="background-color: #ff8d00; "  > Order Your Food</button>
           </div>
         </div>
       </div>
@@ -88,13 +88,41 @@
         </div>
         <div class="col-xl-8 order-xl-1">
           <div class="card bg-secondary shadow">
+
+          <div *ngIf="member.purchase[0]">
+            <div class="card-header bg-white border-0">
+              <div class="row align-items-center">
+                <div class="col-8">
+                  <h3 class="mb-0">Recent Order</h3>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+                 <h6 class="heading-small text-muted mb-4">Your last order</h6>
+          <!--     <div class="pl-lg-4"> -->
+
+                    <table class="table table-hover table-bordered  mb-2"  >
+                      <tbody>
+                      <tr *ngFor="let item of member.purchase[0] ">
+                          <th><div class="smallOrangeHeader">{{item.name}}</div>{{item.description}}</th>
+                          <td>$ {{item.price}}</td>
+                          <td>{{ item.quantity}}</td>
+                          <!-- <td> <button class="btn btn-warning" (click)="addToCartobj(item)" >Add to Cart</button></td> -->
+                          <td  >$ {{item.price * item.quantity}}</td>
+                      </tr>
+                      </tbody>
+                  </table>
+                <!-- </div>  -->
+            </div>
+          </div>
+
             <div class="card-header bg-white border-0">
               <div class="row align-items-center">
                 <div class="col-8">
                   <h3 class="mb-0">My account</h3>
                 </div>
                 <div class="col-4 text-right">
-                  <a *ngIf="!saveBtn" (click)="editdetails()" class="btn btn-sm btn-primary">Edit Details</a>
+                  <button *ngIf="!saveBtn" (click)="editdetails()" class="btn btn-sm btn-primary">Save / Edit Details</button>
                 </div>
               </div>
             </div>
@@ -190,8 +218,8 @@
                 <hr class="my-4">
                 <!-- Description -->
                <h6 class="heading-small text-muted mb-4">Order History</h6>
-               <button (click)="showMyContainer=!showMyContainer" *ngIf="!showMyContainer" class="btn btn-sm btn-primary" >Show Recent Order</button>
-               <button (click)="showMyContainer=!showMyContainer" *ngIf="showMyContainer" class="btn btn-sm btn-primary" >Hide Recent Order</button>
+               <button (click)="showMyContainer=!showMyContainer" *ngIf="!showMyContainer" class="btn btn-sm btn-primary" >Show All Orders</button>
+               <button (click)="showMyContainer=!showMyContainer" *ngIf="showMyContainer" class="btn btn-sm btn-primary" >Hide All Orders</button>
                 <div *ngIf="showMyContainer">
                       <div class="pl-lg-4 mt-3">
                         <div class="form-group focused">

@@ -4,7 +4,7 @@
         <button (click)="addToCartobj()" class="btn-get-started w-100 mb-5 mt-2" >Buy Annual Membership ($20)</button>
     </div>
     <div *ngIf="this.member.membershipstatus == 'Expire' " >
-        <div  class="  " style="text-align: center;">Sorry, Your Membership Has Expired : {{ expired }}</div>
+        <div  class=" redExpired " >Membership Expired : {{ expired }}</div>
         <button (click)="addToCartobj()" class="btn-get-started w-100 mb-5 mt-2" > Renew Annual Membership</button>
     </div>
     <div *ngIf="this.member.membershipstatus == 'Valid' " >

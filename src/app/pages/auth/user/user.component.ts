@@ -196,6 +196,7 @@ export class UserComponent implements OnInit{
   }
 
   editdetails(){
+    this.onSubmit();
     this.saveBtn = true;
   }
 
