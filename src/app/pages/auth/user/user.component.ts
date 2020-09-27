@@ -22,7 +22,7 @@ import { switchMap } from 'rxjs/operators';
 export class UserComponent implements OnInit{
 
   user: FirebaseUserModel = new FirebaseUserModel();
-  member: MemberModel = new MemberModel();
+//  member: MemberModel = new MemberModel();
   newmember: MemberModel = new MemberModel();
   profileForm: FormGroup;
 
@@ -32,19 +32,20 @@ export class UserComponent implements OnInit{
 
    
 
-  uemail = '' ;
-  userDetails ;
-  ulr;
-  validMember;
+//  uemail = '' ;
+//  userDetails ;
 
+//  ulr;
+//  validMember;
 
-  items: Observable<any[]>; 
+ member:any;
+ showMyContainer: boolean = false;
   
 
   constructor(
     public userService: UserService,
     public authService: AuthService,
-    private route: ActivatedRoute,
+    private ar: ActivatedRoute,
     private location : Location,
     private fb: FormBuilder,
     public memberDetails: MemberDetailsService,
@@ -67,49 +68,58 @@ export class UserComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.route.data.subscribe(routeData => {
-      let data = routeData['data'];
-          if (data) { 
-             this.memberDetails.allMembersDetails().subscribe(d => {
-               console.log(d);
-               d.forEach( (e, index) => {
-               //  console.log(index);
-                 if( e.email === data.email)
-                  {
-                    this.newUserCheck = false;
-                    this.user = { ...data, ...e};
-                    this.user.displayName = this.user.firstname +' '+this.user.lastname;
-                    this.user.id = index;
-                    console.log(this.user);
-                    this.member = this.user;
-                    console.log(this.member);
-                    this.userService.updateMember(this.user);
-                     this.createForm(this.member.id, this.member.firstname, this.member.lastname,this.member.photoURL, this.member.address1, this.member.address2, this.member.city, this.member.state, this.member.country, this.member.zipcode );
-                  }
-                  else{
-                     this.newUserId = d.length;
-                //     console.log(this.newUserId);
-                  }
-               }
-               );
+   this.userService.cast.subscribe( m => {
+      this.member = m;
+      console.log(this.member);
+      this.createForm(this.member.id, this.member.firstname, this.member.lastname,this.member.photoURL, this.member.address1, this.member.address2, this.member.city, this.member.state, this.member.country, this.member.zipcode );
+   }) ;
 
-               // For New User 
-                if(this.newUserCheck){
-                  this.newUserId = d.length;
-                  this.member = data;
-                  console.log(this.member); 
-                  console.log(this.newUserId);
-                  this.member.displayName = this.member.firstname +' '+this.member.lastname;
+    // this.ar.data.subscribe(routeData => {
+    // });
+
+    // this.route.data.subscribe(routeData => {
+    //   let data = routeData['data'];
+    //       if (data) { 
+    //          this.memberDetails.allMembersDetails().subscribe(d => {
+    //            console.log(d);
+    //            d.forEach( (e, index) => {
+    //            //  console.log(index);
+    //              if( e.email === data.email)
+    //               {
+    //                 this.newUserCheck = false;
+    //                 this.user = { ...data, ...e};
+    //                 this.user.displayName = this.user.firstname +' '+this.user.lastname;
+    //                 this.user.id = index;
+    //                 console.log(this.user);
+    //                 this.member = this.user;
+    //                 console.log(this.member);
+    //                 this.userService.updateMember(this.user);
+    //                  this.createForm(this.member.id, this.member.firstname, this.member.lastname,this.member.photoURL, this.member.address1, this.member.address2, this.member.city, this.member.state, this.member.country, this.member.zipcode );
+    //               }
+    //               else{
+    //                  this.newUserId = d.length;
+    //             //     console.log(this.newUserId);
+    //               }
+    //            }
+    //            );
+
+    //            // For New User 
+    //             if(this.newUserCheck){
+    //               this.newUserId = d.length;
+    //               this.member = data;
+    //               console.log(this.member); 
+    //               console.log(this.newUserId);
+    //               this.member.displayName = this.member.firstname +' '+this.member.lastname;
 
                   
-                    this.createForm(this.newUserId, this.member.firstname, this.member.lastname,this.member.photoURL, this.member.address1, this.member.address2, this.member.city, this.member.state, this.member.country, this.member.zipcode );
-                }
+    //                 this.createForm(this.newUserId, this.member.firstname, this.member.lastname,this.member.photoURL, this.member.address1, this.member.address2, this.member.city, this.member.state, this.member.country, this.member.zipcode );
+    //             }
 
-             });
+    //          });
 
-          }
-    });
-    let date = new Date();  
+    //       }
+    // });
+ //   let date = new Date();  
 //    let cdate = Date.getFullYear()+'-'+Date.getMonth()+'-'+Date.getDay();
 //    console.log(cdate);
       

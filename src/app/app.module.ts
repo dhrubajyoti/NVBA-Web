@@ -46,6 +46,7 @@ import { AuthService } from './pages/auth/core/auth.service';
 import { UserService } from './pages/auth/core/user.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ForgetpasswordComponent } from './pages/auth/forgetpassword/forgetpassword.component';
+import { MemberDetailsService } from './services/member-details.service';
 
 // import { NgxPayPalModule } from 'ngx-paypal';
 
@@ -62,6 +63,7 @@ import { RangamanchaComponent } from './pages/rangamancha/rangamancha.component'
 import { NvbatvComponent } from './pages/nvbatv/nvbatv.component';
 import { CartmemberComponent } from './pages/cartmember/cartmember.component';
 import { Durgapuja2020Component } from './pages/durgapuja2020/durgapuja2020.component';
+import { OrderTicketsComponent } from './pages/order-tickets/order-tickets.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +95,8 @@ import { Durgapuja2020Component } from './pages/durgapuja2020/durgapuja2020.comp
     RangamanchaComponent,
     NvbatvComponent,
     CartmemberComponent,
-    Durgapuja2020Component
+    Durgapuja2020Component,
+    OrderTicketsComponent
   ],
   imports: [
     BrowserModule,
@@ -115,7 +118,7 @@ import { Durgapuja2020Component } from './pages/durgapuja2020/durgapuja2020.comp
     ToastrModule.forRoot(), // ToastrModule added
     CarouselModule.forRoot()
   ],
-  providers: [AuthService, UserService, UserResolver, AuthGuard], 
+  providers: [AuthService, UserService, UserResolver, AuthGuard, MemberDetailsService], 
   bootstrap: [AppComponent]
 })
 export class AppModule { } 

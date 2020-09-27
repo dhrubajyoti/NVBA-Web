@@ -20,9 +20,10 @@ export class FirebaseUserModel {
   term: string;
   discount_code: string;
   joined: string;
-  exiered: string;
+  expires: string;
   billingFirstname: string;
   billingLastname: string;
+  membershipstatus: string;
 
   constructor(){
     this.id = 0;
@@ -46,10 +47,10 @@ export class FirebaseUserModel {
     this.term = "";
     this.discount_code = "";
     this.joined = "";
-    this.exiered = "";
+    this.expires = "";
     this.billingFirstname = "";
     this.billingLastname = "";
-
+    this.membershipstatus = "";
   }
 }
 
@@ -76,9 +77,10 @@ export class MemberModel {
   term: string;
   discount_code: string;
   joined: string;
-  exiered: string;
+  expires: string;
   billingFirstname: string;
   billingLastname: string;
+  membershipstatus: string;
 
   constructor(){
     this.id = 0;
@@ -102,9 +104,10 @@ export class MemberModel {
     this.term = "";
     this.discount_code = "";
     this.joined = "";
-    this.exiered = "";
+    this.expires = "";
     this.billingFirstname = "";
     this.billingLastname = "";
+    this.membershipstatus = "";
   }
 }
 

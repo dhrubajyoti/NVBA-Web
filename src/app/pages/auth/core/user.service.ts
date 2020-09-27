@@ -16,10 +16,15 @@ export class UserService {
    public db: AngularFirestore,
    public afAuth: AngularFireAuth
  ){
+
+ 
+    
+
  }
 
  updateMember( currentMember: MemberModel ){
     this.member.next(currentMember);
+    console.log('Update Member Call');
  }
 
 
@@ -30,6 +35,7 @@ export class UserService {
           console.log('User Details- coming');
           console.log(user.providerData);
           console.log(user.providerData[0].email);
+          console.log(user);
           resolve(user);
         } else {
           reject('No user logged in');
@@ -38,7 +44,8 @@ export class UserService {
     })
   }
 
-  updateCurrentUser(value){ console.log(value);
+  updateCurrentUser(value){ 
+    console.log(value);
     return new Promise<any>((resolve, reject) => {
       var user = firebase.auth().currentUser;
       user.updateProfile({

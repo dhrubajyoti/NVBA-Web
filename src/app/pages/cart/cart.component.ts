@@ -74,7 +74,7 @@ export class CartComponent implements OnInit, OnChanges, AfterViewChecked {
       if(value.quantity > 0){ //alert(value.quantity);
        
         this.totalCost += (value.price * value.quantity);
-        value.tax = (value.price * value.quantity) * 0.06; 
+        value.tax = (value.price * value.quantity) * 0.00; 
         value.tax = parseFloat(value.tax).toFixed(2);
         this.cs.addToCart(value);
         console.log(value.tax);

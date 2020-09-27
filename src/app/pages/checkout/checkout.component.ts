@@ -4,7 +4,8 @@ import { CartService} from '../../services/cart.service';
 import { MemberDetailsService } from './../../services/member-details.service';
 import { from } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
-
+import { Location} from "@angular/common";
+import { Router } from '@angular/router';
 
 declare let paypal:any;
 
@@ -27,7 +28,9 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
     private cart: CartService, 
     private toastr: ToastrService,
     private ar: ActivatedRoute,
-    private mds: MemberDetailsService
+    private mds: MemberDetailsService,
+    private location: Location,
+    private router: Router
     ) {}
 
   ngOnInit(): void {
@@ -54,6 +57,7 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
       this.userDetails = routeData['data'];
       console.log(this.userDetails);
     });
+
   }
 
   ngAfterViewInit(): void {
@@ -82,11 +86,18 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
     })
   } // End of AddPaypalScript
 
+
   paypalConfig = {
     env: 'sandbox',
     client: {
       sandbox: 'AeLhWUCfC2jHOZv7b-KDfZV6R6Mig-2FklW6iIxsuI0UROww652TU9SlVPHyW1ygMGohQo21TfXUVPrz',
 //      production: 'AVBsfj0Jw-jl5_63BPGwuduCaKDsPvbz1pwyqECm7N5FzKEi1Q_o-xQAiM_BTzQhAW064uAPf1v9uZdS'
+    },
+    style: {
+      shape: 'rect',
+      color: 'gold',
+      layout: 'vertical',
+      label: 'paypal',
     },
     commit: true,
     payment: (data, actions) => {
@@ -102,7 +113,7 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
                   "tax": this.tax
                 }
               },
-              "description": "Kobi Pronam Dinner.", 
+              "description": "NVBA Website Payment.", 
               "item_list": {
                 "items": this.cartCheck
               }  
@@ -116,6 +127,7 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
         //Do something when payment is successful.
         console.log(payment);
         console.log('Payment Done');
+        console.log(this.cartCheck);
         let paymentTrans = {...payment.transactions};
       //  this.userDetails = ( paymentTrans);
       //  let pt = {paymant:""};
@@ -125,15 +137,38 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
         console.log('First Time');
        }
         
-        this.userDetails.payments.push(paymentTrans);
+        this.userDetails.payments.unshift(paymentTrans);
+        // Add Membership Details Start
+        if( payment.transactions[0].item_list.items[0].name == 'NVBA Annual Membership' ){
+           let newdate;
+           if(this.userDetails.expires){
+             newdate = new Date(new Date().setFullYear(new Date(this.userDetails.expires).getFullYear() + 1))
+             alert(newdate);
+           }
+           else{
+            newdate = new Date(new Date().setFullYear(new Date().getFullYear() + 1));
+           }
+           this.userDetails.expires = newdate.toISOString().split('T')[0];
+        } // Add Membership Details End
+          
+        if(!this.userDetails.purchase){
+            this.userDetails.purchase = [];
+            console.log('First Time purchase');
+        }
+        this.userDetails.purchase.unshift(this.cartCheck);
         this.mds.updateCustomer(this.userDetails);
         this.toastr.success('Your payment is successful.');
+        this.userDetails.purchase.unshift(this.cart);
         this.cart.clearCart();
         this.cleanup();
+        this.router.navigate(['/user'])
       })
     }
   };
 
+  goBack(){
+      this.location.back();
+  }
 
   cleanup(){
     this.cartCheck = [];

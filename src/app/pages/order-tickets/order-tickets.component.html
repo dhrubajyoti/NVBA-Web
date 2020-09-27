@@ -1,0 +1,56 @@
+
+<section id="durgapuja2020" class="main-pages noScrollXaxis"  >
+    <div class="container">
+        <div class="topLineFix"></div>   
+      <div class="section-header">
+        <h2>Book your Tickets for Durga Puja 2020</h2>
+        <h3 style="text-align: center;">Designed to be enjoyed from the comfort of your home in your living/family room
+        </h3>
+
+        
+
+
+
+      </div>
+
+
+      <div *ngIf="this.member.membershipstatus == 'Valid'; then thenBlock else elseBlock"></div>
+      <ng-template #thenBlock>
+
+
+        <div class="d-flex  justify-content-center mb-4 mt-4">
+            <div class="flex-column col-lg-6">
+                <div><span class="red">*</span> Please see the below:</div>
+                <ul  style="margin: 0 auto;"> 
+                    <li>
+                        Food is available for purchase for NVBA Members Only.
+                    </li>
+                    <li>
+                        Food orders must by placed by October 18th 11:59 PM EST.
+                    </li>
+                    <li>
+                        Food will be provided by the restaurant in Pre-packaged container. NVBA is not responsible for cooking or packing of the food.
+                    </li>
+                    <li>
+                        Members ordering food should pick up their orders by showing their proof of purchase between 4 – 6 PM on October 24th and October 25th from their nearest pickup location which will be announced soon.
+                    </li>
+                    <!-- <li>
+                        Food order may be cancelled and your money will be refunded if the number of orders are less than 20.
+                    </li>
+                    <li>
+                        Food order may close if the number of deliver addresses is 50.
+                    </li>
+                    <li>
+                        Due to logistics challenges, food can be delivered only at the below city and zip code combinations:
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+        <app-cart></app-cart>
+      </ng-template>
+      <ng-template #elseBlock>
+        <app-cartmember></app-cartmember>
+      </ng-template>
+        
+    </div>    
+</section>
