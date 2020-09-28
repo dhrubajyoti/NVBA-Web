@@ -34,28 +34,28 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
     ) {}
 
   ngOnInit(): void {
-    this.cart.currentCart.subscribe( cartCheck => this.cartCheck = cartCheck)
-    console.log(this.cartCheck);
+    this.cart.currentCart.subscribe( cartCheck => this.cartCheck = cartCheck);
+  //  console.log(this.cartCheck);
     [...this.cartCheck].forEach(value => {
-      console.log(value.quantity);
-      console.log(value);
+      // console.log(value.quantity);
+      // console.log(value);
       if(value.quantity){
        this.subtotal += (value.price * value.quantity);
        this.tax =  + parseFloat(value.tax).toFixed(2);
        this.emptyCart = false;
-       console.log('this.emptyCart');
-       console.log(this.emptyCart);
+      //  console.log('this.emptyCart');
+      //  console.log(this.emptyCart);
      } 
     });
-    console.log('Total');
-    console.log(this.subtotal);
-    console.log(this.tax);
-    console.log('this.cartCheck');
-    console.log(this.cartCheck);
+    // console.log('Total');
+    // console.log(this.subtotal);
+    // console.log(this.tax);
+    // console.log('this.cartCheck');
+    // console.log(this.cartCheck);
 
     this.ar.data.subscribe(routeData => {
       this.userDetails = routeData['data'];
-      console.log(this.userDetails);
+   //   console.log(this.userDetails);
     });
 
   }
@@ -67,7 +67,7 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
         this.addPaypalScript().then(() => {
           paypal.Button.render(this.paypalConfig, '#paypal-button-container');
           this.paypalLoad = false;
-          console.log(this.paypalConfig);  
+      //    console.log(this.paypalConfig);  
         })
       }
     }
@@ -125,16 +125,16 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
     onAuthorize: (data, actions) => {
       return actions.payment.execute().then((payment) => {
         //Do something when payment is successful.
-        console.log(payment);
-        console.log('Payment Done');
-        console.log(this.cartCheck);
+        // console.log(payment);
+        // console.log('Payment Done');
+        // console.log(this.cartCheck);
         let paymentTrans = {...payment};
       //  this.userDetails = ( paymentTrans);
       //  let pt = {paymant:""};
      //   let v = { ...this.userDetails, ...pt } 
        if(!this.userDetails.payments){
         this.userDetails.payments = [];
-        console.log('First Time');
+      //  console.log('First Time');
        }
         
         this.userDetails.payments.unshift(paymentTrans);
@@ -153,7 +153,7 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
           
         if(!this.userDetails.purchase){
             this.userDetails.purchase = [];
-            console.log('First Time purchase');
+         //   console.log('First Time purchase');
         }
         this.userDetails.purchase.unshift(this.cartCheck);
         this.mds.updateCustomer(this.userDetails);

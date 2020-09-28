@@ -23,11 +23,11 @@ export class MemberDetailsService {
   }
 
   updateCustomer(user: any): void {
-    console.log(user);
+    // console.log(user);
     this.fdb.object('/Members/' + user.id).update({ ...user }).catch(error => {
       console.log(error);
     }).then( c => {
-      console.log("success Update");
+    //  console.log("success Update");
     });
   }
 

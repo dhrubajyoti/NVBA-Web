@@ -70,9 +70,9 @@ export class UserComponent implements OnInit{
   ngOnInit(): void {
    this.userService.cast.subscribe( m => {
       this.member = m;
-      console.log(this.member);
+    //  console.log(this.member);
       this.lastOrder = this.member.purchase? true : false ;
-      console.log(this.lastOrder);
+    //  console.log(this.lastOrder);
       this.createForm(this.member.id, this.member.firstname, this.member.lastname,this.member.photoURL, this.member.address1, this.member.address2, this.member.city, this.member.state, this.member.country, this.member.zipcode );
    }) ;
 
@@ -204,12 +204,12 @@ export class UserComponent implements OnInit{
 
   onSubmit(){
     this.saveBtn = false;
-    console.log(this.newUserCheck);
+ //   console.log(this.newUserCheck);
     
   //  this.memberDetails.updateCustomer(this.profileForm);
-    console.log(this.profileForm);
+//   console.log(this.profileForm);
     let v = {...this.member, ...this.profileForm.value };
-    console.log(v);
+//    console.log(v);
     if(this.newUserCheck){
       this.memberDetails.createCustomer(v);
     }
@@ -220,7 +220,7 @@ export class UserComponent implements OnInit{
   }
 
   save(value){ 
-    console.log(value);
+ //   console.log(value);
     this.userService.updateCurrentUser(value)
     .then(res => {
       console.log(res);

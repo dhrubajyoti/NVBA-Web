@@ -84,11 +84,13 @@ export class AuthService {
     });
   }
 
-  doForgetPassword(value){ console.log(value);
+  doForgetPassword(value){ // console.log(value);
     
       return new Promise((resolve, reject) => {
         firebase.auth().sendPasswordResetEmail(value.email)
-        .then(res => {console.log("email sent"); resolve(res);})
+        .then(res => {
+          console.log("email sent"); 
+          resolve(res);})
         .catch((error) => {console.log(error); reject(error); })
       });
     

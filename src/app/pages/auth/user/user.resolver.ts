@@ -22,15 +22,15 @@ export class UserResolver implements Resolve<FirebaseUserModel> {
 
     return new Promise((resolve, reject) => {
       this.userService.getCurrentUser()
-      .then(res => { console.log('res');
-          console.log(res);
+      .then(res => { // console.log('res');
+        //  console.log(res);
           user.photoURL = res.photoURL;
           user.displayName = res.displayName;
           user.provider = res.providerData[0].providerId;
           user.email = res.email;
 
               this.mds.allMembersDetails().subscribe(d => { 
-                console.log(d);
+           //     console.log(d);
                 d.forEach( (e, index) => {
               //    console.log(index);
                      if( e.email === user.email)
@@ -57,7 +57,7 @@ export class UserResolver implements Resolve<FirebaseUserModel> {
                 // update all user
                 this.userService.updateMember(user);
                
-                console.log(user);
+           //     console.log(user);
                 return resolve(user);
               });
         

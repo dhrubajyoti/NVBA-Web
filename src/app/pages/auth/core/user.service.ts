@@ -33,9 +33,9 @@ export class UserService {
       var user = firebase.auth().onAuthStateChanged(function(user){
         if (user) {
           console.log('User Details- coming');
-          console.log(user.providerData);
-          console.log(user.providerData[0].email);
-          console.log(user);
+     //     console.log(user.providerData);
+     //     console.log(user.providerData[0].email);
+     //     console.log(user);
           resolve(user);
         } else {
           reject('No user logged in');
@@ -45,7 +45,7 @@ export class UserService {
   }
 
   updateCurrentUser(value){ 
-    console.log(value);
+ //   console.log(value);
     return new Promise<any>((resolve, reject) => {
       var user = firebase.auth().currentUser;
       user.updateProfile({

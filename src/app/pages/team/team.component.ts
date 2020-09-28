@@ -14,7 +14,7 @@ export class TeamComponent implements OnInit {
 private _jsonURL = '/assets/data/ecm.json';
  constructor(private http: HttpClient) {
    this.getJSON().subscribe(data => {
-    console.log(data);
+    // console.log(data);
     this.dataObject = data;
    });
  }

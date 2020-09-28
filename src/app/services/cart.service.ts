@@ -19,7 +19,7 @@ export class CartService {
   //   this.cartvalue.next(prod);
   // }
 
-  addToCart(product) { console.log(product);
+  addToCart(product) { // console.log(product);
 
     // this.items.forEach( (item, index) => {
     //   if(item.category === product.category) this.items.splice(index,1);
@@ -35,7 +35,7 @@ export class CartService {
 
   clearCart() {
     this.items = [];
-    console.log(" Clean Cart "+this.items);
+  //  console.log(" Clean Cart "+this.items);
     return this.items;
   }
 

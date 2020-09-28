@@ -48,25 +48,25 @@ export class CartmemberComponent implements OnInit {
   ngOnInit(): void {
     this.userService.cast.subscribe( m => {
       this.member = m;
-      console.log('this.member page');
-      console.log(this.member);
+    //  console.log('this.member page');
+    //  console.log(this.member);
       if(this.member.expires){
       this.parts =this.member.expires.split('-');
       var mydate = new Date(this.parts[0], this.parts[1] - 1, this.parts[2]); 
       this.expired = mydate;
-      console.log(mydate);
+    //  console.log(mydate);
       this.expired = new Date(this.expired); 
       this.currentDate =  new Date(this.expired) <= new Date() ? 'Expire': 'Valid';
       this.member.membershipstatus = this.currentDate;
       this.userService.updateCurrentUser(this.member)
         .then(res => {
-          console.log(res);
+    //      console.log(res);
         }, err => console.log(err))
       this.expired = this.expired.toDateString();
       }  
-      console.log(this.member.expires);
-      console.log(this.expired);
-      console.log(this.currentDate);
+      // console.log(this.member.expires);
+      // console.log(this.expired);
+      // console.log(this.currentDate);
    }) ;
   }
 

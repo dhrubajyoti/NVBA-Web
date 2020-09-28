@@ -23,7 +23,7 @@ export class CartComponent implements OnInit, OnChanges, AfterViewChecked {
    constructor(private http: HttpClient, private cs: CartService, public router: Router, private cdr: ChangeDetectorRef) {
     this.cs.currentCart.subscribe( cartCheck => this.cartCheck = cartCheck);
     this.getJSON().subscribe(data => {
-      console.log(data);
+   //   console.log(data);
       this.dataObject = data;
       this.checkData();
      });
@@ -46,8 +46,8 @@ export class CartComponent implements OnInit, OnChanges, AfterViewChecked {
       });
        
     });
-    console.log('this.dataObject - Check data');
-    console.log(this.dataObject);
+ //   console.log('this.dataObject - Check data');
+ //   console.log(this.dataObject);
    }
 
   
@@ -69,15 +69,15 @@ export class CartComponent implements OnInit, OnChanges, AfterViewChecked {
   addToCartobj(){
     this.cs.items = [];
     [...this.dataObject].forEach(value => {
-      console.log(value.quantity);
-      console.log(value);
+  //    console.log(value.quantity);
+  //    console.log(value);
       if(value.quantity > 0){ //alert(value.quantity);
        
         this.totalCost += (value.price * value.quantity);
         value.tax = (value.price * value.quantity) * 0.00; 
         value.tax = parseFloat(value.tax).toFixed(2);
         this.cs.addToCart(value);
-        console.log(value.tax);
+      //  console.log(value.tax);
      //   this.checkObject.push(value);
      } 
     });

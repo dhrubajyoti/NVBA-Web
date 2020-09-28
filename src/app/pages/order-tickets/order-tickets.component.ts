@@ -11,7 +11,7 @@ export class OrderTicketsComponent implements OnInit {
   constructor(public userService: UserService){
     this.userService.cast.subscribe( m => {
         this.member = m;
-        console.log(this.member);
+      //  console.log(this.member);
     });
    }
 

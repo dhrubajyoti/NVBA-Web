@@ -24,9 +24,9 @@ export class HeaderComponent implements OnInit, OnChanges {
 
   ngOnInit(){
     this.userService.cast.subscribe( cast => this.member = cast);
-    console.log(this.member.email);
+   // console.log(this.member.email);
     if(this.member.email){
-      console.log(this.member.email); 
+   //   console.log(this.member.email); 
     }
   }
 
