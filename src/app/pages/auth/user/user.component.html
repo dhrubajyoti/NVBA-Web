@@ -10,13 +10,13 @@
       <!-- Header container -->
       <div class="container d-flex align-items-center">
         <div class="row">
-          <div class="col-lg-7 col-md-10">
+          <div class="col-lg-7 col-md-8">
             <h1 class="display-2 text-white">Hello {{member.displayName?member.displayName:"Guest"}}</h1>
             <p *ngIf="member.membershipstatus == 'Valid'" class="text-white mt-0 mb-5">Thanks for being part of the NVBA family. This is your account's profile page. You can see the membership details along with various updates.</p>
             <app-cartmember></app-cartmember>
             <!-- <a href=" " class="btn btn-primary">Edit profile</a> -->
           </div>
-          <div class="col-lg-5 col-md-2">
+          <div class="col-lg-5 col-md-4">
             <button routerLink="/durgapuja2020" class="btn btn-block btn-primary" > Durgapuja 2020</button>
             <button routerLink="/ordertickets" class="btn btn-block btn-primary" style="background-color: #ff8d00; "  > Order Your Food</button>
           </div>
@@ -89,7 +89,7 @@
         <div class="col-xl-8 order-xl-1">
           <div class="card bg-secondary shadow">
 
-          <div *ngIf="member.purchase[0]">
+          <div *ngIf="lastOrder"> 
             <div class="card-header bg-white border-0">
               <div class="row align-items-center">
                 <div class="col-8">

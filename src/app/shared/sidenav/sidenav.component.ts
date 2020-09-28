@@ -14,7 +14,7 @@ export class SidenavComponent implements OnInit {
   }
 
   close(){
-    alert('clo');
+   //  alert('clo');
     this.child.toggle();
     this.child.yourChild.toggle();
   }

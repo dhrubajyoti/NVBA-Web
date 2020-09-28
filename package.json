@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "buildp": "ng build --base-href /nvbaweb/ --deploy-url /nvbaweb/",
-    "buildunder": "ng build --prod --base-href /nvbaweb/"
+    "buildunder": "ng build --prod --base-href /nvbaweb/",
+    "withoutCache": "ng build --prod --base-href /nvbaweb/ --output-hashing=all"
   },
   "private": true,
   "dependencies": {

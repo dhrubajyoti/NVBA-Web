@@ -128,7 +128,7 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
         console.log(payment);
         console.log('Payment Done');
         console.log(this.cartCheck);
-        let paymentTrans = {...payment.transactions};
+        let paymentTrans = {...payment};
       //  this.userDetails = ( paymentTrans);
       //  let pt = {paymant:""};
      //   let v = { ...this.userDetails, ...pt } 
@@ -143,7 +143,7 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
            let newdate;
            if(this.userDetails.expires){
              newdate = new Date(new Date().setFullYear(new Date(this.userDetails.expires).getFullYear() + 1))
-             alert(newdate);
+            //  alert(newdate);
            }
            else{
             newdate = new Date(new Date().setFullYear(new Date().getFullYear() + 1));
