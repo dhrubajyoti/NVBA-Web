@@ -64,6 +64,7 @@ import { NvbatvComponent } from './pages/nvbatv/nvbatv.component';
 import { CartmemberComponent } from './pages/cartmember/cartmember.component';
 import { Durgapuja2020Component } from './pages/durgapuja2020/durgapuja2020.component';
 import { OrderTicketsComponent } from './pages/order-tickets/order-tickets.component';
+import { AllrecordsComponent } from './pages/allrecords/allrecords.component';
 
 @NgModule({
   declarations: [
@@ -96,7 +97,8 @@ import { OrderTicketsComponent } from './pages/order-tickets/order-tickets.compo
     NvbatvComponent,
     CartmemberComponent,
     Durgapuja2020Component,
-    OrderTicketsComponent
+    OrderTicketsComponent,
+    AllrecordsComponent
   ],
   imports: [
     BrowserModule,

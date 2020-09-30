@@ -54,7 +54,7 @@ export class LoginComponent {
   tryGoogleLogin(){
     this.authService.doGoogleLogin()
     .then(res => {
-      this.router.navigate(['/user']);
+      this.router.navigate(['/home']);
     })
   }
 
@@ -62,7 +62,7 @@ export class LoginComponent {
     this.authService.doLogin(value)
     .then(res => {
    //   console.log(value);
-      this.router.navigate(['/user']);
+      this.router.navigate(['/home']);
       this.toastr.success(value.email, 'Login Successfully');
     }, err => {
       console.log(err);

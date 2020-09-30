@@ -1,7 +1,7 @@
 [
     {
       "name": "Saturday Adult Non-Veg",
-      "description": "Adult Non-Veg ( Chicken Cutlet, Peas Pulao, Chicken Rejala, Chum Chum )",
+      "description": "Non-Veg ( Chicken Cutlet, Peas Pulao, Chicken Rezala, Chum Chum )",
       "quantity": 0,
       "price": 12.50,
       "tax": 0.00,
@@ -10,7 +10,7 @@
     },
     {
         "name": "Saturday Adult Veg",
-        "description": "Adult Veg ( Veg Cutlet, Peas Pulao, Paneer Jalfrezi, Chum Chum )",
+        "description": "Veg ( Veg Cutlet, Peas Pulao, Paneer Jalfrezi, Chum Chum )",
         "quantity": 0,
         "price": 10.50,
         "tax": 0.00,
@@ -19,7 +19,7 @@
     },
     {
         "name": "Saturday Kids Non-Veg",
-        "description": "Kids Non-Veg ( Pulao Rice, Chicken [2PC] )",
+        "description": "Kids Meal ( Pulao Rice, Chicken [2PC] )",
         "quantity": 0,
         "price": 7.50,
         "tax": 0.00,
@@ -28,7 +28,7 @@
     },
     {
         "name": "Sunday Adult Non-Veg",
-        "description": "Adult Non-Veg ( Vegitable Chop, Goat Kacchi Biryani, Balusai )",
+        "description": "Non-Veg ( Veg Chop, Goat Kacchi Biryani, Balushahi )",
         "quantity": 0,
         "price": 14.50,
         "tax": 0.00,
@@ -37,7 +37,7 @@
       },
       {
           "name": "Sunday Adult Veg",
-          "description": "Adult Veg ( Vegitable Chop, Veg Paneer Biryani, Balusai )",
+          "description": "Veg ( Veg Chop, Veg Paneer Biryani, Balushahi )",
           "quantity": 0,
           "price": 11,
           "tax": 0.00,
@@ -46,7 +46,7 @@
       },
       {
           "name": "Sunday Kids Non-Veg",
-          "description": "Kids Non-Veg ( Rice, Butter Chicken )",
+          "description": "Kids Meal ( Rice, Butter Chicken )",
           "quantity": 0,
           "price": 7.50,
           "tax": 0.00,

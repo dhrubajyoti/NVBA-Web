@@ -28,6 +28,7 @@ import { AuthGuard } from './pages/auth/core/auth.guard';
 import { EmailarchiveComponent } from './pages/emailarchive/emailarchive.component';
 import { CheckoutComponent} from './pages/checkout/checkout.component';
 import { OrderTicketsComponent } from './pages/order-tickets/order-tickets.component';
+import { AllrecordsComponent } from './pages/allrecords/allrecords.component';
 import { from } from 'rxjs';
 
 
@@ -59,6 +60,8 @@ const routes: Routes = [
   { path: "user", component: UserComponent,  resolve: { data: UserResolver},  data: { animation: 'isRight' }},
   { path: "checkout", component: CheckoutComponent, resolve: { data: UserResolver}, pathMatch: 'full', data: { animation: 'isRight' }},
   { path: "ordertickets", component: OrderTicketsComponent, resolve: { data: UserResolver}, pathMatch: 'full', data: { animation: 'isRight' }},
+
+  { path: "allrecords", component: AllrecordsComponent, pathMatch: 'full', data: { animation: 'isRight' }},
   
 ];
 

@@ -39,7 +39,7 @@ export class UserResolver implements Resolve<FirebaseUserModel> {
                           user = { ...user, ...e};
                           user.displayName = user.firstname +' '+user.lastname;
                           user.id = index;
-                          console.log(user);
+                    //      console.log(user);
                     //        this.member = this.user;
                     //        console.log(this.member);
                     //        this.userService.updateMember(this.user);

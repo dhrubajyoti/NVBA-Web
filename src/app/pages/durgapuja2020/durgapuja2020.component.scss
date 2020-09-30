@@ -11,4 +11,24 @@
     border-radius: 5px;
     transition: 0.5s;
     margin: 0 20px 20px 0;
+    cursor: pointer;
 }
+
+@media (min-width: 576px) {
+    .dp {
+        max-height: 360px ;
+    }
+    .food{
+        max-height: 270px;;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .dp {
+        max-height: 300px ;
+    }
+    .food{
+        max-height: 180px;
+    }
+  }
+
