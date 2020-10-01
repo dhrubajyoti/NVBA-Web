@@ -23,6 +23,7 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
   emptyCart: boolean = true;
 
   userDetails: any;
+  move:boolean = false;
 
   constructor( 
     private cart: CartService, 
@@ -125,44 +126,58 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
     },
     onAuthorize: (data, actions) => {
       return actions.payment.execute().then((payment) => {
-        //Do something when payment is successful.
-        // console.log(payment);
-        // console.log('Payment Done');
-        // console.log(this.cartCheck);
-        let paymentTrans = {...payment};
-      //  this.userDetails = ( paymentTrans);
-      //  let pt = {paymant:""};
-     //   let v = { ...this.userDetails, ...pt } 
-       if(!this.userDetails.payments){
-        this.userDetails.payments = [];
-      //  console.log('First Time');
-       }
         
-        this.userDetails.payments.unshift(paymentTrans);
-        // Add Membership Details Start
-        if( payment.transactions[0].item_list.items[0].name == 'NVBA Annual Membership' ){
-           let newdate;
-           if(this.userDetails.expires){
-             newdate = new Date(new Date().setFullYear(new Date(this.userDetails.expires).getFullYear() + 1))
-            //  alert(newdate);
-           }
-           else{
-            newdate = new Date(new Date().setFullYear(new Date().getFullYear() + 1));
-           }
-           this.userDetails.expires = newdate.toISOString().split('T')[0];
-        } // Add Membership Details End
+        //Do something when payment is successful.
+         console.log(payment);
+         console.log(this.userDetails);
+         this.mds.addPayments(payment) ;
+    //     // console.log('Payment Done');
+    //     // console.log(this.cartCheck);
+    //     let paymentTrans = {...payment};
+    //   //  this.userDetails = ( paymentTrans);
+    //     let pt = {paymant:""};
+    //  //   let v = { ...this.userDetails, ...pt } 
+    //   //  if(!this.userDetails.payments){
+    //   //   this.userDetails.payments = [];
+    //   // //  console.log('First Time');
+    //   //  }
+    //     if(this.userDetails){
+    //     this.userDetails.payments.unshift(paymentTrans);
+    //     }
+    //     // Add Membership Details Start
+    //     if( payment.transactions[0].item_list.items[0].name == 'NVBA Annual Membership' ){
+    //        let newdate;
+    //        if(this.userDetails.expires){
+    //          newdate = new Date(new Date().setFullYear(new Date(this.userDetails.expires).getFullYear() + 1))
+    //         //  alert(newdate);
+    //        }
+    //        else{
+    //         newdate = new Date(new Date().setFullYear(new Date().getFullYear() + 1));
+    //        }
+    //        this.userDetails.expires = newdate.toISOString().split('T')[0];
+    //     } // Add Membership Details End
           
-        if(!this.userDetails.purchase){
-            this.userDetails.purchase = [];
-         //   console.log('First Time purchase');
-        }
-        this.userDetails.purchase.unshift(this.cartCheck);
-        this.mds.updateCustomer(this.userDetails);
+    //     // if(!this.userDetails.purchase){
+    //     //     this.userDetails.purchase = [];
+    //     //  //   console.log('First Time purchase');
+    //     // }
+
+    //     if(this.userDetails){
+    //       this.userDetails.purchase.unshift(this.cartCheck);
+    //       this.mds.updateCustomer(this.userDetails);
+    //       this.userDetails.purchase.unshift(this.cart);
+    //     }
+        
         this.toastr.success('Your payment is successful.');
-        this.userDetails.purchase.unshift(this.cart);
-        this.cart.clearCart();
-        this.cleanup();
-        this.router.navigate(['/user'])
+        
+        
+     
+          this.cart.clearCart();
+          this.cleanup();
+          this.router.navigate(['/durgapuja2020']);
+      
+          
+
       })
     }
   };

@@ -7,24 +7,21 @@
         <h3 style="text-align: center;">Designed to be enjoyed from the comfort of your home in your living/family room
         </h3>
 
-        
-
-
 
       </div>
 
 
-      <div *ngIf="this.member.membershipstatus == 'Valid'; then thenBlock else elseBlock"></div>
-      <ng-template #thenBlock>
+      <!-- <div *ngIf="this.member.membershipstatus == 'Valid'; then thenBlock else elseBlock"></div>
+      <ng-template #thenBlock> -->
 
 
         <div class="d-flex  justify-content-center mb-4 mt-4">
             <div class="flex-column col-lg-6">
                 <div style="font-weight: bold;" ><span class="red">*</span><b>Guidelines:</b></div>
                 <ul  style="margin: 0 auto;"> 
-                    <li>
+                    <!-- <li>
                         Food is available for purchase for NVBA Members only.
-                    </li>
+                    </li> -->
                     <li>
                         Food orders must by placed by October 18th 11:59 PM EST.
                     </li>
@@ -47,10 +44,7 @@
             </div>
         </div>
         <app-cart></app-cart>
-      </ng-template>
-      <ng-template #elseBlock>
-        <app-cartmember></app-cartmember>
-      </ng-template>
+  
         
     </div>    
 </section>

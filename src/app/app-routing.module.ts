@@ -58,8 +58,8 @@ const routes: Routes = [
   { path: "register", component: RegisterComponent, canActivate: [AuthGuard], data: { animation: 'isRight' } },
   { path: "forgetpassword", component: ForgetpasswordComponent, pathMatch: 'full', data: { animation: 'isRight' }},
   { path: "user", component: UserComponent,  resolve: { data: UserResolver},  data: { animation: 'isRight' }},
-  { path: "checkout", component: CheckoutComponent, resolve: { data: UserResolver}, pathMatch: 'full', data: { animation: 'isRight' }},
-  { path: "ordertickets", component: OrderTicketsComponent, resolve: { data: UserResolver}, pathMatch: 'full', data: { animation: 'isRight' }},
+  { path: "checkout", component: CheckoutComponent,  pathMatch: 'full', data: { animation: 'isRight' }},
+  { path: "orderfood", component: OrderTicketsComponent,  pathMatch: 'full', data: { animation: 'isRight' }},
 
   { path: "allrecords", component: AllrecordsComponent, pathMatch: 'full', data: { animation: 'isRight' }},
   
