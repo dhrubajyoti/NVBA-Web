@@ -14,6 +14,19 @@
     cursor: pointer;
 }
 
+.marginCenter{
+    margin: 0 auto;
+}
+
+table .bold{
+    color: #000;
+    opacity: 1;
+}
+
+p {
+    text-indent: 30px;
+}
+
 @media (min-width: 576px) {
     .dp {
         max-height: 360px ;
