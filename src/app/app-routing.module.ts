@@ -57,7 +57,7 @@ const routes: Routes = [
   { path: "login", component: LoginComponent, canActivate: [AuthGuard]  },
   { path: "register", component: RegisterComponent, canActivate: [AuthGuard]  },
   { path: "forgetpassword", component: ForgetpasswordComponent, pathMatch: 'full' },
-  { path: "user", component: UserComponent,  resolve: { data: UserResolver},  data: { animation: 'isRight' }},
+  { path: "user", component: UserComponent,  resolve: { data: UserResolver} },
   { path: "checkout", component: CheckoutComponent,  pathMatch: 'full' },
   { path: "orderfood", component: OrderTicketsComponent,  pathMatch: 'full' },
 

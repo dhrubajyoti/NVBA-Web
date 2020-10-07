@@ -15,12 +15,7 @@ export class UserService {
   constructor(
    public db: AngularFirestore,
    public afAuth: AngularFireAuth
- ){
-
- 
-    
-
- }
+ ){ }
 
  updateMember( currentMember: MemberModel ){
     this.member.next(currentMember);

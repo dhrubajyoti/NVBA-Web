@@ -43,7 +43,17 @@ export class ForgetpasswordComponent  {
        this.router.navigate(['/login']);
      }, err => {
     //   console.log(err);
-       this.errorMessage = err.message;
+    if(err.code == 'auth/user-not-found')
+        this.errorMessage = "Sorry, We not able to find your email in our record. Please check Or try different email address.";
+
+      if(err.code == 'auth/wrong-password')
+      this.errorMessage = "You might trying wrong password. Please try again. If not able to recall your password. Click Forgot your password.";
+    //  this.errorMessage = err.message;
+
+      if(err.code == 'auth/invalid-email')
+      this.errorMessage = err.message;
+
+
        this.successMessage = "";
      })
    }

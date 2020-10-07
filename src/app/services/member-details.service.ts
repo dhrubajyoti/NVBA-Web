@@ -59,7 +59,7 @@ export class MemberDetailsService {
       let id = p.length;
       console.log(id);
       console.log(id+1);
-      this.payId = id+1 ;
+      this.payId = id ;
     });
 
     this.fdb.object('/PaypalPayments/'+  this.payId ).set({ pay }).catch(error => {

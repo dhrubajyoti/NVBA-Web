@@ -70,7 +70,7 @@ export class UserComponent implements OnInit{
   ngOnInit(): void {
    this.userService.cast.subscribe( m => {
       this.member = m;
-    //  console.log(this.member);
+      console.log(this.member);
       this.lastOrder = this.member.purchase? true : false ;
     //  console.log(this.lastOrder);
       this.createForm(this.member.id, this.member.firstname, this.member.lastname,this.member.photoURL, this.member.address1, this.member.address2, this.member.city, this.member.state, this.member.country, this.member.zipcode );

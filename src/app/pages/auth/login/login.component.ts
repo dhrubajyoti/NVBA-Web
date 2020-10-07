@@ -66,8 +66,18 @@ export class LoginComponent {
       this.toastr.success(value.email, 'Login Successfully');
     }, err => {
       console.log(err);
+      if(err.code == 'auth/user-not-found')
+        this.errorMessage = "Sorry, We not able to find your email in our record. Please check or try different email for login.";
+
+      if(err.code == 'auth/wrong-password')
+      this.errorMessage = "You might trying wrong password. Please try again. If not able to recall your password. Click Forgot your password.";
+    //  this.errorMessage = err.message;
+
+      if(err.code == 'auth/invalid-email')
       this.errorMessage = err.message;
-      this.toastr.error(err.message, 'Login Error');
+
+
+      this.toastr.error(this.errorMessage, 'Login Error');
     })
   }
 }
