@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve", 
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -27,6 +27,8 @@
     "@angular/router": "~10.0.2",
     "@angular/service-worker": "~10.0.2",
     "@material/drawer": "^4.0.0",
+    "ag-grid-angular": "^24.0.0",
+    "ag-grid-community": "^24.0.0",
     "bootstrap": "^4.5.0",
     "firebase": "^7.15.4",
     "jquery": "^3.5.1",

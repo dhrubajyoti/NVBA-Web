@@ -67,7 +67,7 @@ export class LoginComponent {
     }, err => {
       console.log(err);
       if(err.code == 'auth/user-not-found')
-        this.errorMessage = "Sorry, We not able to find your email in our record. Please check or try different email for login.";
+        this.errorMessage = "Sorry, We not able to find your email in our records. Please check or try different email for login.";
 
       if(err.code == 'auth/wrong-password')
       this.errorMessage = "You might trying wrong password. Please try again. If not able to recall your password. Click Forgot your password.";

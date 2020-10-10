@@ -64,7 +64,9 @@ import { NvbatvComponent } from './pages/nvbatv/nvbatv.component';
 import { CartmemberComponent } from './pages/cartmember/cartmember.component';
 import { Durgapuja2020Component } from './pages/durgapuja2020/durgapuja2020.component';
 import { OrderTicketsComponent } from './pages/order-tickets/order-tickets.component';
-import { AllrecordsComponent } from './pages/allrecords/allrecords.component';
+import { ReportsComponent } from './pages/ec/reports/reports.component';
+
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -98,7 +100,7 @@ import { AllrecordsComponent } from './pages/allrecords/allrecords.component';
     CartmemberComponent,
     Durgapuja2020Component,
     OrderTicketsComponent,
-    AllrecordsComponent
+    ReportsComponent
   ],
   imports: [
     BrowserModule,
@@ -118,7 +120,8 @@ import { AllrecordsComponent } from './pages/allrecords/allrecords.component';
     FormsModule,
     CommonModule,
     ToastrModule.forRoot(), // ToastrModule added
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    AgGridModule.withComponents([])
   ],
   providers: [AuthService, UserService, UserResolver, AuthGuard, MemberDetailsService], 
   bootstrap: [AppComponent]

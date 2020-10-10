@@ -28,7 +28,7 @@ import { AuthGuard } from './pages/auth/core/auth.guard';
 import { EmailarchiveComponent } from './pages/emailarchive/emailarchive.component';
 import { CheckoutComponent} from './pages/checkout/checkout.component';
 import { OrderTicketsComponent } from './pages/order-tickets/order-tickets.component';
-import { AllrecordsComponent } from './pages/allrecords/allrecords.component';
+import { ReportsComponent } from './pages/ec/reports/reports.component';
 import { from } from 'rxjs';
 
 
@@ -61,7 +61,7 @@ const routes: Routes = [
   { path: "checkout", component: CheckoutComponent,  pathMatch: 'full' },
   { path: "orderfood", component: OrderTicketsComponent,  pathMatch: 'full' },
 
-  { path: "allrecords", component: AllrecordsComponent, pathMatch: 'full' },
+  { path: "reports", component: ReportsComponent,  pathMatch: 'full' },
   
 ];
 
