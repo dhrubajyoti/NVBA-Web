@@ -71,7 +71,10 @@ export class LoginComponent {
 
       if(err.code == 'auth/wrong-password')
       this.errorMessage = "You might trying wrong password. Please try again. If not able to recall your password. Click Forgot your password.";
-    //  this.errorMessage = err.message;
+    //  this.errorMessage = err.message; auth/user-disabled
+
+      if(err.code == 'auth/user-disabled')
+      this.errorMessage = "Sorry, Please try different email for login. The user account has been disabled by an administrator.";
 
       if(err.code == 'auth/invalid-email')
       this.errorMessage = err.message;
