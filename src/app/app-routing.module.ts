@@ -29,11 +29,12 @@ import { EmailarchiveComponent } from './pages/emailarchive/emailarchive.compone
 import { CheckoutComponent} from './pages/checkout/checkout.component';
 import { OrderTicketsComponent } from './pages/order-tickets/order-tickets.component';
 import { ReportsComponent } from './pages/ec/reports/reports.component';
+import { ResetpasswordComponent } from './pages/auth/resetpassword/resetpassword.component';
 import { from } from 'rxjs';
 
 
 const routes: Routes = [
-  { path: "", component: HomeComponent, pathMatch: 'full' }, 
+  { path: "", component: Durgapuja2020Component, pathMatch: 'full' }, 
   { path: "home", component: HomeComponent },
   { path: "about", component: AboutComponent, pathMatch: 'full'  },
   { path: "contactus", component: ContactusComponent, pathMatch: 'full'  },
@@ -58,6 +59,7 @@ const routes: Routes = [
   { path: "register", component: RegisterComponent, canActivate: [AuthGuard]  },
   { path: "forgetpassword", component: ForgetpasswordComponent, pathMatch: 'full' },
   { path: "user", component: UserComponent,  resolve: { data: UserResolver} },
+  { path: "resetpassword", component: ResetpasswordComponent, pathMatch: 'full' },
   { path: "checkout", component: CheckoutComponent,  pathMatch: 'full' },
   { path: "orderfood", component: OrderTicketsComponent,  pathMatch: 'full' },
 

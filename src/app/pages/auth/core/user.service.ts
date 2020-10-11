@@ -51,4 +51,23 @@ export class UserService {
       }, err => reject(err))
     })
   }
+
+   verifyPasswordResetCode(code){
+     console.log(code);
+     let em = firebase.auth().verifyPasswordResetCode(code)
+      .then(function(email) {
+        // Display a "new password" form with the user's email address
+        console.log('vaid');
+        return email ;
+      })
+      .catch(function() {
+        // Invalid code
+        console.log('expired');
+        return 'expired';
+      });
+
+      return em;
+  }
+
+
 }

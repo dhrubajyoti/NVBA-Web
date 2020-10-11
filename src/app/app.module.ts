@@ -67,6 +67,7 @@ import { OrderTicketsComponent } from './pages/order-tickets/order-tickets.compo
 import { ReportsComponent } from './pages/ec/reports/reports.component';
 
 import { AgGridModule } from 'ag-grid-angular';
+import { ResetpasswordComponent } from './pages/auth/resetpassword/resetpassword.component';
 
 @NgModule({
   declarations: [
@@ -100,7 +101,8 @@ import { AgGridModule } from 'ag-grid-angular';
     CartmemberComponent,
     Durgapuja2020Component,
     OrderTicketsComponent,
-    ReportsComponent
+    ReportsComponent,
+    ResetpasswordComponent
   ],
   imports: [
     BrowserModule,

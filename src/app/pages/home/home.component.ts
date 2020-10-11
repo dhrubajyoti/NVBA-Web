@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 
 @Component({
@@ -8,11 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  
+  // mode:any;
+  // oobCode:any;
+  // apiKey:any;
+  // lang:any;
+  // fpurl:any;
+
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+  ) {}
   
 
   ngOnInit() {
-    
+    this.route.queryParams.subscribe(params => {
+      if(params['mode'] == "resetPassword"){
+        this.router.navigate(['/resetpassword', params]);
+      }
+    });
   }
 
 
