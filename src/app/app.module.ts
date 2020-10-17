@@ -68,6 +68,7 @@ import { ReportsComponent } from './pages/ec/reports/reports.component';
 
 import { AgGridModule } from 'ag-grid-angular';
 import { ResetpasswordComponent } from './pages/auth/resetpassword/resetpassword.component';
+import { CartnonmemberComponent } from './pages/cartnonmember/cartnonmember.component';
 
 @NgModule({
   declarations: [
@@ -102,7 +103,8 @@ import { ResetpasswordComponent } from './pages/auth/resetpassword/resetpassword
     Durgapuja2020Component,
     OrderTicketsComponent,
     ReportsComponent,
-    ResetpasswordComponent
+    ResetpasswordComponent,
+    CartnonmemberComponent
   ],
   imports: [
     BrowserModule,

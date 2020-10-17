@@ -22,8 +22,9 @@ export class Durgapuja2020Component implements OnInit {
   //  this.UserService.getCurrentUser
     this.UserService.cast.subscribe(m =>{
       this.member = m;
-    //  console.log(this.member);
+      console.log(this.member);
     });
+
     
    }
 

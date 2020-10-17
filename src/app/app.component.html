@@ -56,15 +56,15 @@
 
         
         
-        <li [routerLinkActive]="['active']"  [routerLinkActiveOptions]="{exact: true}"  class="" >
+        <li [routerLinkActive]="['active']"  [routerLinkActiveOptions]="{exact: true}"  (click)="sidenav.toggle()" >
           <a routerLink="user">Membership</a>
         </li>  
         
-        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" *ngIf="member.displayName != 'Guest'" >
+        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" *ngIf="member.displayName != 'Guest'" (click)="sidenav.toggle()" >
               <a routerLink="user" class="ml-2" >Member Details</a>
         </li>
         
-        <li *ngIf="member.displayName != 'Guest'" >
+        <li *ngIf="member.displayName != 'Guest'" (click)="sidenav.toggle()" >
               <a class="ml-2" (click)="signout()" >Sign Out</a>        
         </li>
         

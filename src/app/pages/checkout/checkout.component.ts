@@ -204,6 +204,13 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
           }
           this.member.expires = newdate.toISOString().split('T')[0];
       } // Add Membership Details End
+
+          // Add Non-Membership Ticket Details 
+          if( payment.transactions[0].item_list.items[0].name == 'Non-Member Concert ticket' ){
+
+            this.member.nonmemberpogramticket = "paid";
+            
+        } // Add Non-Membership Ticket Details
   }
 
 

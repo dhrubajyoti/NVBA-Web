@@ -148,7 +148,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #233dd2;
+  color: #f4eee7;
 }
 
 a:not([href]):not([tabindex]) {
@@ -976,6 +976,27 @@ textarea.form-control {
 
 .card-header:first-child {
   border-radius: calc(.375rem - 1px) calc(.375rem - 1px) 0 0;
+}
+
+.btn-get-userpage {
+  background: #ff8d00;
+  // border: 2px solid #ff8d00;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 5px;
+  transition: 0.5s;
+  margin: 0 20px 20px 0;
+  cursor: pointer;
+  
+  -webkit-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.55);
+box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.55);
+
 }
 
 @keyframes progress-bar-stripes {

@@ -9,13 +9,14 @@ import { MemberModel } from './../core/user.model';
 @Injectable()
 export class UserService {
 
-  private member = new BehaviorSubject<any>(new MemberModel);
+  public member = new BehaviorSubject<any>(new MemberModel);
   cast = this.member.asObservable();
 
   constructor(
    public db: AngularFirestore,
    public afAuth: AngularFireAuth
- ){ }
+ ){ 
+ }
 
  updateMember( currentMember: MemberModel ){
     this.member.next(currentMember);
