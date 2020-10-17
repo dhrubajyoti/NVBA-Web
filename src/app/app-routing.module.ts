@@ -6,6 +6,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactusComponent } from './pages/contactus/contactus.component';
 import { ImagegalleryComponent } from './pages/imagegallery/imagegallery.component';
 import { MagazineComponent } from './pages/magazine/magazine.component';
+import { Ameyaa2020Component } from './magazine/ameyaa2020/ameyaa2020.component';
+
 import { HistoryComponent } from './pages/history/history.component';
 import { TeamComponent } from './pages/team/team.component';
 import { LawComponent } from './pages/law/law.component';
@@ -40,6 +42,8 @@ const routes: Routes = [
   { path: "contactus", component: ContactusComponent, pathMatch: 'full'  },
   { path: "imagegallery", component: ImagegalleryComponent, pathMatch: 'full'  },
   { path: "magazine", component: MagazineComponent, pathMatch: 'full'  },
+  { path: "ameyaa2020", component: Ameyaa2020Component, pathMatch: 'full'  },
+
   { path: "history", component: HistoryComponent, pathMatch: 'full'  },
   { path: "team", component: TeamComponent,pathMatch: 'full'  },
   { path: "law", component: LawComponent, pathMatch: 'full'   },
