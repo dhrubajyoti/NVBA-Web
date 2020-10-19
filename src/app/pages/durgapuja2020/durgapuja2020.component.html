@@ -38,7 +38,7 @@
               </h2>
               <div class="d-flex align-items-center flex-column bold" *ngIf="this.member.membershipstatus != 'Valid'" >
                  <p style="color: #bf3737; text-indent: 0px;" class="justify-content-center">
-                  Active Member <a routerLink="/login" > Sign In </a> to watch the program for free. Non-member <a routerLink="/register"> Sign Up </a> with $35.00 or Buy membership to watch the program.
+                  Active Member <a routerLink="/login" > Sign In </a> to watch the program for free. Non-member <a routerLink="/register"> Sign Up </a> with $35.00 or <a routerLink="/login" > Buy membership</a> to watch the program.
                 </p>
                 <div class="m-2 justify-content-center">
                     <div style="font-weight: bold; font-size: 1.2em;color: #838383;" ><span class="red">*</span><b>Membership Benefits:</b> </div>
@@ -71,7 +71,7 @@
                       <td>
                         <div>Local Cultural Program and an evening with <b>Aritra</b>.</div>
                         <div>
-                          <a href=""  class="btn-get-spc w-100 " > Watch Local Performance and Aritra Live </a>
+                          <a   class="btn-get-spc w-100 " > Watch Local Performance and Aritra Live </a>
                         </div>
                       </td>
                     </tr>
@@ -83,7 +83,7 @@
                         <div>Enjoy Virtual Durga Puja, Organized by NVBA. Then watch <b>Anweshaa Live</b> in the evening.</div>
                         
                           <div *ngIf="this.member.membershipstatus == 'Valid' || this.member.nonmemberpogramticket == 'paid' ">
-                            <a href="#"  class="btn-get-spc w-100 " > Watch Anweshaa Live - Saturday (Oct. 24th)</a>
+                            <a  class="btn-get-spc w-100 " > Watch Anweshaa Live - Saturday (Oct. 24th)</a>
                           </div>
 
                           <div *ngIf="this.member.email">
@@ -108,7 +108,7 @@
                       <td>
                         <div>Enjoy Virtual Durga Puja and Arati from Washington Kali Bari. In the evening enjoy the timeless hits of <b>Usha Uthup</b> and <b>Jolly Mukherjee</b>.</div>
                         <div *ngIf="this.member.membershipstatus == 'Valid' || this.member.nonmemberpogramticket == 'paid' ">
-                          <a href="#" class="btn-get-spc w-100 " > Watch Jolly Mukherjee/Usha Uthup Concert - Sunday (Oct. 25th)</a>
+                          <a  class="btn-get-spc w-100 " > Watch Jolly Mukherjee/Usha Uthup Concert - Sunday (Oct. 25th)</a>
                         </div>
                         <div *ngIf="this.member.email == ''">
                             <a routerLink="/login" class="btn-get-spc w-100 " > Watch Jolly Mukherjee/Usha Uthup Concert </a>
@@ -150,7 +150,7 @@
               </div>
             <hr />
 
-             <h2 class="d-flex justify-content-center mt-4" >Feast with food</h2> 
+             <!-- <h2 class="d-flex justify-content-center mt-4" >Feast with food</h2> 
             <div class="d-flex flex-wrap mt-5 mb-5"> 
               <span class="col-md-8 marginCenter" >
                 What is a Bengali Festival without food? Food is a quintessential part of puja. NVBA brings some palatable mouth watering delicacies, to make your puja evenings special with friends, family and food.
@@ -166,9 +166,7 @@
             <div class="flex-column col-lg-6">
                 <div style="font-weight: bold;" ><span class="red">*</span><b>Guidelines:</b> </div>
                 <ul  style="margin: 0 auto;"> 
-                    <!-- <li>
-                        Food is available for purchase for NVBA Members only.
-                    </li> -->
+                    
                     <li>
                         Food orders must by placed by October 18th 11:59 PM EST.
                     </li>
@@ -178,22 +176,14 @@
                     <li>
                         Members ordering food should pick up their orders by showing their proof of purchase between 4 – 6 PM on October 24th and October 25th from their nearest pickup location which will be announced soon.
                     </li>
-                    <!-- <li>
-                        Food order may be cancelled and your money will be refunded if the number of orders are less than 20.
-                    </li>
-                    <li>
-                        Food order may close if the number of deliver addresses is 50.
-                    </li>
-                    <li>
-                        Due to logistics challenges, food can be delivered only at the below city and zip code combinations:
-                    </li> -->
+                    
                 </ul>
             </div>
-        </div>
+        </div> -->
             
-            <hr />
+            <!-- <hr /> -->
 
-            <button routerLink="/orderfood" class="btn-get-started w-100 mb-5 mt-2 " > Order Your Food </button>
+            <!-- <button routerLink="/orderfood" class="btn-get-started w-100 mb-5 mt-2 " > Order Your Food </button> -->
             
             <!-- <p class="d-flex justify-content-center mt-4 mb-5">Our orders are now closed.</p>
              -->

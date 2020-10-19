@@ -203,6 +203,7 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
           newdate = new Date(new Date().setFullYear(new Date().getFullYear() + 1));
           }
           this.member.expires = newdate.toISOString().split('T')[0];
+          this.member.membershipstatus = 'Valid';
       } // Add Membership Details End
 
           // Add Non-Membership Ticket Details 

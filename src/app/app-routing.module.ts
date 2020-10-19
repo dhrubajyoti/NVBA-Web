@@ -7,6 +7,8 @@ import { ContactusComponent } from './pages/contactus/contactus.component';
 import { ImagegalleryComponent } from './pages/imagegallery/imagegallery.component';
 import { MagazineComponent } from './pages/magazine/magazine.component';
 import { Ameyaa2020Component } from './magazine/ameyaa2020/ameyaa2020.component';
+import { FaqComponent } from './magazine/faq/faq.component';
+
 
 import { HistoryComponent } from './pages/history/history.component';
 import { TeamComponent } from './pages/team/team.component';
@@ -43,6 +45,7 @@ const routes: Routes = [
   { path: "imagegallery", component: ImagegalleryComponent, pathMatch: 'full'  },
   { path: "magazine", component: MagazineComponent, pathMatch: 'full'  },
   { path: "ameyaa2020", component: Ameyaa2020Component, pathMatch: 'full'  },
+  { path: "faq", component: FaqComponent, pathMatch: 'full'  },
 
   { path: "history", component: HistoryComponent, pathMatch: 'full'  },
   { path: "team", component: TeamComponent,pathMatch: 'full'  },

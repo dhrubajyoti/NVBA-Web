@@ -70,6 +70,7 @@ import { AgGridModule } from 'ag-grid-angular';
 import { ResetpasswordComponent } from './pages/auth/resetpassword/resetpassword.component';
 import { CartnonmemberComponent } from './pages/cartnonmember/cartnonmember.component';
 import { Ameyaa2020Component } from './magazine/ameyaa2020/ameyaa2020.component';
+import { FaqComponent } from './magazine/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -106,7 +107,8 @@ import { Ameyaa2020Component } from './magazine/ameyaa2020/ameyaa2020.component'
     ReportsComponent,
     ResetpasswordComponent,
     CartnonmemberComponent,
-    Ameyaa2020Component
+    Ameyaa2020Component,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
