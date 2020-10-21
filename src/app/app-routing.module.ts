@@ -70,7 +70,7 @@ const routes: Routes = [
   { path: "checkout", component: CheckoutComponent,  pathMatch: 'full' },
   { path: "orderfood", component: OrderTicketsComponent,  pathMatch: 'full' },
 
-  { path: "reports", component: ReportsComponent,  pathMatch: 'full' },
+  { path: "reports", component: ReportsComponent,  pathMatch: 'full', resolve: { data: UserResolver}  },
   
 ];
 

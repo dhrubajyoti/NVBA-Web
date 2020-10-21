@@ -24,6 +24,7 @@ export class FirebaseUserModel {
   billingFirstname: string;
   billingLastname: string;
   membershipstatus: string;
+  usertype: string;
 
   constructor(){
     this.id = 0;
@@ -51,6 +52,7 @@ export class FirebaseUserModel {
     this.billingFirstname = "";
     this.billingLastname = "";
     this.membershipstatus = "";
+    this.usertype="user"
   }
 }
 
@@ -81,6 +83,7 @@ export class MemberModel {
   billingFirstname: string;
   billingLastname: string;
   membershipstatus: string;
+  usertype: string;
 
   constructor(){
     this.id = 0;
@@ -108,6 +111,7 @@ export class MemberModel {
     this.billingFirstname = "";
     this.billingLastname = "";
     this.membershipstatus = "";
+    this.usertype = "user";
   }
 }
 
