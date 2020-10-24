@@ -13,13 +13,30 @@
           <div class=" col-lg-12 col-md-12 row  justify-content-center  " >
             <div class="col-lg-4  col-xs-12" > 
               
-              <div class="col-12 mb-2">
+              <!-- <div class="col-12 mb-2">
                 <a href="https://youtu.be/bbRaOO6O3kw" target="_blank" class="btn-get-spc w-100" > <img src="./assets/images/logo/durgaLogo.png" height="32px" > Watch Local Performance and Aritra - Friday Evening 7:30 PM EDT (Oct. 23rd) </a>
+              </div> -->
+              <h4 class=" align-content-center " style=" text-align: center; color: #838383; " >Todays Event</h4>
+              <div class="col-12 mb-2">
+                <a href="https://youtu.be/kcvs5_3dT94" target="_blank" class="btn-get-spc w-100" > NVBA Durga Puja Live Streaming from 10 AM EDT (Oct. 24th) </a>
               </div>
 
-              <div class="col-12 mb-2">
-                <a href="https://youtu.be/tRK-1yZP67s" target="_blank" class="btn-get-spc w-100" > NVBA Durga Puja Live Streaming from 10 AM EDT (Oct. 24th) </a>
+              <div class="col-12">
+                <div *ngIf="this.member.membershipstatus == 'Valid' || this.member.nonmemberpogramticket == 'paid' ">
+                  <a target="_blank" href="https://www.youtube.be/watch?v=wharnIQjnq0" class="btn-get-spc w-100 " > Watch Anweshaa Live - Saturday Evening 7:30 PM (Oct. 24th)</a>
+                </div>
+
+                <div *ngIf="this.member.email">
+                  <div *ngIf="this.member.membershipstatus == 'Expire' || this.member.membershipstatus == ''" >
+                    <app-cartnonmember></app-cartnonmember>
+                  </div>
+                </div>
+
+                <div *ngIf="this.member.email == ''" >
+                    <a routerLink="/login" class="btn-get-spc w-100 " > Watch Anweshaa Live - Saturday Evening 7:30 PM (Oct. 24th)</a>
+                </div>
               </div>
+
               <div class="col-12" >
                 <a href="https://kalitemplewashington.org/DurgaPujoSchedule2020.html" target="_blank" class="btn-get-spc w-100" > Kali Temple  Durga Puja Live Streaming from 11:30 AM (Oct. 25th) </a>
               </div>
@@ -93,9 +110,7 @@
                       </td>
                       <td>
                         <div>Local Cultural Program and an evening with <b>Aritra</b>.</div>
-                        <div>
-                          <a href="https://youtu.be/bbRaOO6O3kw" target="_blank"  class="btn-get-spc w-100 " > Watch Local Performance and Aritra Friday Evening 7:30 PM (Oct. 23rd) </a>
-                        </div>
+                        
                       </td>
                     </tr>
                     <tr>
@@ -106,13 +121,11 @@
                         <div>Enjoy Virtual Durga Puja, Organized by NVBA. Then watch <b>Anweshaa Live</b> in the evening.</div>
                         
                           <div *ngIf="this.member.membershipstatus == 'Valid' || this.member.nonmemberpogramticket == 'paid' ">
-                            <a  class="btn-get-spc w-100 " > Watch Anweshaa Live - Saturday Evening 7:30 PM (Oct. 24th)</a>
+                            <a href="https://www.youtube.be/watch?v=wharnIQjnq0" class="btn-get-spc w-100 " > Watch Anweshaa Live - Saturday Evening 7:30 PM (Oct. 24th)</a>
                           </div>
 
                           <div *ngIf="this.member.email">
                             <div *ngIf="this.member.membershipstatus == 'Expire' || this.member.membershipstatus == ''" >
-                              <!-- <a routerLink="/ticketprog" class="btn-get-spc w-100 " > Non Member - Buy Anweshaa Live / Jolly Mukherjee/Usha Uthup program ticket
-                              </a> -->
                               <app-cartnonmember></app-cartnonmember>
                             </div>
                           </div>
