@@ -16,12 +16,28 @@
               <!-- <div class="col-12 mb-2">
                 <a href="https://youtu.be/bbRaOO6O3kw" target="_blank" class="btn-get-spc w-100" > <img src="./assets/images/logo/durgaLogo.png" height="32px" > Watch Local Performance and Aritra - Friday Evening 7:30 PM EDT (Oct. 23rd) </a>
               </div> -->
-              <h4 class=" align-content-center " style=" text-align: center; color: #838383; " >Todays Event</h4>
-              <div class="col-12 mb-2">
-                <a href="https://youtu.be/kcvs5_3dT94" target="_blank" class="btn-get-spc w-100" > NVBA Durga Puja Live Streaming from 10 AM EDT (Oct. 24th) </a>
+              <h4 class=" align-content-center " style=" text-align: center; color: #838383; " >Upcoming Event</h4>
+                  <div class="col-12 mb-2">
+                    <div *ngIf="this.member.membershipstatus == 'Valid' || this.member.nonmemberpogramticket == 'paid' ">
+                      <a target="_blank" href="https://youtu.be/qCJOLtLZYp8" class="btn-get-spc w-100 " > Re-Telecast Jolly Mukherjee/Usha Uthup Concert - Saturday 1:00 PM (Oct. 31st)</a>
+                    </div>
+                    <div *ngIf="this.member.email == ''">
+                        <a routerLink="/login" class="btn-get-spc w-100 " > Re-Telecast Jolly Mukherjee/Usha Uthup Concert - Saturday 1:00 PM (Oct. 31st)</a>
+                    </div>
+                    <div *ngIf="this.member.email">
+                      <div *ngIf="this.member.membershipstatus == 'Expire' || this.member.membershipstatus == ''" >
+                        <!-- <a routerLink="/ticketprog" class="btn-get-spc w-100 " > Non Member - Buy Anweshaa Live / Jolly Mukherjee/Usha Uthup program ticket
+                        </a> --> 
+                        <app-cartnonmember></app-cartnonmember>
+                      </div>
+                    </div>
+                
               </div>
+              <!-- <div class="col-12 mb-2">
+                <a href="https://youtu.be/kcvs5_3dT94" target="_blank" class="btn-get-spc w-100" > NVBA Durga Puja Live Streaming from 10 AM EDT (Oct. 24th) </a>
+              </div> -->
 
-              <div class="col-12">
+              <!-- <div class="col-12">
                 <div *ngIf="this.member.membershipstatus == 'Valid' || this.member.nonmemberpogramticket == 'paid' ">
                   <a target="_blank" href="https://www.youtube.be/watch?v=wharnIQjnq0" class="btn-get-spc w-100 " > Watch Anweshaa Live - Saturday Evening 7:30 PM (Oct. 24th)</a>
                 </div>
@@ -35,14 +51,14 @@
                 <div *ngIf="this.member.email == ''" >
                     <a routerLink="/login" class="btn-get-spc w-100 " > Watch Anweshaa Live - Saturday Evening 7:30 PM (Oct. 24th)</a>
                 </div>
-              </div>
+              </div> -->
 
-              <div class="col-12" >
+              <!-- <div class="col-12" >
                 <a href="https://kalitemplewashington.org/DurgaPujoSchedule2020.html" target="_blank" class="btn-get-spc w-100" > Kali Temple  Durga Puja Live Streaming from 11:30 AM (Oct. 25th) </a>
               </div>
               <div class="col-12 mb-4">
                 We are happy to announce that NVBA has sponsored Durga Puja, on October, 25th at Washington Kali Bari on behalf of the whole community.
-              </div>
+              </div> -->
 
             </div>
             <div class="col-lg-6  col-xs-12 d-flex justify-content-center " >
@@ -104,7 +120,7 @@
               <div class="d-flex flex-column justify-content-center  mt-3 mb-5">
                 <table class="col-md-8 marginCenter table">
                   <tbody>
-                    <tr>
+                    <!-- <tr>
                       <td width="25%">
                         <div class=" italic bold black " >23rd October, 2020</div>
                       </td>
@@ -136,18 +152,18 @@
                           
                         
                       </td>
-                    </tr>
+                    </tr> -->
                     <tr>
-                      <td>
-                        <div class=" italic bold" >25th October, 2020</div>
-                      </td>
-                      <td>
-                        <div>Enjoy Virtual Durga Puja and Arati from Washington Kali Bari. In the evening enjoy the timeless hits of <b>Usha Uthup</b> and <b>Jolly Mukherjee</b>.</div>
+                      <!-- <td>
+                        <div class=" italic bold" >31st October, 2020</div>
+                      </td> -->
+                      <td class=" align-content-center align-items-center" >
+                        <div class=" align-content-center align-items-center" >Enjoy the timeless hits of <b>Usha Uthup</b> and <b>Jolly Mukherjee</b> .</div>
                         <div *ngIf="this.member.membershipstatus == 'Valid' || this.member.nonmemberpogramticket == 'paid' ">
-                          <a  class="btn-get-spc w-100 " > Watch Jolly Mukherjee/Usha Uthup Concert - Sunday Evening 7:30 PM (Oct. 25th)</a>
+                          <a target="_blank" href="https://youtu.be/qCJOLtLZYp8" class="btn-get-spc w-100 " > Re-Telecast Jolly Mukherjee/Usha Uthup Concert - Saturday 1:00 PM (Oct. 31st)</a>
                         </div>
                         <div *ngIf="this.member.email == ''">
-                            <a routerLink="/login" class="btn-get-spc w-100 " > Watch Jolly Mukherjee/Usha Uthup Concert - Sunday Evening 7:30 PM(Oct. 25th) </a>
+                            <a routerLink="/login" class="btn-get-spc w-100 " > Re-Telecast Jolly Mukherjee/Usha Uthup Concert - Saturday 1:00 PM (Oct. 31st)</a>
                         </div>
                         <div *ngIf="this.member.email">
                           <div *ngIf="this.member.membershipstatus == 'Expire' || this.member.membershipstatus == ''" >
