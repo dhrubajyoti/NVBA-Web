@@ -71,6 +71,7 @@ import { ResetpasswordComponent } from './pages/auth/resetpassword/resetpassword
 import { CartnonmemberComponent } from './pages/cartnonmember/cartnonmember.component';
 import { Ameyaa2020Component } from './magazine/ameyaa2020/ameyaa2020.component';
 import { FaqComponent } from './magazine/faq/faq.component';
+import { SaraswatipujaComponent } from './pages/saraswatipuja/saraswatipuja.component';
 
 @NgModule({
   declarations: [
@@ -108,7 +109,8 @@ import { FaqComponent } from './magazine/faq/faq.component';
     ResetpasswordComponent,
     CartnonmemberComponent,
     Ameyaa2020Component,
-    FaqComponent
+    FaqComponent,
+    SaraswatipujaComponent
   ],
   imports: [
     BrowserModule,

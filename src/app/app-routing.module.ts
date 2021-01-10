@@ -14,6 +14,7 @@ import { HistoryComponent } from './pages/history/history.component';
 import { TeamComponent } from './pages/team/team.component';
 import { LawComponent } from './pages/law/law.component';
 import { Saraswatipujo2020Component } from './pages/saraswatipujo2020/saraswatipujo2020.component';
+import { SaraswatipujaComponent } from './pages/saraswatipuja/saraswatipuja.component';
 import { Kobipronam2020Component } from './pages/kobipronam2020/kobipronam2020.component';
 import { Durgapuja2020Component } from './pages/durgapuja2020/durgapuja2020.component';
 import { PresidentComponent } from './pages/president/president.component';
@@ -38,7 +39,7 @@ import { from } from 'rxjs';
 
 
 const routes: Routes = [
-  { path: "", component: Durgapuja2020Component, pathMatch: 'full' }, 
+  { path: "", component: HomeComponent, pathMatch: 'full' }, 
   { path: "home", component: HomeComponent },
   { path: "about", component: AboutComponent, pathMatch: 'full'  },
   { path: "contactus", component: ContactusComponent, pathMatch: 'full'  },
@@ -51,6 +52,7 @@ const routes: Routes = [
   { path: "team", component: TeamComponent,pathMatch: 'full'  },
   { path: "law", component: LawComponent, pathMatch: 'full'   },
   { path: "saraswatipujo2020", component: Saraswatipujo2020Component, pathMatch: 'full'  },
+  { path: "saraswatipuja", component: SaraswatipujaComponent, pathMatch: 'full'  },
   { path: "kobipronam2020", component: Kobipronam2020Component, pathMatch: 'full'  },
   { path: "durgapuja2020", component: Durgapuja2020Component, pathMatch: 'full'  },
   { path: "emailarchive", component:EmailarchiveComponent, pathMatch: 'full' },
