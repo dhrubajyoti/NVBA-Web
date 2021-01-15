@@ -9,17 +9,13 @@ import { MemberModel } from './../core/user.model';
 @Injectable()
 export class UserService {
 
-  private member = new BehaviorSubject<any>(new MemberModel);
+  public member = new BehaviorSubject<any>(new MemberModel);
   cast = this.member.asObservable();
 
   constructor(
    public db: AngularFirestore,
    public afAuth: AngularFireAuth
- ){
-
- 
-    
-
+ ){ 
  }
 
  updateMember( currentMember: MemberModel ){
@@ -56,4 +52,23 @@ export class UserService {
       }, err => reject(err))
     })
   }
+
+   verifyPasswordResetCode(code){
+     console.log(code);
+     let em = firebase.auth().verifyPasswordResetCode(code)
+      .then(function(email) {
+        // Display a "new password" form with the user's email address
+        console.log('vaid');
+        return email ;
+      })
+      .catch(function() {
+        // Invalid code
+        console.log('expired');
+        return 'expired';
+      });
+
+      return em;
+  }
+
+
 }

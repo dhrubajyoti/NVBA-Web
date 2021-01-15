@@ -54,7 +54,7 @@ export class LoginComponent {
   tryGoogleLogin(){
     this.authService.doGoogleLogin()
     .then(res => {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/user']);
     })
   }
 
@@ -62,12 +62,25 @@ export class LoginComponent {
     this.authService.doLogin(value)
     .then(res => {
    //   console.log(value);
-      this.router.navigate(['/home']);
+      this.router.navigate(['/user']);
       this.toastr.success(value.email, 'Login Successfully');
     }, err => {
       console.log(err);
+      if(err.code == 'auth/user-not-found')
+        this.errorMessage = "Sorry, We not able to find your email in our records. Please check or try different email for login.";
+
+      if(err.code == 'auth/wrong-password')
+      this.errorMessage = "You might trying wrong password. Please try again. If not able to recall your password. Click Forgot your password.";
+    //  this.errorMessage = err.message; auth/user-disabled
+
+      if(err.code == 'auth/user-disabled')
+      this.errorMessage = "Sorry, Please try different email for login. The user account has been disabled by an administrator.";
+
+      if(err.code == 'auth/invalid-email')
       this.errorMessage = err.message;
-      this.toastr.error(err.message, 'Login Error');
+
+
+      this.toastr.error(this.errorMessage, 'Login Error');
     })
   }
 }

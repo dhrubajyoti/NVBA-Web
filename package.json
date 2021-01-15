@@ -3,14 +3,15 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve", 
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "buildp": "ng build --base-href /nvbaweb/ --deploy-url /nvbaweb/",
-    "buildunder": "ng build --prod --base-href /nvbaweb/",
-    "withoutCache": "ng build --prod --base-href /nvbaweb/ --output-hashing=all"
+    "buildunder": "ng build --prod --base-href /nvbaweb/ --output-hashing=all",
+    "withoutCache": "ng build --prod --base-href /nvbaweb/ --output-hashing=all",
+    "prodBuild": "ng build --prod --output-hashing=all"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +28,8 @@
     "@angular/router": "~10.0.2",
     "@angular/service-worker": "~10.0.2",
     "@material/drawer": "^4.0.0",
+    "ag-grid-angular": "^24.1.0",
+    "ag-grid-community": "^24.1.0",
     "bootstrap": "^4.5.0",
     "firebase": "^7.15.4",
     "jquery": "^3.5.1",

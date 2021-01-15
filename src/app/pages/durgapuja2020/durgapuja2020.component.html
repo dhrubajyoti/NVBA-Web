@@ -10,12 +10,22 @@
             </h3>
           </div>
           
-          <div class="" style="display: flex; justify-content: center; " >
-            <img src="assets/images/stocks/DP-2020.jpg"  class="img-fluid dp" alt="Responsive image">
-          </div> 
+          <div class=" col-lg-12 col-md-12 row  justify-content-center  " >
+            
+            <div class="col-lg-12  col-xs-12 d-flex justify-content-center " >
+              <img src="assets/images/stocks/DP-2020.jpg"  class="img-fluid dp" alt="Responsive image">
+            </div> 
+            <div class="col-lg-4  col-xs-12" >
+              &nbsp;
+            </div>
+          </div>
           
+          
+          <div class="d-flex align-items-center flex-column mt-4">
+              <a routerLink="/ameyaa2020" style="font-size: 1.3em; text-decoration: underline; " > <i class="fa fa-book"></i> NVBA Sharadiya Magazine - Ameyaa 2020 </a>
+          </div>
 
-            <div class="d-flex flex-wrap mt-5 mb-5 col-md-8 marginCenter "> 
+            <div class="d-flex flex-wrap mt-4 mb-5 col-md-8 marginCenter "> 
                  <p>
                     NVBA is proud to host Durga Puja 2020 For Blissful Three Days Of Virtual Puja Celebration From October 23rd To October 25th, 2020. Our Goal Is To Provide You With The Same Feeling As In Previous Years But In A Virtual Setup. NVBA Always Plans Top-Class Entertainment Featuring The Best International And Local Artists In The Line-Up. NVBA RangaMancha Will Bring You Three Nights Of Cultural Entertainment Through Its Online Streaming Platform. 
                 </p> 
@@ -26,22 +36,48 @@
                   Our goal is to provide you with the same feeling as previous years, but in a virtual setup. Maintaining the tradition and continuity we will be performing Durga Puja Online!
                     More details will be shared in the coming days.
                 </p>
-              
+                <!-- <a routerLink="rangamancha" class=" btn-get-started" >Rangamancha</a> -->
             </div>
             <hr />
 
             <div class="flex justify-content-center mt-5 mb-5"> 
-              <h2 style="text-align: center;">NVBA has planned a THREE DAYS Puja Extravaganza for you.
+              <h2 style="text-align: center;">NVBA has planned a Three Days Puja Cultural Extravaganza for you.
               </h2>
-              <div class="d-flex flex-column justify-content-center  mt-5 mb-5">
-                <table class="col-md-8 marginCenter">
+             <!-- <div class="d-flex align-items-center flex-column bold" *ngIf="this.member.membershipstatus != 'Valid'" >
+                 <p style="color: #bf3737; text-indent: 0px;" class="justify-content-center">
+                  Active Member <a routerLink="/login" > Sign In </a> to watch the program for free. Non-member <a routerLink="/register"> Sign Up </a> with $35.00 or <a routerLink="/login" > Buy membership</a> to watch the program.
+                </p> -->
+                <!-- <div class="m-2 justify-content-center">
+                    <div style="font-weight: bold; font-size: 1.2em;color: #838383;" ><span class="red">*</span><b>Membership Benefits:</b> </div>
+                        <ul  style="text-align: left;color: #838383;"> 
+                            <li>
+                                Access to year round member only events like kobi pronam, nobo borsho celebrations, annual picnic etc.
+                            </li>
+                            <li>
+                                Access to early bird discounted tickets.
+                            </li>
+                            <li>
+                                Enjoy several members only programs free of cost.
+                            </li>
+                            <li>
+                                Can participate/perform in cultural programs.
+                            </li>
+                            <li>
+                                Registered members have voting rights at the elections.
+                            </li>
+                        </ul>
+                    </div> 
+              </div> -->
+              <div class="d-flex flex-column justify-content-center  mt-3 mb-5">
+                <table class="col-md-8 marginCenter table">
                   <tbody>
-                    <tr>
+                    <!-- <tr>
                       <td width="25%">
                         <div class=" italic bold black " >23rd October, 2020</div>
                       </td>
                       <td>
-                        <div>Local Cultural Program and an evening with <b>Aritra</b></div>
+                        <div>Local Cultural Program and an evening with <b>Aritra</b>.</div>
+                        
                       </td>
                     </tr>
                     <tr>
@@ -49,43 +85,74 @@
                         <div class=" italic bold" >24th October, 2020</div>
                       </td>
                       <td>
-                        <div>Enjoy Virtual Durga Puja, Organized by NVBA. Then watch <b>Aneweshaa Live</b> in the evening.</div>
+                        <div>Enjoy Virtual Durga Puja, Organized by NVBA. Then watch <b>Anweshaa Live</b> in the evening.</div>
+                        
+                          <div *ngIf="this.member.membershipstatus == 'Valid' || this.member.nonmemberpogramticket == 'paid' ">
+                            <a href="https://www.youtube.be/watch?v=wharnIQjnq0" class="btn-get-spc w-100 " > Watch Anweshaa Live - Saturday Evening 7:30 PM (Oct. 24th)</a>
+                          </div>
+
+                          <div *ngIf="this.member.email">
+                            <div *ngIf="this.member.membershipstatus == 'Expire' || this.member.membershipstatus == ''" >
+                              <app-cartnonmember></app-cartnonmember>
+                            </div>
+                          </div>
+
+                          <div *ngIf="this.member.email == ''" >
+                              <a routerLink="/login" class="btn-get-spc w-100 " > Watch Anweshaa Live - Saturday Evening 7:30 PM (Oct. 24th)</a>
+                          </div>
+                          
+                        
                       </td>
-                    </tr>
+                    </tr> -->
                     <tr>
-                      <td>
-                        <div class=" italic bold" >25th October, 2020</div>
-                      </td>
-                      <td>
-                        <div>Enjoy Virtual Durga Puja and Arati from Washington Kali Bari. In the evening enjoy the timeless hits of <b>Usha Uthup</b> and <b>Jolly Mukherjee</b>.</div>
-                      </td>
+                      <!-- <td>
+                        <div class=" italic bold" >31st October, 2020</div>
+                      </td> -->
+                      <!-- <td class=" align-content-center align-items-center" > -->
+                        <!-- <div class=" align-content-center align-items-center" >Enjoy the timeless hits of <b>Usha Uthup</b> and <b>Jolly Mukherjee</b> .</div>
+                        <div *ngIf="this.member.membershipstatus == 'Valid' || this.member.nonmemberpogramticket == 'paid' ">
+                          <a target="_blank" href="https://youtu.be/qCJOLtLZYp8" class="btn-get-spc w-100 " > Re-Telecast Jolly Mukherjee/Usha Uthup Concert - Saturday 1:00 PM (Oct. 31st)</a>
+                        </div> -->
+                        <!-- <div *ngIf="this.member.email == ''">
+                            <a routerLink="/login" class="btn-get-spc w-100 " > Re-Telecast Jolly Mukherjee/Usha Uthup Concert - Saturday 1:00 PM (Oct. 31st)</a>
+                        </div> -->
+                        <!-- <div *ngIf="this.member.email">
+                          <div *ngIf="this.member.membershipstatus == 'Expire' || this.member.membershipstatus == ''" >
+                            <a routerLink="/ticketprog" class="btn-get-spc w-100 " > Non Member - Buy Anweshaa Live / Jolly Mukherjee/Usha Uthup program ticket
+                            </a> 
+                            <app-cartnonmember></app-cartnonmember>
+                          </div>
+                        </div> -->
+                        
+                      <!-- </td> -->
                     </tr>
                   </tbody>
                 </table>
-                <div class="row m-5">
+                <!-- <div class="row m-5">
                   <div class="marginCenter col-md-6 text-center ">
                      More details coming soon.
                   </div>
-                </div>
+                </div> -->
                 <!-- <div class=" col-md-6 marginCenter" ></div>
                 <div class=" col-md-6 marginCenter" ></div> -->
-                <div class=" d-flex flex-center justify-content-center ">
-                  <div class=" m-2 col-md-8  " >
-                    <h3 class="" >
-                      We are happy to announce that NVBA has sponsored Durga Puja, on October, 25th at Washington Kali Bari on behalf of the whole community.
-                    </h3> 
-                  </div> 
-                </div>
+                
                 
               </div>
               <div class=" text-center">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/nic4RKOCaIo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
-             
+              
             </div>  
-            <hr />
+            <!-- <hr />
+              <div class=" d-flex flex-center justify-content-center ">
+                <div class=" m-2 col-md-8  " >
+                  <h3 class="" >
+                    We are happy to announce that NVBA has sponsored Durga Puja, on October, 25th at Washington Kali Bari on behalf of the whole community.
+                  </h3> 
+                </div> 
+              </div> -->
 
-             <h2 class="d-flex justify-content-center mt-4" >Feast with food</h2> 
+             <!-- <h2 class="d-flex justify-content-center mt-4" >Feast with food</h2> 
             <div class="d-flex flex-wrap mt-5 mb-5"> 
               <span class="col-md-8 marginCenter" >
                 What is a Bengali Festival without food? Food is a quintessential part of puja. NVBA brings some palatable mouth watering delicacies, to make your puja evenings special with friends, family and food.
@@ -93,78 +160,15 @@
             </div>
 
             <div class="d-flex justify-content-center mb-4 col-md-12">
-              <img src="assets/images/stocks/AllFoodMenu.jpeg"  class="img-fluid food" alt="Responsive image">  
+              <img src="assets/images/stocks/foodmenu.jpg"  class="img-fluid food" alt="Responsive image">  
             </div>
 
-
-            <!-- <div class="d-flex  justify-content-center mb-4 mt-4">
-                <div class="flex-column col-lg-6">
-                    <div><span class="red">*</span> Please see the below:</div>
-                    <ul  style="margin: 0 auto;"> 
-                        <li>
-                            Food delivery shall be done by volunteers.
-                        </li>
-                        <li>
-                            For safety reasons, the volunteers will wear hand gloves and face masks.
-                        </li>
-                        <li>
-                            Food will be delivered in front.
-                        </li>
-                        <li>
-                            Food packaging will be done at the commercial restaurant by the restaurant folks and handed over to the volunteers for delivery.
-                        </li>
-                        <li>
-                            Food order may be cancelled and your money will be refunded if the number of orders are less than 20.
-                        </li>
-                        <li>
-                            Food order may close if the number of deliver addresses is 50.
-                        </li>
-                        <li>
-                            Due to logistics challenges, food can be delivered only at the below city and zip code combinations:
-                        </li>
-                    </ul>
-                </div>
-            </div> -->
-            <!-- <div class=" d-flex  justify-content-center  mb-5 " style="width: 100%">
-              <div class="d-flex flex-wrap">
-                <div class="col-md-4">
-                    Aldie - 20105 <br />
-                    Ashburn - 20146 <br />
-                    Ashburn - 20147 <br />
-                    Ashburn - 20148 <br />
-                    Ashburn - 20149 
-                </div>
-                <div class="col-md-4">
-                    Centerville - 20120 <br />
-                    Centerville - 20121 <br />
-                    Centerville - 20151 <br />
-                    Chantilly - 20151 <br />
-                    Chantilly - 20152 <br />
-                    Chantilly - 22033 <br />
-                </div>    
-                <div class="col-md-4">
-                    Fairfax - 22030 <br />
-                    Fairfax - 22031 <br />
-                    Herndon - 20170 <br />
-                    Herndon - 20171 <br />
-                </div>    
-                <div class="col-md-4">
-                    Reston - 20190 <br />
-                    Reston - 20191 <br />
-                    Sterling - 20164 <br />
-                    Sterling - 20165 <br />
-                    Sterling - 20166 <br />
-                </div>  
-              </div>      
-            </div> -->
 
             <div class="d-flex  justify-content-center mb-4 mt-4">
             <div class="flex-column col-lg-6">
                 <div style="font-weight: bold;" ><span class="red">*</span><b>Guidelines:</b> </div>
                 <ul  style="margin: 0 auto;"> 
-                    <!-- <li>
-                        Food is available for purchase for NVBA Members only.
-                    </li> -->
+                    
                     <li>
                         Food orders must by placed by October 18th 11:59 PM EST.
                     </li>
@@ -174,22 +178,14 @@
                     <li>
                         Members ordering food should pick up their orders by showing their proof of purchase between 4 – 6 PM on October 24th and October 25th from their nearest pickup location which will be announced soon.
                     </li>
-                    <!-- <li>
-                        Food order may be cancelled and your money will be refunded if the number of orders are less than 20.
-                    </li>
-                    <li>
-                        Food order may close if the number of deliver addresses is 50.
-                    </li>
-                    <li>
-                        Due to logistics challenges, food can be delivered only at the below city and zip code combinations:
-                    </li> -->
+                    
                 </ul>
             </div>
-        </div>
+        </div> -->
             
-            <hr />
+            <!-- <hr /> -->
 
-            <button routerLink="/orderfood" class="btn-get-started w-100 mb-5 mt-2 " > Order Your Food </button>
+            <!-- <button routerLink="/orderfood" class="btn-get-started w-100 mb-5 mt-2 " > Order Your Food </button> -->
             
             <!-- <p class="d-flex justify-content-center mt-4 mb-5">Our orders are now closed.</p>
              -->
@@ -209,6 +205,92 @@
         
 
     </section><!-- #team --> 
+
+
+        <!--==========================
+      Clients Section
+    ============================-->
+    <section id="clients" class="section-bg">
+
+      <div class="container">
+
+        <div class="section-header" style="text-align: center;">
+          <h2>Our Sponsors</h2>
+          <div style="width: 100%; height: 20px;"></div>
+          <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dere santome nida.</p> -->
+        </div>
+
+        <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
+          
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo">
+                <a href="http://www.c-mci.com/corporate/" target="_blank">
+                  <img src="assets/images/sponsors/CMCI.png" class="img-fluid" alt=""> 
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo" >
+                <a href="https://www.synchronisys.com" target="_blank">
+                  <img src="assets/images/sponsors/sync.png" class="img-fluid" alt="">
+                </a>
+              </div>
+            </div>
+          
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo">
+                <a href=" https://www.facebook.com/shailaja.raju.3" target="_blank">
+                  <img src="assets/images/sponsors/realtor.png" class="img-fluid" alt="">
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo"   >
+                <a href="https://www.datasyncinc.com/" target="_blank" >
+                  <img src="assets/images/sponsors/datasync.jpg" class="img-fluid" alt="">
+                </a>  
+              </div>
+            </div>
+          
+        
+          
+          
+          
+<!--           
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="assets/img/clients/client-7.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
+            </div>
+          </div> -->
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
 
     <div class="floatDonate">
         <a class="" target="_blank" href="https://www.paypal.com/us/fundraiser/charity/2511674" style="cursor: pointer;"><strong>Donate</strong></a>

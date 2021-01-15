@@ -1,11 +1,51 @@
 <div class="mt-4" style="width:100%;" >
     <div *ngIf="this.member.membershipstatus === '' " >
         <div class=" " style="text-align: center;" >NVBA Membership gives you access to all NVBA events at discounted rates</div>
-        <button (click)="addToCartobj()" class="btn-get-started w-100 mb-5 mt-2" >Buy Annual Membership ($20)</button>
+        <button (click)="addToCartobj()" class="btn-get-started w-100 mb-5 mt-2" >Buy Annual Membership ($20) & Enjoy All Program Free</button>
+        <div class="flex-column row m-2">
+            <div style="font-weight: bold; font-size: 1.3em;color: #cccccc;" ><span class="red">*</span><b>Membership Benefits:</b> </div>
+            <ul  style="text-align: left;color: #cccccc;"> 
+                <li>
+                    Access to year round member only events like kobi pronam, nobo borsho celebrations, annual picnic etc.
+                </li>
+                <li>
+                    Access to early bird discounted tickets.
+                </li>
+                <li>
+                    Enjoy several members only programs free of cost.
+                </li>
+                <li>
+                    Can participate/perform in cultural programs.
+                </li>
+                <li>
+                    Registered members have voting rights at the elections.
+                </li>
+            </ul>
+        </div>
     </div>
     <div *ngIf="this.member.membershipstatus == 'Expire' " >
         <div  class=" redExpired " >Membership Expired : {{ expired }}</div>
-        <button (click)="addToCartobj()" class="btn-get-started w-100 mb-5 mt-2" > Renew Annual Membership</button>
+        <button (click)="addToCartobj()" class="btn-get-started w-100 mb-3 mt-2" > Renew Annual Membership ($20) & Enjoy All Program Free</button>
+        <div class="flex-column row ">
+            <div style="font-weight: bold; font-size: 1.3em;color: #cccccc;" ><span class="red">*</span><b>Membership Benefits:</b> </div>
+            <ul  style="text-align: left; color: #cccccc;"> 
+                <li>
+                    Access to year round member only events like kobi pronam, nobo borsho celebrations, annual picnic etc.
+                </li>
+                <li>
+                    Access to early bird discounted tickets.
+                </li>
+                <li>
+                    Enjoy several members only programs free of cost.
+                </li>
+                <li>
+                    Can participate/perform in cultural programs.
+                </li>
+                <li>
+                    Registered members have voting rights at the elections.
+                </li>
+            </ul>
+        </div>
     </div>
     <div *ngIf="this.member.membershipstatus == 'Valid' " >
         <div  class=" " style="text-align: center;" >Membership Expiration Date : {{ expired }}</div>

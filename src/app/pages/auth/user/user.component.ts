@@ -70,115 +70,17 @@ export class UserComponent implements OnInit{
   ngOnInit(): void {
    this.userService.cast.subscribe( m => {
       this.member = m;
-    //  console.log(this.member);
+      console.log(this.member);
       this.lastOrder = this.member.purchase? true : false ;
     //  console.log(this.lastOrder);
       this.createForm(this.member.id, this.member.firstname, this.member.lastname,this.member.photoURL, this.member.address1, this.member.address2, this.member.city, this.member.state, this.member.country, this.member.zipcode );
    }) ;
 
-    // this.ar.data.subscribe(routeData => {
-    // });
-
-    // this.route.data.subscribe(routeData => {
-    //   let data = routeData['data'];
-    //       if (data) { 
-    //          this.memberDetails.allMembersDetails().subscribe(d => {
-    //            console.log(d);
-    //            d.forEach( (e, index) => {
-    //            //  console.log(index);
-    //              if( e.email === data.email)
-    //               {
-    //                 this.newUserCheck = false;
-    //                 this.user = { ...data, ...e};
-    //                 this.user.displayName = this.user.firstname +' '+this.user.lastname;
-    //                 this.user.id = index;
-    //                 console.log(this.user);
-    //                 this.member = this.user;
-    //                 console.log(this.member);
-    //                 this.userService.updateMember(this.user);
-    //                  this.createForm(this.member.id, this.member.firstname, this.member.lastname,this.member.photoURL, this.member.address1, this.member.address2, this.member.city, this.member.state, this.member.country, this.member.zipcode );
-    //               }
-    //               else{
-    //                  this.newUserId = d.length;
-    //             //     console.log(this.newUserId);
-    //               }
-    //            }
-    //            );
-
-    //            // For New User 
-    //             if(this.newUserCheck){
-    //               this.newUserId = d.length;
-    //               this.member = data;
-    //               console.log(this.member); 
-    //               console.log(this.newUserId);
-    //               this.member.displayName = this.member.firstname +' '+this.member.lastname;
-
-                  
-    //                 this.createForm(this.newUserId, this.member.firstname, this.member.lastname,this.member.photoURL, this.member.address1, this.member.address2, this.member.city, this.member.state, this.member.country, this.member.zipcode );
-    //             }
-
-    //          });
-
-    //       }
-    // });
- //   let date = new Date();  
-//    let cdate = Date.getFullYear()+'-'+Date.getMonth()+'-'+Date.getDay();
-//    console.log(cdate);
+    
       
   }
  
   
-
-
-
-  // featchData() {
-
-
-  //     this.memberDetails.allMembersDetails().subscribe(record => record.find( e=> {
-  //      if( e.email === this.uemail)
-  //       {
-  //         this.user = { ...this.user, ...e};
-  //         console.log(this.user);
-  //       }
-
-  //     }));
-
-      
-
-  // //     this.memberDetails.getMemberDetails(this.uemail).subscribe((mdata)=>{
-  // // //    this.memberDetails.GetMember(this.uemail).subscribe((mdata)=>{
-  // // //      console.log(this.memberDetails.GetMember('1'));
-
-  // //     if(mdata){
-  // //       console.log(mdata);
-  // //       this.userDetails = mdata[0];
-  // //       console.log('this.userDetails');
-  // //       console.log(this.userDetails.user_registered);
-
-  // //       var dateString = this.userDetails.user_registered;
-  // //       var startDate = new Date(dateString);
-  // //       //Year * seconds * minutes * hours * milliseconds = 1 day 
-  // //       var year = 365 * 60 * 60 * 24 * 1000;
-  // //       var endDate = new Date(startDate.getTime() + year);
-  // //       console.log( endDate );
-  // //       var d = new Date();
-  // //       if (d<endDate){
-  // //         this.validMember = true;
-  // //         this.ulr = endDate;
-  // //       }  
-  // //       else{
-  // //         this.validMember = false;
-  // //         this.ulr = d;
-  // //       }
-          
-       
-  // //     }
-  // //     else
-  // //      console.log('empty');
-  // //      this.userDetails = '';
-  // //   //  this.articles = data['articles'];
-  // //   });
-  // }
 
   createForm(id, firstname, lastname, photoURL, address1, address2, city, state, country, zipcode) {
 
