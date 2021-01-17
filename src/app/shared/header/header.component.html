@@ -47,7 +47,10 @@
             <a routerLink="#" >Program</a>
             <ul>
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" >
+                <a routerLink="cares" >Cares</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" >
                 <a href="https://www.facebook.com/nvbayouth/" target="_blank" >NVBA Youth</a></li>
+
                 <li *ngIf="member.usertype == 'admin'" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
                   <a routerLink="reports" >Reports</a></li>   
               <!-- <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" >

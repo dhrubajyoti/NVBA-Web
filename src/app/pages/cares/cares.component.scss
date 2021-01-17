@@ -1,0 +1,32 @@
+.caresLogo{
+    img { 
+        max-width: 200px;
+        margin: 0 auto;
+     }
+
+}
+
+.date{
+    font-size: 1.1em;
+}
+
+.eventsHeaderL{
+    justify-content: start;
+    width: 100%;
+    display: flex;
+}
+.eventsHeaderR{
+    justify-content: end;
+    width: 100%;
+    display: flex;
+}
+
+.img-fluid, .img-thumbnail {
+    width: 100%;
+    height: auto;
+}
+
+#caresLogoImg{
+    width: 240px;
+    height: auto;
+}
