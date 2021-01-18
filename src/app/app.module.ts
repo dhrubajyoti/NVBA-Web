@@ -72,6 +72,7 @@ import { CartnonmemberComponent } from './pages/cartnonmember/cartnonmember.comp
 import { Ameyaa2020Component } from './magazine/ameyaa2020/ameyaa2020.component';
 import { FaqComponent } from './magazine/faq/faq.component';
 import { SaraswatipujaComponent } from './pages/saraswatipuja/saraswatipuja.component';
+import { CaresComponent } from './pages/cares/cares.component';
 
 @NgModule({
   declarations: [
@@ -110,7 +111,8 @@ import { SaraswatipujaComponent } from './pages/saraswatipuja/saraswatipuja.comp
     CartnonmemberComponent,
     Ameyaa2020Component,
     FaqComponent,
-    SaraswatipujaComponent
+    SaraswatipujaComponent,
+    CaresComponent
   ],
   imports: [
     BrowserModule,

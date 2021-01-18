@@ -44,6 +44,11 @@
           <hr class="style1">
         </li> -->
 
+        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" (click)="sidenav.toggle()" >
+          <a routerLink="cares">Cares</a>
+          <hr class="style1">
+        </li>
+
           <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" (click)="sidenav.toggle()" >
             <a href="https://www.facebook.com/nvbayouth/" target="_blank">NVBA Youth</a>
             <hr class="style1">
