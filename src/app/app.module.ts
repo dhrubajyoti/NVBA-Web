@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common'; 
 import { ToastrModule } from 'ngx-toastr';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -133,6 +134,7 @@ import { CaresComponent } from './pages/cares/cares.component';
     CommonModule,
     ToastrModule.forRoot(), // ToastrModule added
     CarouselModule.forRoot(),
+    ModalModule.forRoot(),
     AgGridModule.withComponents([])
   ],
   providers: [AuthService, UserService, UserResolver, AuthGuard, MemberDetailsService], 
