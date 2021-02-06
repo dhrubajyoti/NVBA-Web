@@ -2,3 +2,37 @@
     max-width: inherit;
     height: 100%;
 }
+.artist {
+    width: inherit;
+    max-width: 400px;
+    margin: 0 inherit;
+    height: auto;
+}
+.artistDiv div{
+    width: 100%;
+    height: auto;
+}
+
+
+.italic{
+    span{
+        color: rgba(0,0,0,1);
+        font-weight: 600;
+        font-size: 1.05em;
+       
+    }
+}
+
+#saraswatipuja {
+    a{
+        text-decoration: underline;
+    }
+    h3{
+        font-size: 1.4em;
+        color: rgba(0,0,0,1);
+    }
+    .or{
+        color: #ff8d00;
+    }
+} 
+
