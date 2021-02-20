@@ -29,6 +29,11 @@ export class SaraswatipujaComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      if(params['mode'] == "resetPassword"){
+        this.router.navigate(['/resetpassword', params]);
+      }
+    });
   }
 
 }
