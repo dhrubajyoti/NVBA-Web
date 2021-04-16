@@ -36,6 +36,7 @@ import { OrderTicketsComponent } from './pages/order-tickets/order-tickets.compo
 import { ReportsComponent } from './pages/ec/reports/reports.component';
 import { ResetpasswordComponent } from './pages/auth/resetpassword/resetpassword.component';
 import { CaresComponent } from './pages/cares/cares.component';
+import { ArtworksComponent } from './pages/archive/artworks/artworks.component';
 import { from } from 'rxjs';
 
 
@@ -63,6 +64,7 @@ const routes: Routes = [
   { path: "rangamancha", component: RangamanchaComponent, pathMatch: 'full' },
   { path: "nvbatv", component: NvbatvComponent, pathMatch: 'full' },
   { path: "cares", component: CaresComponent, pathMatch: 'full' }, 
+  { path: "artworks", component: ArtworksComponent, pathMatch: 'full' }, 
   // { path: '404', component: NotFoundComponent},
   // { path: '**', redirectTo: '/404'},
 
