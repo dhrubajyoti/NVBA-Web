@@ -36,11 +36,12 @@ import { OrderTicketsComponent } from './pages/order-tickets/order-tickets.compo
 import { ReportsComponent } from './pages/ec/reports/reports.component';
 import { ResetpasswordComponent } from './pages/auth/resetpassword/resetpassword.component';
 import { CaresComponent } from './pages/cares/cares.component';
+import { ArtworksComponent } from './pages/archive/artworks/artworks.component';
 import { from } from 'rxjs';
 
 
 const routes: Routes = [
-  { path: "", component: SaraswatipujaComponent, pathMatch: 'full' }, 
+  { path: "", component: HomeComponent, pathMatch: 'full' }, 
   { path: "home", component: HomeComponent },
   { path: "about", component: AboutComponent, pathMatch: 'full'  },
   { path: "contactus", component: ContactusComponent, pathMatch: 'full'  },
@@ -63,6 +64,7 @@ const routes: Routes = [
   { path: "rangamancha", component: RangamanchaComponent, pathMatch: 'full' },
   { path: "nvbatv", component: NvbatvComponent, pathMatch: 'full' },
   { path: "cares", component: CaresComponent, pathMatch: 'full' }, 
+  { path: "artworks", component: ArtworksComponent, pathMatch: 'full' }, 
   // { path: '404', component: NotFoundComponent},
   // { path: '**', redirectTo: '/404'},
 
