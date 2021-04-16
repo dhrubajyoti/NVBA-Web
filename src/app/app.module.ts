@@ -74,6 +74,7 @@ import { Ameyaa2020Component } from './magazine/ameyaa2020/ameyaa2020.component'
 import { FaqComponent } from './magazine/faq/faq.component';
 import { SaraswatipujaComponent } from './pages/saraswatipuja/saraswatipuja.component';
 import { CaresComponent } from './pages/cares/cares.component';
+import { ArtworksComponent } from './pages/archive/artworks/artworks.component';
 
 @NgModule({
   declarations: [
@@ -113,7 +114,8 @@ import { CaresComponent } from './pages/cares/cares.component';
     Ameyaa2020Component,
     FaqComponent,
     SaraswatipujaComponent,
-    CaresComponent
+    CaresComponent,
+    ArtworksComponent
   ],
   imports: [
     BrowserModule,
