@@ -9,6 +9,18 @@
             <h3 style="text-align: center;">Designed to be enjoyed from the comfort of your home in your living/family room.
             </h3>
           </div>
+          <div class=" col-lg-12 col-md-12  d-flex flex-column  " >
+            
+            <div style="text-align: center;" >
+                <a href="https://us02web.zoom.us/j/83864372224?pwd=cm82VGs1ZWt2SUJ2cHQyTm53S00zQT09" target="_blank" class="btn-get-spc  button  " style="background-color: #ff6602;"  > Live Saraswati Puja, Anjali and Virtual Hathe Khori</a>
+            </div>
+            <div *ngIf=" this.member.membershipstatus == 'Valid'" style="text-align: center;" >
+                <a href="https://www.youtube.com/watch?v=8KHGCz1zxoY" class="btn-get-spc  button " target="_blank" > Watch Local Performance <br> and <br> Saberi Bhattacharya  <br> Saturday Evening 7:30 PM (Feb. 20th)</a>
+            </div>
+            <div *ngIf=" this.member.membershipstatus != 'Valid'" style="text-align: center;" >
+                <button routerLink="/login" class="btn-get-spc button " > Watch Local Performance <br> and <br> Saberi Bhattacharya  <br> Saturday Evening 7:30 PM (Feb. 20th)</button>
+            </div>
+          </div>
           
           <div class=" col-lg-12 col-md-12 row  justify-content-center  " >
             
@@ -30,8 +42,9 @@
                 <p class=" italic "><span>Puja </span> - Live Telecast from 11 am.</p>
                 <p class=" italic "><span>Arati/Anjali </span> - 12.30 pm</p>
                 <p class=" italic "><span>Virtual Hathe Khori </span> - 1 pm</p>
-                <p style="margin-bottom: 30px;">Link will be shared  through email, FB and Website, closer to the date. <br />
-                 </p>
+                <!-- <p style="margin-bottom: 30px;">Link will be shared  through email, FB and Website, closer to the date. <br />
+                 </p> -->
+                 <p class="mb-5"><a target="_blank" href="https://us02web.zoom.us/j/83864372224?pwd=cm82VGs1ZWt2SUJ2cHQyTm53S00zQT09"  >Link for Saraswati Puja, Anjali and Virtual Hathe Khori </a></p>
                  <div >
                    <h3>HATHE KHORI, 2021</h3>
                  </div>
@@ -51,12 +64,19 @@
                 <div class=" col-lg-12 col-md-12 text-center justify-content-center">
                   <img src="assets/images/stocks/saberi.png"  class="img-fluid dp artist" alt="Responsive image">
                 </div>
+
+                <div class="col-lg-12 col-md-12 text-center justify-content-center mt-4">
+                  <iframe max-width="560" height="215" src="https://www.youtube.com/embed/o1iy49iVOzA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  
+                </div>
                  
                 <div>
                   <p class="m-4 italic ">Enjoy the evening with Musical Talent from India- Saberi Bhattacharya. <br />
-                    Brought to you virtually on 20th February evening.  <br />
+                    Brought to you virtually on 20th February evening at 7:30 PM.  <br />
                     Stay tuned for more information.</p>
                 </div>
+
+                
 
           </div>
 

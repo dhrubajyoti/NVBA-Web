@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
+import { UserService } from './../auth/core/user.service';
+import { UserResolver } from './../auth/user/user.resolver'; 
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-saraswatipuja',
@@ -7,9 +11,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SaraswatipujaComponent implements OnInit {
 
-  constructor() { }
+  member:any;
+  
+  constructor(
+    public UserService:UserService,
+    public userResolver:UserResolver,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {
+  //  this.UserService.getCurrentUser
+    this.UserService.cast.subscribe(m =>{
+      this.member = m;
+      console.log(this.member);
+    });
+
+    
+   }
 
   ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      if(params['mode'] == "resetPassword"){
+        this.router.navigate(['/resetpassword', params]);
+      }
+    });
   }
 
 }
