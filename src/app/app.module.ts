@@ -76,6 +76,7 @@ import { SaraswatipujaComponent } from './pages/saraswatipuja/saraswatipuja.comp
 import { CaresComponent } from './pages/cares/cares.component';
 import { ArtworksComponent } from './pages/archive/artworks/artworks.component';
 import { KobipronamComponent } from './pages/kobipronam/kobipronam.component';
+import { PicnicComponent } from './pages/picnic/picnic.component';
 
 @NgModule({
   declarations: [
@@ -117,7 +118,8 @@ import { KobipronamComponent } from './pages/kobipronam/kobipronam.component';
     SaraswatipujaComponent,
     CaresComponent,
     ArtworksComponent,
-    KobipronamComponent
+    KobipronamComponent,
+    PicnicComponent
   ],
   imports: [
     BrowserModule,
