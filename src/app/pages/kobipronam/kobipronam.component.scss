@@ -1,0 +1,56 @@
+.img-fluid, .img-thumbnail {
+    max-width: inherit;
+    height: 100%;
+}
+.artist {
+    width: inherit;
+    max-width: 400px;
+    margin: 0 inherit;
+    height: auto;
+}
+.artistDiv div{
+    width: 100%;
+    height: auto;
+}
+
+
+.italic{
+    span{
+        color: rgba(0,0,0,1);
+        font-weight: 600;
+        font-size: 1.05em;
+       
+    }
+}
+
+#saraswatipuja {
+    a{
+        text-decoration: underline;
+    }
+    h3{
+        font-size: 1.4em;
+        color: rgba(0,0,0,1);
+    }
+    .or{
+        color: #ff8d00;
+    }
+} 
+
+button, a.button{
+    background: #ff8d00;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.5s;
+    margin: 25px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px 0px rgb(0 0 0 / 55%);
+    border-color: #ff8d00;
+    text-decoration: none !important;
+    text-align: center;
+}

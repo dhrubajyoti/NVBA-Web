@@ -75,6 +75,7 @@ import { FaqComponent } from './magazine/faq/faq.component';
 import { SaraswatipujaComponent } from './pages/saraswatipuja/saraswatipuja.component';
 import { CaresComponent } from './pages/cares/cares.component';
 import { ArtworksComponent } from './pages/archive/artworks/artworks.component';
+import { KobipronamComponent } from './pages/kobipronam/kobipronam.component';
 
 @NgModule({
   declarations: [
@@ -115,7 +116,8 @@ import { ArtworksComponent } from './pages/archive/artworks/artworks.component';
     FaqComponent,
     SaraswatipujaComponent,
     CaresComponent,
-    ArtworksComponent
+    ArtworksComponent,
+    KobipronamComponent
   ],
   imports: [
     BrowserModule,
