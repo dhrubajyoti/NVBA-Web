@@ -1,0 +1,220 @@
+[
+    {
+        "name": "All 3 days",
+        "description": "Adult Non-Veg",
+        "quantity": 0,
+        "price": 110,
+        "tax": 0.00,
+        "sku": "DP2021ALL01",
+        "currency": "USD"
+      },
+      {
+        "name": "All 3 days",
+        "description": "Adult Veg",
+        "quantity": 0,
+        "price": 110,
+        "tax": 0.00,
+        "sku": "DP2021ALL02",
+        "currency": "USD"
+      },
+      {
+        "name": "All 3 days",
+        "description": "Kid [ 5 years to 18 years ] Non-Veg",
+        "quantity": 0,
+        "price": 55,
+        "tax": 0.00,
+        "sku": "DP2021ALL03",
+        "currency": "USD"
+      },
+      {
+        "name": "All 3 days",
+        "description": "Kid [ 5 years to 18 years ] Veg",
+        "quantity": 0,
+        "price": 55,
+        "tax": 0.00,
+        "sku": "DP2021ALL04",
+        "currency": "USD"
+      },
+    {
+      "name": "All 3 days ",
+      "description": "Toddler ( 2-4 years of age)",
+      "quantity": 0,
+      "price": 0,
+      "tax": 0.00,
+      "sku": "DP2021ALL05",
+      "currency": "USD"
+    },
+    {
+        "name": "All 3 days",
+        "description": "Infant (0-1 year)",
+        "quantity": 0,
+        "price": 0,
+        "tax": 0.00,
+        "sku": "DP2021ALL06",
+        "currency": "USD"
+    },
+    {
+        "name": "Friday Only",
+        "description": "Adult Non-Veg",
+        "quantity": 0,
+        "price": 20,
+        "tax": 0.00,
+        "sku": "DP2021FRI01",
+        "currency": "USD"
+      },
+      {
+        "name": "Friday Only",
+        "description": "Adult Veg",
+        "quantity": 0,
+        "price": 20,
+        "tax": 0.00,
+        "sku": "DP2021FRI02",
+        "currency": "USD"
+      },
+      {
+        "name": "Friday Only",
+        "description": "Kid [ 5 years to 18 years ] Non-Veg",
+        "quantity": 0,
+        "price": 10,
+        "tax": 0.00,
+        "sku": "DP2021FRI03",
+        "currency": "USD"
+      },
+      {
+        "name": "Friday Only",
+        "description": "Kid [ 5 years to 18 years ] Veg",
+        "quantity": 0,
+        "price": 10,
+        "tax": 0.00,
+        "sku": "DP2021FRI04",
+        "currency": "USD"
+      },
+    {
+      "name": "Friday Only",
+      "description": "Toddler ( 2-4 years of age)",
+      "quantity": 0,
+      "price": 0,
+      "tax": 0.00,
+      "sku": "DP2021FRI05",
+      "currency": "USD"
+    },
+    {
+        "name": "Friday Only",
+        "description": "Infant (0-1 year)",
+        "quantity": 0,
+        "price": 0,
+        "tax": 0.00,
+        "sku": "DP2021FRI06",
+        "currency": "USD"
+    },
+    {
+        "name": "Saturday Only",
+        "description": "Adult Non-Veg",
+        "quantity": 0,
+        "price": 60,
+        "tax": 0.00,
+        "sku": "DP2021SAT01",
+        "currency": "USD"
+      },
+      {
+        "name": "Saturday Only",
+        "description": "Adult Veg",
+        "quantity": 0,
+        "price": 60,
+        "tax": 0.00,
+        "sku": "DP2021SAT02",
+        "currency": "USD"
+      },
+      {
+        "name": "Saturday Only",
+        "description": "Kid [ 5 years to 18 years ] Non-Veg",
+        "quantity": 0,
+        "price": 30,
+        "tax": 0.00,
+        "sku": "DP2021SAT03",
+        "currency": "USD"
+      },
+      {
+        "name": "Saturday Only",
+        "description": "Kid [ 5 years to 18 years ] Veg",
+        "quantity": 0,
+        "price": 30,
+        "tax": 0.00,
+        "sku": "DP2021SAT04",
+        "currency": "USD"
+      },
+    {
+      "name": "Saturday Only",
+      "description": "Toddler ( 2-4 years of age)",
+      "quantity": 0,
+      "price": 0,
+      "tax": 0.00,
+      "sku": "DP2021SAT05",
+      "currency": "USD"
+    },
+    {
+        "name": "Saturday Only",
+        "description": "Infant (0-1 year)",
+        "quantity": 0,
+        "price": 0,
+        "tax": 0.00,
+        "sku": "DP2021SAT06",
+        "currency": "USD"
+    },
+    {
+        "name": "Sunday Only",
+        "description": "Adult Non-Veg",
+        "quantity": 0,
+        "price": 85,
+        "tax": 0.00,
+        "sku": "DP2021SUN01",
+        "currency": "USD"
+      },
+      {
+        "name": "Sunday Only",
+        "description": "Adult Veg",
+        "quantity": 0,
+        "price": 85,
+        "tax": 0.00,
+        "sku": "DP2021SUN02",
+        "currency": "USD"
+      },
+      {
+        "name": "Sunday Only",
+        "description": "Kid [ 5 years to 18 years ] Non-Veg",
+        "quantity": 0,
+        "price": 40,
+        "tax": 0.00,
+        "sku": "DP2021SUN03",
+        "currency": "USD"
+      },
+      {
+        "name": "Sunday Only",
+        "description": "Kid [ 5 years to 18 years ] Veg",
+        "quantity": 0,
+        "price": 40,
+        "tax": 0.00,
+        "sku": "DP2021SUN04",
+        "currency": "USD"
+      },
+    {
+      "name": "Sunday Only",
+      "description": "Toddler ( 2-4 years of age)",
+      "quantity": 0,
+      "price": 0,
+      "tax": 0.00,
+      "sku": "DP2021SUN05",
+      "currency": "USD"
+    },
+    {
+        "name": "Sunday Only",
+        "description": "Infant (0-1 year)",
+        "quantity": 0,
+        "price": 0,
+        "tax": 0.00,
+        "sku": "DP2021SUN06",
+        "currency": "USD"
+    }
+    
+      
+]    

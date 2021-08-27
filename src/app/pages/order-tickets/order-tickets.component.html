@@ -1,13 +1,11 @@
 
-<section id="durgapuja2020" class="main-pages noScrollXaxis"  >
+<section id="durgapuja2021" class="main-pages noScrollXaxis"  >
     <div class="container">
         <div class="topLineFix"></div>   
       <div class="section-header">
-        <h2>Order Your Food for Durga Puja 2020</h2>
-        <h3 style="text-align: center;">Designed to be enjoyed from the comfort of your home in your living/family room
+        <h2>Order Tickets for Durga Puja 2021</h2>
+        <h3 style="text-align: center;">Please take tickets as per your convinience, with Cultural program with kavita krishnamurthy Live or with out cultural program.
         </h3>
-
-
       </div>
 
 
@@ -43,7 +41,22 @@
                 </ul>
             </div>
         </div>
-        <app-cart></app-cart>
+
+        
+        <button class="btn-get-started" *ngIf="isBtn" (click) = toggleDisplay()>Ticket include Cultural Program</button>  
+        <button class="btn-get-started" *ngIf="isBtn" (click) = toggleDisplay()>Ticket Without Cultural Program</button> 
+        <div *ngIf="!isBtn"  >
+            <button class="btn-get-started" (click) = toggleDisplay()>{{btnMsg}}</button>  
+            <div *ngIf="!isShow" >
+                <app-earlybird></app-earlybird>
+             </div>
+             <div *ngIf="isShow">
+                <app-earlybirdwithoutcultural></app-earlybirdwithoutcultural>
+             </div>
+        </div>     
+         
+          
+          
   
         
     </div>    
