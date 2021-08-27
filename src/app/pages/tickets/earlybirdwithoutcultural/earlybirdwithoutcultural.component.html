@@ -1,0 +1,129 @@
+<div class="table-responsive">
+  
+    <p> As per CDC guideline we need register all guests in the lists. <br />Please provide accurate information.   </p>
+  
+    <table class="table table-hover table-bordered " style="background-color: #fff;" >
+        <thead>
+          <tr >
+            <th colspan="4" style="color:#ff8d00; background-color: #fafafa;" >
+                All 3 Days ( October 8th, 2021 to October 10th, 2021 )
+            </th>
+          </tr>
+          <tr>
+            <th scope="col"  >Items</th>
+            <th scope="col">Cost</th>
+            <th scope="col">Quantity</th>
+            <!-- <th scope="col">Add</th> -->
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let item of dataObject; index as i" >
+          
+          <tr *ngIf="i < 6">
+              <th>{{item.description}}</th>
+              <td>$ {{item.price}}</td>
+              <td><input type="number" [(ngModel)]="item.quantity" style="width:50px" min="0" max="10" ></td>
+              <!-- <td> <button class="btn btn-warning" (click)="addToCartobj(item)" >Add to Cart</button></td> -->
+              <td  >$ {{item.price * item.quantity}}</td>
+          </tr>
+        </tbody>
+        <!-- <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th> 
+              <th scope="col" colspan="3" ><div class="d-flex justify-content-end">Total</div></th>
+            
+              <th scope="col">$ {{totalCost}}</th> 
+            </tr>
+        </thead> -->
+        <thead>
+          <tr>
+            <th style="color:#ff8d00; background-color: #fafafa;" colspan="4" >
+              Only Friday ( October 8th, 2021)
+            </th>
+          </tr>
+          <tr>
+            <th scope="col" >Items</th>
+            <th scope="col">Cost</th>
+            <th scope="col">Quantity</th>
+            <!-- <th scope="col">Add</th> -->
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let item of dataObject; index as i" >
+          
+            <tr *ngIf="i > 5 && i < 12" >
+              <th>{{item.description}}</th>
+              <td>$ {{item.price}}</td>
+              <td><input type="number" [(ngModel)]="item.quantity" style="width:50px" min="0" max="10" ></td>
+              <!-- <td> <button class="btn btn-warning" (click)="addToCartobj(item)" >Add to Cart</button></td> -->
+              <td  >$ {{item.price * item.quantity}}</td>
+            </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th style="color:#ff8d00; background-color: #fafafa;" colspan="4" >
+                Only Saturday ( October 9th, 2021)
+                </th>
+            </tr>
+            <tr>
+                <th scope="col" >Items</th>
+                <th scope="col">Cost</th>
+                <th scope="col">Quantity</th>
+                <!-- <th scope="col">Add</th> -->
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of dataObject; index as i" >
+            
+                <tr *ngIf="i > 11 && i < 18" >
+                <th>{{item.description}}</th>
+                <td>$ {{item.price}}</td>
+                <td><input type="number" [(ngModel)]="item.quantity" style="width:50px" min="0" max="10" ></td>
+                <!-- <td> <button class="btn btn-warning" (click)="addToCartobj(item)" >Add to Cart</button></td> -->
+                <td  >$ {{item.price * item.quantity}}</td>
+                </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th style="color:#ff8d00; background-color: #fafafa;" colspan="4" >
+                Only Sunday ( October 10th, 2021)
+                </th>
+            </tr>
+            <tr>
+                <th scope="col" >Items</th>
+                <th scope="col">Cost</th>
+                <th scope="col">Quantity</th>
+                <!-- <th scope="col">Add</th> -->
+                <th scope="col">Total</th>
+            </tr>
+            </thead>
+            <tbody *ngFor="let item of dataObject; index as i" >
+            
+                <tr *ngIf="i > 17" >
+                <th>{{item.description}}</th>
+                <td>$ {{item.price}}</td>
+                <td><input type="number" [(ngModel)]="item.quantity" style="width:50px" min="0" max="10" ></td>
+                <!-- <td> <button class="btn btn-warning" (click)="addToCartobj(item)" >Add to Cart</button></td> -->
+                <td  >$ {{item.price * item.quantity}}</td>
+                </tr>
+        </tbody>
+        <thead>
+            <tr>
+              <!-- <th scope="col"></th>
+              <th scope="col"></th> -->
+              <th scope="col" colspan="3" ><div class="d-flex justify-content-end">Total</div></th>
+              <!-- <th scope="col">Add</th> -->
+              <th scope="col">$ {{totalCost}}</th> 
+            </tr>
+        </thead>
+    </table>
+  
+    <div class="float-right mb-5">
+        <button class="btn btn-warning" (click)="addToCartobj()" >Add to Cart</button>
+    </div>
+    <!-- <div>
+        {{ dataObject | json }}
+    </div> -->
+    
+  </div>

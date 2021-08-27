@@ -76,6 +76,13 @@ import { SaraswatipujaComponent } from './pages/saraswatipuja/saraswatipuja.comp
 import { CaresComponent } from './pages/cares/cares.component';
 import { ArtworksComponent } from './pages/archive/artworks/artworks.component';
 import { KobipronamComponent } from './pages/kobipronam/kobipronam.component';
+import { PicnicComponent } from './pages/picnic/picnic.component';
+import { Durgapuja2021Component } from './pages/durgapuja2021/durgapuja2021.component';
+import { EarlybirdComponent } from './pages/tickets/earlybird/earlybird.component';
+import { RegulargateComponent } from './pages/tickets/regulargate/regulargate.component';
+import { RegulargatewithoutculturalComponent } from './pages/tickets/regulargatewithoutcultural/regulargatewithoutcultural.component';
+import { EarlybirdwithoutculturalComponent } from './pages/tickets/earlybirdwithoutcultural/earlybirdwithoutcultural.component';
+
 
 @NgModule({
   declarations: [
@@ -117,7 +124,13 @@ import { KobipronamComponent } from './pages/kobipronam/kobipronam.component';
     SaraswatipujaComponent,
     CaresComponent,
     ArtworksComponent,
-    KobipronamComponent
+    KobipronamComponent,
+    PicnicComponent,
+    Durgapuja2021Component,
+    EarlybirdComponent,
+    RegulargateComponent,
+    RegulargatewithoutculturalComponent,
+    EarlybirdwithoutculturalComponent
   ],
   imports: [
     BrowserModule,

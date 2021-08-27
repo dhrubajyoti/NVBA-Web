@@ -34,7 +34,7 @@
             ],
             "allowedCommonJsDependencies": [
               "lodash"
-           ],
+            ],
             "scripts": []
           },
           "configurations": {
@@ -131,5 +131,8 @@
       }
     }
   },
-  "defaultProject": "nvba"
+  "defaultProject": "nvba",
+  "cli": {
+    "analytics": "66cb07e0-5fd3-4e71-81f1-56423a48c280"
+  }
 }
