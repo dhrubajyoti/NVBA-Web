@@ -4,8 +4,8 @@
         <div class="topLineFix"></div>   
       <div class="section-header">
         <h2>Order Tickets for Durga Puja 2021</h2>
-        <h3 style="text-align: center;">Please take tickets as per your convinience, with Cultural program with kavita krishnamurthy Live or with out cultural program.
-        </h3>
+        <!-- <h3 style="text-align: center;">Please take tickets as per your convinience, with Cultural program with kavita krishnamurthy Live or with out cultural program.
+        </h3> -->
       </div>
 
 
@@ -15,35 +15,46 @@
 
         <div class="d-flex  justify-content-center mb-4 mt-4">
             <div class="flex-column col-lg-6">
-                <div style="font-weight: bold;" ><span class="red">*</span><b>Guidelines:</b></div>
-                <ul  style="margin: 0 auto;"> 
+                <h3 style="text-align: center;">ARBITRATION AND RELEASE &
+                    WAIVER OF LIABILITY AGREEMENT
+                    NORTHERN VIRGINIA BENGALI ASSOCIATION EVENTS:.
+                </h3>
+                
+                <ol  style="margin: 10px auto;"> 
                     <!-- <li>
                         Food is available for purchase for NVBA Members only.
                     </li> -->
                     <li>
-                        Food orders must by placed by October 18th 11:59 PM EST.
+                        Registrant fully understands that the novel coronavirus SARS- CoV-2 and any resulting disease (together with any mutation, adaptation, or variation thereof, "COVID-19”) is an extremely contagious disease that can lead to severe illness and death, and there is an inherent danger and risk of exposure to COVID-19 in any place where people are present.
                     </li>
                     <li>
-                        Food will be provided by the restaurant in pre-packaged container. NVBA is not responsible for cooking or packing of the food.
+                        Registrant fully acknowledges that all family members and relatives ages 12 and above are fully vaccinated and will abide by CDC and VDH guidelines during the entire event hosted by Northern Virginia Bengali Association from October 8th. Till October 10th. 2021.
                     </li>
                     <li>
-                        Members ordering food should pick up their orders by showing their proof of purchase between 4 – 6 PM on October 24th and October 25th from their nearest pickup location which will be announced soon.
-                    </li>
-                    <!-- <li>
-                        Food order may be cancelled and your money will be refunded if the number of orders are less than 20.
+                        Registrant and their family members and relatives accompanying the registrant agrees to wear a mask at all times inside the school building with the exception of eating and drinking. Failure to do so may result in warning or eviction from the school property.
                     </li>
                     <li>
-                        Food order may close if the number of deliver addresses is 50.
+                        Should the Durga Puja event get cancelled NVBA will refund the registration cost minus the PayPal processing fees via check to the registrant’s mailing address.
                     </li>
-                    <li>
-                        Due to logistics challenges, food can be delivered only at the below city and zip code combinations:
-                    </li> -->
-                </ul>
+                    <li style="list-style: none; margin: 20px 0 20px 0;">
+                        <strong>BY COMPLETING THE REGISTRATION FOR THIS EVENT,</strong>  I HAVE CAREFULLY READ AND FULLY UNDERSTAND ALL PROVISIONS OF THIS RELEASE. AND FREELY AND KNOWINGLY ASSUME THE RISK AND WAIVE MY RIGHTS CONCERNING LIABILITY AS DESCRIBED ABOVE AND AGREE NOT TO HOLD NORTHERN VIRGINIA BENGALI ASSOCIATION (NVBA) AND ITS EXECUTIVE COMMITTEE MEMBERS LIABLE FOR ANY ILLNESS OR INJURY:
+                    </li>
+                    <li style="list-style: none; margin: 20px 0 20px 0;">
+                        <input type="checkbox" #agree id="agree" [(ngModel)]="iAgree" name="agree" value="agree" (click)="checkCheckBoxvalue(agree)" >
+                            <label for="agree" style="margin-left: 10px; font-size: 1.1em;" > I agree</label><br>
+                    </li>
+                     
+                </ol>
+                
             </div>
         </div>
 
+        <div *ngIf="iAgree" [@inOutAnimation] >
+            <app-earlybirdwithoutcultural></app-earlybirdwithoutcultural>
+        </div>
+
         
-        <button class="btn-get-started" *ngIf="isBtn" (click) = toggleDisplay()>Ticket include Cultural Program</button>  
+        <!-- <button class="btn-get-started" *ngIf="isBtn" (click) = toggleDisplay()>Ticket include Cultural Program</button>  
         <button class="btn-get-started" *ngIf="isBtn" (click) = toggleDisplay()>Ticket Without Cultural Program</button> 
         <div *ngIf="!isBtn"  >
             <button class="btn-get-started" (click) = toggleDisplay()>{{btnMsg}}</button>  
@@ -53,7 +64,7 @@
              <div *ngIf="isShow">
                 <app-earlybirdwithoutcultural></app-earlybirdwithoutcultural>
              </div>
-        </div>     
+        </div>      -->
          
           
           

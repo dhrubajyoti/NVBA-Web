@@ -47,7 +47,10 @@ export class ReportsComponent implements OnInit {
     { field: 'address1', sortable: true , filter: true},
     { field: 'address2', sortable: true , filter: true},
     { field: 'city', sortable: true , filter: true},
-    { field: 'zipcode', sortable: true , filter: true}
+    { field: 'zipcode', sortable: true , filter: true},
+    { field: 'iAgree', sortable: true , filter: true},
+    { field: 'iAgreeDateTime', sortable: true , filter: true},
+    { field: 'iAgreeIP', sortable: true , filter: true}
 	];
 
 

@@ -5,21 +5,21 @@ import { CartService } from '../../../services/cart.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-earlybirdwithoutcultural',
-  templateUrl: './earlybirdwithoutcultural.component.html',
-  styleUrls: ['./earlybirdwithoutcultural.component.scss']
+  selector: 'app-eventtickets',
+  templateUrl: './eventtickets.component.html',
+  styleUrls: ['./eventtickets.component.scss']
 })
-export class EarlybirdwithoutculturalComponent implements OnInit, OnChanges, AfterViewChecked {
+export class EventticketsComponent implements OnInit, OnChanges, AfterViewChecked {
 
   dataObject :any=[];
   checkObject :any=[];
   cartObject : any=[];
   totalCost: number = 0;
   cartCheck: any;
-  customClass = 'customClass';
 
 
-  private _jsonURLcart = '/assets/data/durgapuja-2021-earlybirdwithoutculture.json';
+
+  private _jsonURLcart = '/assets/data/eventtickets.json';
    constructor(private http: HttpClient, private cs: CartService, public router: Router, private cdr: ChangeDetectorRef) {
     this.cs.currentCart.subscribe( cartCheck => this.cartCheck = cartCheck);
     this.getJSON().subscribe(data => {
