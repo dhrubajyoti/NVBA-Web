@@ -101,11 +101,11 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
 
 
   paypalConfig = {
-  //  env: 'sandbox',
-    env: 'production',
+    env: 'sandbox',
+  //  env: 'production',
     client: {
-  //    sandbox: 'AeLhWUCfC2jHOZv7b-KDfZV6R6Mig-2FklW6iIxsuI0UROww652TU9SlVPHyW1ygMGohQo21TfXUVPrz',
-      production: 'AVBsfj0Jw-jl5_63BPGwuduCaKDsPvbz1pwyqECm7N5FzKEi1Q_o-xQAiM_BTzQhAW064uAPf1v9uZdS'
+      sandbox: 'AeLhWUCfC2jHOZv7b-KDfZV6R6Mig-2FklW6iIxsuI0UROww652TU9SlVPHyW1ygMGohQo21TfXUVPrz',
+  //    production: 'AVBsfj0Jw-jl5_63BPGwuduCaKDsPvbz1pwyqECm7N5FzKEi1Q_o-xQAiM_BTzQhAW064uAPf1v9uZdS'
     },
     style: {
       shape: 'rect',
@@ -196,11 +196,13 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
       if( payment.transactions[0].item_list.items[0].name == 'NVBA Annual Membership' ){
           let newdate;
           if(this.member.expires){
-            newdate = new Date(new Date().setFullYear(new Date(this.member.expires).getFullYear() + 1))
-          //  alert(newdate);
+      //   newdate = new Date(new Date().setFullYear(new Date(this.member.expires).getFullYear() + 1))
+           newdate = new Date(new Date().setFullYear(new Date().getFullYear() + 1));
+       //     alert('If = '+newdate);
           }
           else{
           newdate = new Date(new Date().setFullYear(new Date().getFullYear() + 1));
+       //   alert('else = '+newdate);
           }
           this.member.expires = newdate.toISOString().split('T')[0];
           this.member.membershipstatus = 'Valid';

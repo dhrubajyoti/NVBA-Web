@@ -11,7 +11,13 @@
       <div>
           <div class="mb-3"><a (click)="goBack()"  style="color: #ff6500; " ><i class="fa fa-chevron-left" aria-hidden="true"></i> Go Back</a></div>
                         <div class="table-responsive">
-                            <div class="d-flex justify-content-center my-5" *ngIf="emptyCart"  >  Empty Cart </div> 
+                            <div class="flex-column my-5" *ngIf="emptyCart"  > 
+                                <div class="flex-center  my-5">Empty Cart </div> 
+                                <h2 class="flex-center  my-3">Always update your mailing address and phone number in case we need to issue a refund.</h2>
+                                <div class="flex-center ">
+                                    <a class="btn-get-started text-center " routerLink="/user" >Membership Details Page</a>
+                                </div>
+                            </div> 
                             <table class="table table-hover table-bordered" *ngIf="!emptyCart" >
                                 <thead>
                                 <tr>

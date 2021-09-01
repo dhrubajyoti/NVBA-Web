@@ -40,6 +40,7 @@ import { ResetpasswordComponent } from './pages/auth/resetpassword/resetpassword
 import { CaresComponent } from './pages/cares/cares.component';
 import { ArtworksComponent } from './pages/archive/artworks/artworks.component';
 import { PicnicComponent } from './pages/picnic/picnic.component';
+import { EventticketsComponent } from './pages/tickets/eventtickets/eventtickets.component';
 import { from } from 'rxjs';
 
 
@@ -80,7 +81,8 @@ const routes: Routes = [
   { path: "user", component: UserComponent,  resolve: { data: UserResolver} },
   { path: "resetpassword", component: ResetpasswordComponent, pathMatch: 'full' },
   { path: "checkout", component: CheckoutComponent,  pathMatch: 'full' },
-  { path: "ordertickets", component: OrderTicketsComponent,  pathMatch: 'full' },
+  { path: "ordertickets", component: OrderTicketsComponent,  pathMatch: 'full', resolve: { data: UserResolver} },
+  { path: "eventtickets", component: EventticketsComponent,  pathMatch: 'full', resolve: { data: UserResolver} },
 
   { path: "reports", component: ReportsComponent,  pathMatch: 'full', resolve: { data: UserResolver}  },
   

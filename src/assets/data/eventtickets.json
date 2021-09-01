@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Kavita Krishnamurthy show tickets for Adults",
+        "description": "Adult ",
+        "quantity": 0,
+        "price": 35,
+        "tax": 0.00,
+        "sku": "DP2021KKS01",
+        "currency": "USD"
+      },
+      {
+        "name": "Kavita Krishnamurthy show tickets for Kids",
+        "description": "Kids age 0 to 18 years",
+        "quantity": 0,
+        "price": 25,
+        "tax": 0.00,
+        "sku": "DP2021KKS02",
+        "currency": "USD"
+      }
+]

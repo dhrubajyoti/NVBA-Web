@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -82,6 +83,7 @@ import { EarlybirdComponent } from './pages/tickets/earlybird/earlybird.componen
 import { RegulargateComponent } from './pages/tickets/regulargate/regulargate.component';
 import { RegulargatewithoutculturalComponent } from './pages/tickets/regulargatewithoutcultural/regulargatewithoutcultural.component';
 import { EarlybirdwithoutculturalComponent } from './pages/tickets/earlybirdwithoutcultural/earlybirdwithoutcultural.component';
+import { EventticketsComponent } from './pages/tickets/eventtickets/eventtickets.component';
 
 
 @NgModule({
@@ -130,7 +132,8 @@ import { EarlybirdwithoutculturalComponent } from './pages/tickets/earlybirdwith
     EarlybirdComponent,
     RegulargateComponent,
     RegulargatewithoutculturalComponent,
-    EarlybirdwithoutculturalComponent
+    EarlybirdwithoutculturalComponent,
+    EventticketsComponent
   ],
   imports: [
     BrowserModule,
@@ -152,7 +155,8 @@ import { EarlybirdwithoutculturalComponent } from './pages/tickets/earlybirdwith
     ToastrModule.forRoot(), // ToastrModule added
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([]),
+    AccordionModule.forRoot()
   ],
   providers: [AuthService, UserService, UserResolver, AuthGuard, MemberDetailsService], 
   bootstrap: [AppComponent]
