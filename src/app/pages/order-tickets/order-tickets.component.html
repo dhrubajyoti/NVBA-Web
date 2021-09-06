@@ -40,8 +40,18 @@
                         <strong>BY COMPLETING THE REGISTRATION FOR THIS EVENT,</strong>  I HAVE CAREFULLY READ AND FULLY UNDERSTAND ALL PROVISIONS OF THIS RELEASE. AND FREELY AND KNOWINGLY ASSUME THE RISK AND WAIVE MY RIGHTS CONCERNING LIABILITY AS DESCRIBED ABOVE AND AGREE NOT TO HOLD NORTHERN VIRGINIA BENGALI ASSOCIATION (NVBA) AND ITS EXECUTIVE COMMITTEE MEMBERS LIABLE FOR ANY ILLNESS OR INJURY:
                     </li>
                     <li style="list-style: none; margin: 20px 0 20px 0;">
-                        <input type="checkbox" #agree id="agree" [(ngModel)]="iAgree" name="agree" value="agree" (click)="checkCheckBoxvalue(agree)" >
-                            <label for="agree" style="margin-left: 10px; font-size: 1.1em;" > I agree</label><br>
+                        <span>
+                            <input type="checkbox" #agree id="agree" [(ngModel)]="iAgree" name="agree" value="agree" (click)="checkCheckBoxvalue(agree)" >
+                            <label for="agree" style="margin-left: 10px; font-size: 1.1em;" > I agree</label>
+                        </span>   
+                        <span style="float: right;">
+                            <input type="checkbox" #disagree id="disagree" name="disagree" value="disagree" (click)="redirectToHomepage()" >
+                            <label for="disagree" style="margin-left: 10px; font-size: 1.1em;" > I disagree</label>
+                        </span>
+
+                                
+                            
+                        <br>
                     </li>
                      
                 </ol>

@@ -3,6 +3,7 @@ import { UserService } from './../auth/core/user.service';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { IpServiceService } from './../../services/ip-service.service';
 import { MemberDetailsService } from './../../services/member-details.service';
+import { Router, Params } from '@angular/router';
 
 @Component({
   selector: 'app-order-tickets',
@@ -43,6 +44,7 @@ export class OrderTicketsComponent implements OnInit, OnChanges {
 
   btnMsg = "Ticket Without Cultural Program";
   constructor(
+    private router: Router,
     public userService: UserService, 
     private mds: MemberDetailsService,
     private ip:IpServiceService ){
@@ -53,12 +55,12 @@ export class OrderTicketsComponent implements OnInit, OnChanges {
    }
 
   ngOnInit(): void {
-    if(!localStorage.getItem('iAgrees'))
-        localStorage.setItem('iAgrees', 'false');
-    else {
-      if(localStorage.getItem('iAgrees') == 'true')
-        this.iAgree = true;
-    }
+    // if(!localStorage.getItem('iAgrees'))
+    //     localStorage.setItem('iAgrees', 'false');
+    // else {
+    //   if(localStorage.getItem('iAgrees') == 'true')
+    //     this.iAgree = true;
+    // }
 
     this.getIP();
            
@@ -71,13 +73,17 @@ export class OrderTicketsComponent implements OnInit, OnChanges {
     console.log(event.checked);
     this.iAgree = event.checked;
     console.log(this.iAgree);
-    localStorage.setItem('iAgrees', 'true');
+   // localStorage.setItem('iAgrees', 'true');
     console.log(this.ipAddress);
     const d = new Date();
     this.member.iAgree = true;
     this.member.iAgreeDateTime = d.toString();
     this.member.iAgreeIP = this.ipAddress;
     this.mds.updateCustomer(this.member);
+  }
+
+  redirectToHomepage(){
+    this.router.navigate(['/home']);
   }
 
   getIP()
