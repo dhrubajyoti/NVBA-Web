@@ -21,30 +21,38 @@
                       <td  >$ {{item.price * item.quantity}}</td>
                   </tr>
                 </tbody>
-            </table>
-        </accordion-group>
-        <accordion-group heading="Kavita Krishnamurthy Show (Sunday)">
-            <table class="table table-bordered table-hover ">
-                    <thead>
+                <thead>
                     <tr>
-                        <th scope="col" >Items</th>
-                        <th scope="col">Cost</th>
-                        <th scope="col">Quantity</th>
-                        <!-- <th scope="col">Add</th> -->
-                        <th scope="col">Total</th>
+                        <th colspan="4" style="background-color: #fad19e;" >Kavita Krishnamurthy Show (Sunday)
+                        <span class=" red " *ngIf="!addtoCartBtn"  >Please check the head count.</span>
+                        </th>    
                     </tr>
                 </thead>
-                <tbody *ngFor="let item of dataObject; index as i" >
+                <tbody *ngFor="let item of dataObject; index as i" style="background-color: #f9debe;" >
                     
-                        <tr *ngIf="i > 5 && i < 8" >
-                        <th>{{item.description}}</th>
-                        <td>$ {{item.price}}</td>
-                        <td><input type="number" [(ngModel)]="item.quantity" style="width:50px" min="0" max="10" ></td>
-                        <!-- <td> <button class="btn btn-warning" (click)="addToCartobj(item)" >Add to Cart</button></td> -->
-                        <td  >$ {{item.price * item.quantity}}</td>
-                        </tr>
+                    <tr *ngIf="i > 5 && i < 8" >
+                    <th>{{item.description}}</th>
+                    <td>$ {{item.price}}</td>
+                    <td><input type="number" [(ngModel)]="item.quantity" style="width:50px" min="0" max="10" ></td>
+                    <!-- <td> <button class="btn btn-warning" (click)="addToCartobj(item)" >Add to Cart</button></td> -->
+                    <td  >$ {{item.price * item.quantity}}</td>
+                    </tr>
                 </tbody>
-            </table>    
+                <thead>
+                    <tr>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col" ><div class="d-flex justify-content-end">Total</div></th>
+                    <!-- <th scope="col">Add</th> -->
+                    <th  scope="col">$ {{totalCost}}</th> 
+                    </tr>
+                </thead>
+            </table>
+
+            <div class="float-right mb-5">
+                <span class=" red " *ngIf="!addtoCartBtn"  >Please check the head count.</span>
+                <button [disabled]="addtoCartBtn === false" class="btn btn-warning" (click)="addToCartobj()" >Add to Cart</button>
+            </div>
         </accordion-group>
         <accordion-group heading="Single Day ( Friday - October 8th, 2021)" >
             <table class="table table-bordered table-hover ">
@@ -116,7 +124,7 @@
             </table>    
         </accordion-group>
     </accordion>
-    <table class="table ">
+    <table class="table table-bordered table-hover  ">
         <thead>
             <tr>
             <th scope="col"></th>
@@ -129,7 +137,7 @@
     </table>
 
     <div class="float-right mb-5">
-        <button class="btn btn-warning" (click)="addToCartobj()" >Add to Cart</button>
+        <button [disabled]="addtoCartBtn === false" class="btn btn-warning" (click)="addToCartobj()" >Add to Cart</button>
     </div>
 
 

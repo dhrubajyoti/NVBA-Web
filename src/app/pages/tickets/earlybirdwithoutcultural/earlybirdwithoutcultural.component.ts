@@ -19,6 +19,12 @@ export class EarlybirdwithoutculturalComponent implements OnInit, OnChanges, Aft
   customClass = 'customClass';
 
 
+  addtoCartBtn: boolean = true;
+  // kkAdultsCount: number = 0;
+  // kkkidsCount: number = 0;
+  // headCount: number = 0;
+
+
   private _jsonURLcart = '/assets/data/durgapuja-2021-earlybirdwithoutculture.json';
    constructor(private http: HttpClient, private cs: CartService, public router: Router, private cdr: ChangeDetectorRef) {
     this.cs.currentCart.subscribe( cartCheck => this.cartCheck = cartCheck);
@@ -57,11 +63,36 @@ export class EarlybirdwithoutculturalComponent implements OnInit, OnChanges, Aft
 
   ngAfterViewChecked(): void {
     let tc = 0;
+    let headCount = 0;
+    let ticketCount = 0;
     [...this.dataObject].forEach(value => {
+      console.log(value);
       if(value.quantity > 0){ 
         tc += (value.price * value.quantity);
-     } 
+      }
+      
+      if(value.ticketType === 'all3days' ){
+        headCount += value.quantity;
+      //  console.log("Head Count = "+ headCount);
+      }
+
+      if(value.showName === 'kkShow' ){
+        ticketCount += value.quantity;
+      //  console.log("Ticket Count = "+ ticketCount);
+        
+      }
+
+     
+     
     });
+
+    if(ticketCount>headCount){
+      this.addtoCartBtn = false;
+    }
+    else{
+      this.addtoCartBtn = true;
+    }
+
     this.totalCost = tc;
     this.cdr.detectChanges();
   }
@@ -71,7 +102,7 @@ export class EarlybirdwithoutculturalComponent implements OnInit, OnChanges, Aft
     [...this.dataObject].forEach(value => {
   //    console.log(value.quantity);
   //    console.log(value);
-      if(value.quantity > 0){ //alert(value.quantity);
+      if(value.quantity > 0){ alert(value.quantity);
        
         this.totalCost += (value.price * value.quantity);
         value.tax = (value.price * value.quantity) * 0.00; 
