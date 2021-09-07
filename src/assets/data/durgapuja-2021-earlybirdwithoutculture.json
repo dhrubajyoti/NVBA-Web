@@ -21,9 +21,9 @@
       },
       {
         "name": "All 3 days",
-        "description": "Kid [ 5 years to 18 years ] Non-Veg",
+        "description": "Kids [ 10 to 18 years ] Non-Veg",
         "quantity": 0,
-        "price": 30,
+        "price": 35,
         "tax": 0.00,
         "sku": "DP2021WOCALL03",
         "currency": "USD",
@@ -31,9 +31,9 @@
       },
       {
         "name": "All 3 days",
-        "description": "Kid [ 5 years to 18 years ] Veg",
+        "description": "Kids [ 10 to 18 years ] Veg",
         "quantity": 0,
-        "price": 30,
+        "price": 35,
         "tax": 0.00,
         "sku": "DP2021WOCALL04",
         "currency": "USD",
@@ -41,7 +41,7 @@
       },
     {
       "name": "All 3 days ",
-      "description": "Toddler ( 2-4 years of age)",
+      "description": "kids [ 0 to 10 years ]",
       "quantity": 0,
       "price": 0,
       "tax": 0.00,
@@ -51,9 +51,9 @@
     },
     {
         "name": "All 3 days",
-        "description": "Infant (0-1 year)",
+        "description": "Students and Visiting Parents",
         "quantity": 0,
-        "price": 0,
+        "price": 35,
         "tax": 0.00,
         "sku": "DP2021WOCALL06",
         "currency": "USD",
@@ -99,7 +99,7 @@
       },
       {
         "name": "Friday Only",
-        "description": "Kid [ 5 years to 18 years ] Non-Veg",
+        "description": "Kids [ 10 to 18 years ] Non-Veg",
         "quantity": 0,
         "price": 10,
         "tax": 0.00,
@@ -108,7 +108,7 @@
       },
       {
         "name": "Friday Only",
-        "description": "Kid [ 5 years to 18 years ] Veg",
+        "description": "Kids [ 10 to 18 years ] Veg",
         "quantity": 0,
         "price": 10,
         "tax": 0.00,
@@ -117,7 +117,7 @@
       },
     {
       "name": "Friday Only",
-      "description": "Toddler ( 2-4 years of age)",
+      "description": "kids [ 0 to 10 years ]",
       "quantity": 0,
       "price": 0,
       "tax": 0.00,
@@ -126,9 +126,9 @@
     },
     {
         "name": "Friday Only",
-        "description": "Infant (0-1 year)",
+        "description": "Students and Visiting Parents",
         "quantity": 0,
-        "price": 0,
+        "price": 10,
         "tax": 0.00,
         "sku": "DP2021WOCFRI06",
         "currency": "USD"
@@ -153,7 +153,7 @@
       },
       {
         "name": "Saturday Only",
-        "description": "Kid [ 5 years to 18 years ] Non-Veg",
+        "description": "Kids [ 10 to 18 years ] Non-Veg",
         "quantity": 0,
         "price": 15,
         "tax": 0.00,
@@ -162,7 +162,7 @@
       },
       {
         "name": "Saturday Only",
-        "description": "Kid [ 5 years to 18 years ] Veg",
+        "description": "Kids [ 10 to 18 years ] Veg",
         "quantity": 0,
         "price": 15,
         "tax": 0.00,
@@ -171,7 +171,7 @@
       },
     {
       "name": "Saturday Only",
-      "description": "Toddler ( 2-4 years of age)",
+      "description": "kids [ 0 to 10 years ]",
       "quantity": 0,
       "price": 0,
       "tax": 0.00,
@@ -180,9 +180,9 @@
     },
     {
         "name": "Saturday Only",
-        "description": "Infant (0-1 year)",
+        "description": "Students and Visiting Parents",
         "quantity": 0,
-        "price": 0,
+        "price": 15,
         "tax": 0.00,
         "sku": "DP2021WOCSAT06",
         "currency": "USD"
@@ -207,7 +207,7 @@
       },
       {
         "name": "Sunday Only",
-        "description": "Kid [ 5 years to 18 years ] Non-Veg",
+        "description": "Kids [ 10 to 18 years ] Non-Veg",
         "quantity": 0,
         "price": 15,
         "tax": 0.00,
@@ -216,7 +216,7 @@
       },
       {
         "name": "Sunday Only",
-        "description": "Kid [ 5 years to 18 years ] Veg",
+        "description": "Kids [ 10 to 18 years ] Veg",
         "quantity": 0,
         "price": 15,
         "tax": 0.00,
@@ -225,7 +225,7 @@
       },
     {
       "name": "Sunday Only",
-      "description": "Toddler ( 2-4 years of age)",
+      "description": "kids [ 0 to 10 years ]",
       "quantity": 0,
       "price": 0,
       "tax": 0.00,
@@ -234,9 +234,9 @@
     },
     {
         "name": "Sunday Only",
-        "description": "Infant (0-1 year)",
+        "description": "Students and Visiting Parents",
         "quantity": 0,
-        "price": 0,
+        "price": 15,
         "tax": 0.00,
         "sku": "DP2021WOCSUN06",
         "currency": "USD"
