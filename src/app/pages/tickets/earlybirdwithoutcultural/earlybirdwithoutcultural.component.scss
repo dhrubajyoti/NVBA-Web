@@ -13,3 +13,10 @@ accordion-group > div > div {
 [role="tabpanel"] .card-body {
     padding: 0rem !important;
 }
+
+.panel-body, .card-block, .card-body{
+    padding: 0rem;
+}
+
+.tickets button.btn.btn-link.ng-star-inserted{color: #ff8d00;}
+.tickets .singleDay button.btn.btn-link.ng-star-inserted{color: #ffc109;}
