@@ -102,7 +102,7 @@ export class EarlybirdwithoutculturalComponent implements OnInit, OnChanges, Aft
     [...this.dataObject].forEach(value => {
   //    console.log(value.quantity);
   //    console.log(value);
-      if(value.quantity > 0){ alert(value.quantity);
+      if(value.quantity > 0){ //alert(value.quantity);
        
         this.totalCost += (value.price * value.quantity);
         value.tax = (value.price * value.quantity) * 0.00; 
