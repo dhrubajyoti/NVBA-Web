@@ -13,7 +13,7 @@
                 </thead>
                 <tbody *ngFor="let item of dataObject; index as i" >
                   
-                  <tr *ngIf="i < 6">
+                  <tr *ngIf="i < 7">
                       <th>{{item.description}}</th>
                       <td>$ {{item.price}}</td>
                       <td><input type="number" [(ngModel)]="item.quantity" style="width:50px" min="0" max="10" ></td>
@@ -30,7 +30,7 @@
                 </thead>
                 <tbody *ngFor="let item of dataObject; index as i" style="background-color: #f9debe;" >
                     
-                    <tr *ngIf="i > 5 && i < 8" >
+                    <tr *ngIf="i > 6 && i < 9" >
                     <th>{{item.description}}</th>
                     <td>$ {{item.price}}</td>
                     <td><input type="number" [(ngModel)]="item.quantity" style="width:50px" min="0" max="10" ></td>
@@ -67,7 +67,7 @@
                 </thead>
                 <tbody *ngFor="let item of dataObject; index as i" >
                     
-                    <tr *ngIf="i > 7 && i < 14" >
+                    <tr *ngIf="i > 8 && i < 16" >
                         <th>{{item.description}}</th>
                         <td>$ {{item.price}}</td>
                         <td><input type="number" [(ngModel)]="item.quantity" style="width:50px" min="0" max="10" ></td>
@@ -90,7 +90,7 @@
                 </thead>
                 <tbody *ngFor="let item of dataObject; index as i" >
                     
-                        <tr *ngIf="i > 13 && i < 20" >
+                        <tr *ngIf="i > 15 && i < 23" >
                         <th>{{item.description}}</th>
                         <td>$ {{item.price}}</td>
                         <td><input type="number" [(ngModel)]="item.quantity" style="width:50px" min="0" max="10" ></td>
@@ -113,7 +113,7 @@
                     </thead>
                     <tbody *ngFor="let item of dataObject; index as i" >
                     
-                        <tr *ngIf="i > 19" >
+                        <tr *ngIf="i > 22" >
                         <th>{{item.description}}</th>
                         <td>$ {{item.price}}</td>
                         <td><input type="number" [(ngModel)]="item.quantity" style="width:50px" min="0" max="10" ></td>
