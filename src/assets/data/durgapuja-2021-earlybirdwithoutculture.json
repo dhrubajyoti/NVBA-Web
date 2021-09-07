@@ -51,7 +51,7 @@
     },
     {
         "name": "All 3 days",
-        "description": "Students and Visiting Parents",
+        "description": "Students and Visiting Parents Non-Veg ",
         "quantity": 0,
         "price": 35,
         "tax": 0.00,
@@ -60,9 +60,19 @@
         "ticketType": "all3days"
     },
     {
+        "name": "All 3 days",
+        "description": "Students and Visiting Parents Veg",
+        "quantity": 0,
+        "price": 35,
+        "tax": 0.00,
+        "sku": "DP2021WOCALL07",
+        "currency": "USD",
+        "ticketType": "all3days"
+    },
+    {
       "showName": "kkShow",
       "name": "Kavita Krishnamurthy show tickets for Adults",
-      "description": "Adult ",
+      "description": "General Admission",
       "quantity": 0,
       "price": 35,
       "tax": 0.00,
@@ -72,7 +82,7 @@
     {
       "showName": "kkShow",
       "name": "Kavita Krishnamurthy show tickets for Kids",
-      "description": "Kids age 0 to 18 years",
+      "description": "Kids[ 0 - 10 years if seat is required ]",
       "quantity": 0,
       "price": 25,
       "tax": 0.00,
@@ -126,11 +136,20 @@
     },
     {
         "name": "Friday Only",
-        "description": "Students and Visiting Parents",
+        "description": "Students and Visiting Parents Non-Veg",
         "quantity": 0,
         "price": 10,
         "tax": 0.00,
         "sku": "DP2021WOCFRI06",
+        "currency": "USD"
+    },
+    {
+        "name": "Friday Only",
+        "description": "Students and Visiting Parents Veg",
+        "quantity": 0,
+        "price": 10,
+        "tax": 0.00,
+        "sku": "DP2021WOCFRI07",
         "currency": "USD"
     },
     {
@@ -180,11 +199,20 @@
     },
     {
         "name": "Saturday Only",
-        "description": "Students and Visiting Parents",
+        "description": "Students and Visiting Parents Non-Veg",
         "quantity": 0,
         "price": 15,
         "tax": 0.00,
         "sku": "DP2021WOCSAT06",
+        "currency": "USD"
+    },
+    {
+        "name": "Saturday Only",
+        "description": "Students and Visiting Parents Veg",
+        "quantity": 0,
+        "price": 15,
+        "tax": 0.00,
+        "sku": "DP2021WOCSAT07",
         "currency": "USD"
     },
     {
@@ -234,13 +262,22 @@
     },
     {
         "name": "Sunday Only",
-        "description": "Students and Visiting Parents",
+        "description": "Students and Visiting Parents Non-Veg",
         "quantity": 0,
         "price": 15,
         "tax": 0.00,
         "sku": "DP2021WOCSUN06",
         "currency": "USD"
-    }
+    },
+    {
+      "name": "Sunday Only",
+      "description": "Students and Visiting Parents Veg",
+      "quantity": 0,
+      "price": 15,
+      "tax": 0.00,
+      "sku": "DP2021WOCSUN07",
+      "currency": "USD"
+  }
     
       
 ]    
