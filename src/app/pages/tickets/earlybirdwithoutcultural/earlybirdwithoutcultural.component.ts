@@ -70,13 +70,13 @@ export class EarlybirdwithoutculturalComponent implements OnInit, OnChanges, Aft
       if(value.quantity > 0){ 
         tc += (value.price * value.quantity);
       }
-      
-      if(value.ticketType === 'all3days' ){
+      let n = value.name.replace(/\s+/g, '');
+      if(n === 'All3days' ){
         headCount += value.quantity;
       //  console.log("Head Count = "+ headCount);
       }
 
-      if(value.showName === 'kkShow' ){
+      if(n === 'KavitaKrishnamurthyConcert' ){
         ticketCount += value.quantity;
       //  console.log("Ticket Count = "+ ticketCount);
         
