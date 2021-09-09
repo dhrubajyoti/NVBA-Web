@@ -5,7 +5,7 @@
       "quantity": 0,
       "price": 60,
       "tax": 0.00,
-      "sku": "DP2021EBALL01",
+      "sku": "DP2021EBALL01NON",
       "currency": "USD"
     },
     {
@@ -14,7 +14,7 @@
       "quantity": 0,
       "price": 60,
       "tax": 0.00,
-      "sku": "DP2021EBALL02",
+      "sku": "DP2021EBALL02VEG",
       "currency": "USD"
     },
     {
@@ -23,7 +23,7 @@
       "quantity": 0,
       "price": 35,
       "tax": 0.00,
-      "sku": "DP2021EBALL03",
+      "sku": "DP2021EBALL03NON",
       "currency": "USD"
     },
     {
@@ -32,7 +32,7 @@
       "quantity": 0,
       "price": 35,
       "tax": 0.00,
-      "sku": "DP2021EBALL04",
+      "sku": "DP2021EBALL04VEG",
       "currency": "USD"
     },
   {
@@ -41,7 +41,7 @@
     "quantity": 0,
     "price": 0,
     "tax": 0.00,
-    "sku": "DP2021EBALL05",
+    "sku": "DP2021EBALL05KID",
     "currency": "USD"
   },
   {
@@ -50,7 +50,7 @@
       "quantity": 0,
       "price": 35,
       "tax": 0.00,
-      "sku": "DP2021EBALL06",
+      "sku": "DP2021EBALL06NON",
       "currency": "USD"
   },
   {
@@ -59,7 +59,7 @@
       "quantity": 0,
       "price": 35,
       "tax": 0.00,
-      "sku": "DP2021EBALL07",
+      "sku": "DP2021EBALL07VEG",
       "currency": "USD"
   },
   {
@@ -68,7 +68,7 @@
     "quantity": 0,
     "price": 35,
     "tax": 0.00,
-    "sku": "DP2021KKS01",
+    "sku": "DP2021EBKKS01",
     "currency": "USD"
   },
   {
@@ -77,7 +77,7 @@
     "quantity": 0,
     "price": 25,
     "tax": 0.00,
-    "sku": "DP2021KKS02",
+    "sku": "DP2021EBKKS02",
     "currency": "USD"
   },
   {
@@ -86,7 +86,7 @@
       "quantity": 0,
       "price": 35,
       "tax": 0.00,
-      "sku": "DP2021EBFRI01",
+      "sku": "DP2021EBFRI01NON",
       "currency": "USD"
     },
     {
@@ -95,7 +95,7 @@
       "quantity": 0,
       "price": 35,
       "tax": 0.00,
-      "sku": "DP2021EBFRI02",
+      "sku": "DP2021EBFRI02VEG",
       "currency": "USD"
     },
     {
@@ -104,7 +104,7 @@
       "quantity": 0,
       "price": 20,
       "tax": 0.00,
-      "sku": "DP2021EBFRI03",
+      "sku": "DP2021EBFRI03NON",
       "currency": "USD"
     },
     {
@@ -113,7 +113,7 @@
       "quantity": 0,
       "price": 20,
       "tax": 0.00,
-      "sku": "DP2021EBFRI04",
+      "sku": "DP2021EBFRI04VEG",
       "currency": "USD"
     },
   {
@@ -122,7 +122,7 @@
     "quantity": 0,
     "price": 0,
     "tax": 0.00,
-    "sku": "DP2021EBFRI05",
+    "sku": "DP2021EBFRI05KID",
     "currency": "USD"
   },
   {
@@ -131,7 +131,7 @@
       "quantity": 0,
       "price": 20,
       "tax": 0.00,
-      "sku": "DP2021EBFRI06",
+      "sku": "DP2021EBFRI06NON",
       "currency": "USD"
   },
   {
@@ -140,7 +140,7 @@
       "quantity": 0,
       "price": 20,
       "tax": 0.00,
-      "sku": "DP2021EBFRI07",
+      "sku": "DP2021EBFRI07VEG",
       "currency": "USD"
   },
   {
@@ -149,7 +149,7 @@
       "quantity": 0,
       "price": 60,
       "tax": 0.00,
-      "sku": "DP2021EBSAT01",
+      "sku": "DP2021EBSAT01NON",
       "currency": "USD"
     },
     {
@@ -158,7 +158,7 @@
       "quantity": 0,
       "price": 60,
       "tax": 0.00,
-      "sku": "DP2021EBSAT02",
+      "sku": "DP2021EBSAT02VEG",
       "currency": "USD"
     },
     {
@@ -167,7 +167,7 @@
       "quantity": 0,
       "price": 30,
       "tax": 0.00,
-      "sku": "DP2021EBSAT03",
+      "sku": "DP2021EBSAT03NON",
       "currency": "USD"
     },
     {
@@ -176,7 +176,7 @@
       "quantity": 0,
       "price": 30,
       "tax": 0.00,
-      "sku": "DP2021EBSAT04",
+      "sku": "DP2021EBSAT04VEG",
       "currency": "USD"
     },
   {
@@ -185,7 +185,7 @@
     "quantity": 0,
     "price": 0,
     "tax": 0.00,
-    "sku": "DP2021EBSAT05",
+    "sku": "DP2021EBSAT05KID",
     "currency": "USD"
   },
   {
@@ -194,7 +194,7 @@
       "quantity": 0,
       "price": 30,
       "tax": 0.00,
-      "sku": "DP2021EBSAT06",
+      "sku": "DP2021EBSAT06NON",
       "currency": "USD"
   },
   {
@@ -203,7 +203,7 @@
       "quantity": 0,
       "price": 30,
       "tax": 0.00,
-      "sku": "DP2021EBSAT07",
+      "sku": "DP2021EBSAT07VEG",
       "currency": "USD"
   },
   {
@@ -212,7 +212,7 @@
       "quantity": 0,
       "price": 35,
       "tax": 0.00,
-      "sku": "DP2021EBSUN01",
+      "sku": "DP2021EBSUN01NON",
       "currency": "USD"
     },
     {
@@ -221,7 +221,7 @@
       "quantity": 0,
       "price": 35,
       "tax": 0.00,
-      "sku": "DP2021EBSUN02",
+      "sku": "DP2021EBSUN02VEG",
       "currency": "USD"
     },
     {
@@ -230,7 +230,7 @@
       "quantity": 0,
       "price": 15,
       "tax": 0.00,
-      "sku": "DP2021EBSUN03",
+      "sku": "DP2021EBSUN03NON",
       "currency": "USD"
     },
     {
@@ -239,7 +239,7 @@
       "quantity": 0,
       "price": 15,
       "tax": 0.00,
-      "sku": "DP2021EBSUN04",
+      "sku": "DP2021EBSUN04VEG",
       "currency": "USD"
     },
   {
@@ -248,7 +248,7 @@
     "quantity": 0,
     "price": 0,
     "tax": 0.00,
-    "sku": "DP2021EBSUN05",
+    "sku": "DP2021EBSUN05KID",
     "currency": "USD"
   },
   {
@@ -257,7 +257,7 @@
       "quantity": 0,
       "price": 15,
       "tax": 0.00,
-      "sku": "DP2021EBSUN06",
+      "sku": "DP2021EBSUN06NON",
       "currency": "USD"
   },
   {
@@ -266,7 +266,7 @@
     "quantity": 0,
     "price": 15,
     "tax": 0.00,
-    "sku": "DP2021EBSUN07",
+    "sku": "DP2021EBSUN07VEG",
     "currency": "USD"
 }
   

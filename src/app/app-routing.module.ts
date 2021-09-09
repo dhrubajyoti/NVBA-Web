@@ -35,12 +35,15 @@ import { AuthGuard } from './pages/auth/core/auth.guard';
 import { EmailarchiveComponent } from './pages/emailarchive/emailarchive.component';
 import { CheckoutComponent} from './pages/checkout/checkout.component';
 import { OrderTicketsComponent } from './pages/order-tickets/order-tickets.component';
-import { ReportsComponent } from './pages/ec/reports/reports.component';
 import { ResetpasswordComponent } from './pages/auth/resetpassword/resetpassword.component';
 import { CaresComponent } from './pages/cares/cares.component';
 import { ArtworksComponent } from './pages/archive/artworks/artworks.component';
 import { PicnicComponent } from './pages/picnic/picnic.component';
 import { EventticketsComponent } from './pages/tickets/eventtickets/eventtickets.component';
+
+import { AdminconsoleComponent } from './pages/ec/adminconsole/adminconsole.component';
+import { ReportsComponent } from './pages/ec/reports/reports.component';
+import { CountsComponent } from './pages/ec/counts/counts.component';
 import { from } from 'rxjs';
 
 
@@ -84,7 +87,9 @@ const routes: Routes = [
   { path: "ordertickets", component: OrderTicketsComponent,  pathMatch: 'full', resolve: { data: UserResolver} },
   { path: "eventtickets", component: EventticketsComponent,  pathMatch: 'full', resolve: { data: UserResolver} },
 
+  { path: "adminconsole", component: AdminconsoleComponent ,  pathMatch: 'full', resolve: { data: UserResolver}  },
   { path: "reports", component: ReportsComponent,  pathMatch: 'full', resolve: { data: UserResolver}  },
+  { path: "counts", component: CountsComponent,  pathMatch: 'full', resolve: { data: UserResolver}  },
   
   
 ];
