@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, from } from 'rxjs';
 import { CartService } from '../../../services/cart.service';
 import { Router } from '@angular/router';
+import { timestamp } from 'rxjs/operators';
 
 @Component({
   selector: 'app-earlybird',
@@ -20,6 +21,9 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
 
 
   addtoCartBtn: boolean = true;
+  headCount: number;
+  kidsCount: number;
+
   // kkAdultsCount: number = 0;
   // kkkidsCount: number = 0;
   // headCount: number = 0;
@@ -63,12 +67,11 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
 
   ngAfterViewChecked(): void {
     let tc = 0;
-    let headCount = 0;
+    this.headCount = 0;
     let ticketCount = 0;
-    let adultTicket = 0;
-    let kidsTicket = 0;
-    let adultTicketKK = 0;
+    this.kidsCount = 0;
     let kidsTicketKK = 0;
+    
     
     [...this.dataObject].forEach(value => {
       console.log(value);
@@ -79,17 +82,18 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
       // Ticket Logic
       let n = value.name.replace(/\s+/g, '');
       if(n === 'All3days' ){
-        headCount += value.quantity;
+        this.headCount += value.quantity;
 
-        if(value.sku =='DP2021EBALL05' ){
-          kidsTicket += value.quantity;
+        if(value.sku =='DP2021EBALL05KID' ){
+          this.kidsCount += value.quantity;
+          console.log('addKids');
         }
       }
 
       if(n === 'KavitaKrishnamurtiConcert' ){
         ticketCount += value.quantity;
        
-        if(value.sku =='DP2021KKS02' ){
+        if(value.sku =='DP2021EBKKS02' ){
           kidsTicketKK += value.quantity;
         }
       }
@@ -99,19 +103,34 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
     });
 
     
-    if(ticketCount>headCount){
+    if(ticketCount>this.headCount){
       this.addtoCartBtn = false;
     }
     else{
       this.addtoCartBtn = true;
     }
 
-    if(kidsTicketKK>kidsTicket){
+    if(kidsTicketKK>this.kidsCount){
       this.addtoCartBtn = false;
     }
 
     this.totalCost = tc;
     this.cdr.detectChanges();
+  }
+
+  maxValue(sku:string){
+    let v: number = 0;
+    
+    if(sku == 'DP2021EBKKS02'){
+      v = this.kidsCount;
+      console.log(sku );
+    }
+    if(sku == 'DP2021EBKKS01'){
+      v = this.headCount;
+      console.log(sku );
+    }
+    console.log(v);
+    return v;
   }
   
   addToCartobj(){

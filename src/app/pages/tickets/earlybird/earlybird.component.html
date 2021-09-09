@@ -39,7 +39,7 @@
                   <tr *ngIf="i > 6 && i < 9" >
                   <th>{{item.description}}</th>
                   <td>$ {{item.price}}</td>
-                  <td><input type="number" [(ngModel)]="item.quantity" style="width:50px" min="0" max="10" ></td>
+                  <td><input type="number" [(ngModel)]="item.quantity"  id="{{item.sku}}" style="width:50px" min="0" [max]="maxValue(item.sku)" ></td>
                   <!-- <td> <button class="btn btn-warning" (click)="addToCartobj(item)" >Add to Cart</button></td> -->
                   <td  >$ {{item.price * item.quantity}}</td>
                   </tr>
