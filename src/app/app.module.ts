@@ -84,6 +84,8 @@ import { RegulargateComponent } from './pages/tickets/regulargate/regulargate.co
 import { RegulargatewithoutculturalComponent } from './pages/tickets/regulargatewithoutcultural/regulargatewithoutcultural.component';
 import { EarlybirdwithoutculturalComponent } from './pages/tickets/earlybirdwithoutcultural/earlybirdwithoutcultural.component';
 import { EventticketsComponent } from './pages/tickets/eventtickets/eventtickets.component';
+import { AdminconsoleComponent } from './pages/ec/adminconsole/adminconsole.component';
+import { CountsComponent } from './pages/ec/counts/counts.component';
 
 
 @NgModule({
@@ -133,7 +135,9 @@ import { EventticketsComponent } from './pages/tickets/eventtickets/eventtickets
     RegulargateComponent,
     RegulargatewithoutculturalComponent,
     EarlybirdwithoutculturalComponent,
-    EventticketsComponent
+    EventticketsComponent,
+    AdminconsoleComponent,
+    CountsComponent
   ],
   imports: [
     BrowserModule,
