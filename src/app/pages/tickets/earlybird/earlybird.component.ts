@@ -16,7 +16,13 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
   cartObject : any=[];
   totalCost: number = 0;
   cartCheck: any;
+  customClass = 'customClass';
 
+
+  addtoCartBtn: boolean = true;
+  // kkAdultsCount: number = 0;
+  // kkkidsCount: number = 0;
+  // headCount: number = 0;
 
 
   private _jsonURLcart = '/assets/data/durgapuja-2021-earlybird.json';
@@ -57,11 +63,53 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
 
   ngAfterViewChecked(): void {
     let tc = 0;
+    let headCount = 0;
+    let ticketCount = 0;
+    let adultTicket = 0;
+    let kidsTicket = 0;
+    let adultTicketKK = 0;
+    let kidsTicketKK = 0;
+    
     [...this.dataObject].forEach(value => {
+      console.log(value);
       if(value.quantity > 0){ 
         tc += (value.price * value.quantity);
-     } 
+      }
+
+      // Ticket Logic
+      let n = value.name.replace(/\s+/g, '');
+      if(n === 'All3days' ){
+        headCount += value.quantity;
+
+        if(value.sku =='DP2021EBALL05' ){
+          kidsTicket += value.quantity;
+        }
+      }
+
+      if(n === 'KavitaKrishnamurtiConcert' ){
+        ticketCount += value.quantity;
+       
+        if(value.sku =='DP2021KKS02' ){
+          kidsTicketKK += value.quantity;
+        }
+      }
+
+    
+     
     });
+
+    
+    if(ticketCount>headCount){
+      this.addtoCartBtn = false;
+    }
+    else{
+      this.addtoCartBtn = true;
+    }
+
+    if(kidsTicketKK>kidsTicket){
+      this.addtoCartBtn = false;
+    }
+
     this.totalCost = tc;
     this.cdr.detectChanges();
   }
