@@ -4,6 +4,9 @@
           <p class="ml-3 mt-3 yellow " >
               Note:- Kavita Krishnamurti Concert tickets and all cultural programs are currently available to members registering for all 3 days.
           </p>
+          <p>
+            <button class="btn-small rounded btn-warning float-right mr-2 mb-2" (click)="clearCart()" >Clear Order</button>
+          </p>
           <table class="table table-bordered table-hover" >
               <thead>
                 <tr>
@@ -61,9 +64,12 @@
           <div id="singleDay" class="singleDay" >
               <p class="ml-4 mt-3 red">
                   Note:- All Single Day tickets does not include Kavita Krishnamurti Concert. Kavita Krishnamurti concert tickets will be released closer to the event.
-              </p>
+              </p> 
               <accordion>
-                  <accordion-group heading="Friday only (October 8th, 202)" >
+                  <accordion-group heading="Friday only (October 8th, 2021)" >
+                    <p>
+                      <button class="btn-small rounded btn-warning float-right mr-2 mb-2" (click)="clearCart()" >Clear Order</button>
+                    </p>
                       <table class="table table-bordered table-hover ">
                           <thead>
                               <tr>
@@ -87,6 +93,9 @@
                       </table>
                   </accordion-group>
                   <accordion-group heading="Saturday only (October 9th, 2021)">
+                      <p>
+                        <button class="btn-small rounded btn-warning float-right mr-2 mb-2" (click)="clearCart()" >Clear Order</button>
+                      </p>
                       <table class="table table-bordered table-hover ">
                               <thead>
                               <tr>
@@ -110,6 +119,9 @@
                       </table>    
                   </accordion-group>
                   <accordion-group heading="Sunday only (October 10th, 2021)">
+                      <p>
+                        <button class="btn-small rounded btn-warning float-right mr-2 mb-2" (click)="clearCart()" >Clear Order</button>
+                      </p>
                       <table class="table table-bordered table-hover ">
                           <thead>
                               <tr>

@@ -138,4 +138,11 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
 //    this.cartService.addToCart();
   }
 
+  clearCart(){
+    [...this.dataObject].forEach(value => {
+      value.quantity = 0;
+    });
+  }
+
+
 }
