@@ -74,7 +74,7 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
     
     
     [...this.dataObject].forEach(value => {
-      console.log(value);
+   //   console.log(value);
       if(value.quantity > 0){ 
         tc += (value.price * value.quantity);
       }
@@ -84,7 +84,7 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
       if(n === 'All3days' ){
         if(value.sku =='DP2021EBALL06KID' ){
           this.kidsCount += value.quantity;
-          console.log('addKids');
+      //    console.log('addKids');
         }
         else{
           this.headCount += value.quantity;
@@ -125,13 +125,13 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
     
     if(sku == 'DP2021EBKKS02'){
       v = this.kidsCount;
-      console.log(sku );
+    //  console.log(sku );
     }
     if(sku == 'DP2021EBKKS01'){
       v = this.headCount;
-      console.log(sku );
+    //  console.log(sku );
     }
-    console.log(v);
+  //  console.log(v);
     return v;
   }
   
