@@ -1,7 +1,7 @@
 <div class="mt-4" style="width:100%;" >
     <div *ngIf="this.member.membershipstatus === '' " >
         <div class=" " style="text-align: center;" >NVBA Membership gives you access to all NVBA events at discounted rates</div>
-        <button (click)="addToCartobj()" class="btn-get-started w-100 mb-5 mt-2" >Buy Annual Membership ($20) & Enjoy Program Free</button>
+        <button (click)="addToCartobj()" class="btn-get-started w-100 mb-5 mt-2" >Buy Annual Membership ($20) & Enjoy All Programs </button>
         <div class="flex-column row m-2">
             <div style="font-weight: bold; font-size: 1.3em;color: #cccccc;" ><span class="red">*</span><b>Membership Benefits:</b> </div>
             <ul  style="text-align: left;color: #cccccc;"> 
@@ -25,7 +25,7 @@
     </div>
     <div *ngIf="this.member.membershipstatus == 'Expire' " >
         <div  class=" redExpired " >Membership Expired : {{ expired }}</div>
-        <button (click)="addToCartobj()" class="btn-get-started w-100 mb-3 mt-2" > Renew Annual Membership ($20) & Enjoy Program Free</button>
+        <button (click)="addToCartobj()" class="btn-get-started w-100 mb-3 mt-2" > Renew Annual Membership ($20) & Enjoy All Programs </button>
         <div class="flex-column row ">
             <div style="font-weight: bold; font-size: 1.3em;color: #cccccc;" ><span class="red">*</span><b>Membership Benefits:</b> </div>
             <ul  style="text-align: left; color: #cccccc;"> 

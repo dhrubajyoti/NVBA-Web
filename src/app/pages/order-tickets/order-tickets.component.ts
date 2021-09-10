@@ -38,7 +38,7 @@ export class OrderTicketsComponent implements OnInit, OnChanges {
   isShow = false;
   isBtn = true;
 
-  iAgree : boolean = false;
+  iAgree: boolean = false;
   ipAddress:string;
   withCul = false;
 
@@ -65,28 +65,31 @@ export class OrderTicketsComponent implements OnInit, OnChanges {
 
   ngOnInit(): void {
     
+    if(!localStorage.getItem('iAgrees')){
+      localStorage.setItem('iAgrees', 'false');
+    }else {
+      if(localStorage.getItem('iAgrees') == 'true')
+        this.iAgree = true;
+    }
 
     this.getIP();
            
   }
 
   ngOnChanges(): void{
-
-    // if(!localStorage.getItem('iAgrees'))
-    //     localStorage.setItem('iAgrees', 'false');
-    // else {
-    //   if(localStorage.getItem('iAgrees') == 'true')
-    //     this.iAgree = true;
-    // }
-
   }
 
   checkCheckBoxvalue(event){
     console.log(event.checked);
     this.iAgree = event.checked;
     console.log(this.iAgree);
+    let a = this.iAgree;
    // local storage
-   // localStorage.setItem('iAgrees', 'true');
+   if(this.iAgree)
+    localStorage.setItem('iAgrees', 'true' );
+   else
+   localStorage.setItem('iAgrees', 'false' );
+
     console.log(this.ipAddress);
     const d = new Date();
     this.member.iAgree = true;
