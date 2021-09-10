@@ -24,6 +24,7 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
   headCount: number;
   kidsCount: number;
 
+  kkticket:number;
   // kkAdultsCount: number = 0;
   // kkkidsCount: number = 0;
   // headCount: number = 0;
@@ -71,7 +72,7 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
     let ticketCount = 0;
     this.kidsCount = 0;
     let kidsTicketKK = 0;
-    
+    this.kkticket = 0;
     
     [...this.dataObject].forEach(value => {
    //   console.log(value);
@@ -97,6 +98,12 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
         }
         else{
           ticketCount += value.quantity;
+        }
+      }
+
+      if(n === 'KavitaKrishnamurtiConcert' ){
+        if(value.sku =='DP2021EBKKS01' ){
+          this.kkticket += value.quantity;
         }
       }
 
@@ -151,8 +158,22 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
      } 
     });
     
+   
+    if(!this.kkticket){
+        if (confirm('Are you sure you don\'t want to watch Kavita Krishnamurti concert?')) {
+          // Save it!
+          console.log('Go to checkout page.');
+          this.router.navigate(['/checkout']);
+        } else {
+          // Do nothing!
+          console.log('Please take KK tickets.');
+        }
+    }
+
+    
+
  //   this.cs.addToCart(this.checkObject);
-    this.router.navigate(['/checkout']);
+  //  this.router.navigate(['/checkout']);
  //   this.router.navigate(['/heroes', { id: itemId }]);
 
  //   item.count = 
