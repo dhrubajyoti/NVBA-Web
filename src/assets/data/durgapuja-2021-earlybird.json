@@ -109,7 +109,7 @@
     },
     {
       "name": "Friday Only",
-      "description": "Kids [ 10 to 18 years ] Non-Veg",
+      "description": "Kids [ 11 to 18 years ] Non-Veg",
       "quantity": 0,
       "price": 20,
       "tax": 0.00,
@@ -118,7 +118,7 @@
     },
     {
       "name": "Friday Only",
-      "description": "Kids [ 10 to 18 years ] Veg",
+      "description": "Kids [ 11 to 18 years ] Veg",
       "quantity": 0,
       "price": 20,
       "tax": 0.00,
@@ -172,7 +172,7 @@
     },
     {
       "name": "Saturday Only",
-      "description": "Kids [ 10 to 18 years ] Non-Veg",
+      "description": "Kids [ 11 to 18 years ] Non-Veg",
       "quantity": 0,
       "price": 30,
       "tax": 0.00,
@@ -181,7 +181,7 @@
     },
     {
       "name": "Saturday Only",
-      "description": "Kids [ 10 to 18 years ] Veg",
+      "description": "Kids [ 11 to 18 years ] Veg",
       "quantity": 0,
       "price": 30,
       "tax": 0.00,
@@ -235,7 +235,7 @@
     },
     {
       "name": "Sunday Only - Without Kavita Krishnamurti Concert",
-      "description": "Kids [ 10 to 18 years ] Non-Veg",
+      "description": "Kids [ 11 to 18 years ] Non-Veg",
       "quantity": 0,
       "price": 15,
       "tax": 0.00,
@@ -244,7 +244,7 @@
     },
     {
       "name": "Sunday Only - Without Kavita Krishnamurti Concert",
-      "description": "Kids [ 10 to 18 years ] Veg",
+      "description": "Kids [ 11 to 18 years ] Veg",
       "quantity": 0,
       "price": 15,
       "tax": 0.00,
