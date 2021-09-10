@@ -172,7 +172,10 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
            this.cart.clearCart();
            this.cleanup();
           // this.router.navigate(['/durgapuja2020']);
-      
+
+          setTimeout(()=>{                           
+            this.router.navigate(['/durgapuja2021']);
+          }, 6000);
           
 
       })
