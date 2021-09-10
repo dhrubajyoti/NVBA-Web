@@ -1,0 +1,274 @@
+[
+    {
+        "name": "All 3 days",
+        "description": "Adult Non-Veg",
+        "quantity": 0,
+        "price": 60,
+        "tax": 0.00,
+        "sku": "DP2021WOCALL01",
+        "currency": "USD"
+      },
+      {
+        "name": "All 3 days",
+        "description": "Adult Veg",
+        "quantity": 0,
+        "price": 60,
+        "tax": 0.00,
+        "sku": "DP2021WOCALL02",
+        "currency": "USD"
+      },
+      {
+        "name": "All 3 days",
+        "description": "Kids [ 10 to 18 years ] Non-Veg",
+        "quantity": 0,
+        "price": 35,
+        "tax": 0.00,
+        "sku": "DP2021WOCALL03",
+        "currency": "USD"
+      },
+      {
+        "name": "All 3 days",
+        "description": "Kids [ 10 to 18 years ] Veg",
+        "quantity": 0,
+        "price": 35,
+        "tax": 0.00,
+        "sku": "DP2021WOCALL04",
+        "currency": "USD"
+      },
+    {
+      "name": "All 3 days ",
+      "description": "kids [ 0 to 10 years ]",
+      "quantity": 0,
+      "price": 0,
+      "tax": 0.00,
+      "sku": "DP2021WOCALL05",
+      "currency": "USD"
+    },
+    {
+        "name": "All 3 days",
+        "description": "Students and Visiting Parents Non-Veg ",
+        "quantity": 0,
+        "price": 35,
+        "tax": 0.00,
+        "sku": "DP2021WOCALL06",
+        "currency": "USD"
+    },
+    {
+        "name": "All 3 days",
+        "description": "Students and Visiting Parents Veg",
+        "quantity": 0,
+        "price": 35,
+        "tax": 0.00,
+        "sku": "DP2021WOCALL07",
+        "currency": "USD"
+    },
+    {
+      "name": "Kavita Krishnamurthy Concert",
+      "description": "General Admission",
+      "quantity": 0,
+      "price": 35,
+      "tax": 0.00,
+      "sku": "DP2021KKS01",
+      "currency": "USD"
+    },
+    {
+      "name": "Kavita Krishnamurthy Concert",
+      "description": "Kids[ 0 - 10 years if seat is required ]",
+      "quantity": 0,
+      "price": 25,
+      "tax": 0.00,
+      "sku": "DP2021KKS02",
+      "currency": "USD"
+    },
+    {
+        "name": "Friday Only",
+        "description": "Adult Non-Veg",
+        "quantity": 0,
+        "price": 20,
+        "tax": 0.00,
+        "sku": "DP2021WOCFRI01",
+        "currency": "USD"
+      },
+      {
+        "name": "Friday Only",
+        "description": "Adult Veg",
+        "quantity": 0,
+        "price": 20,
+        "tax": 0.00,
+        "sku": "DP2021WOCFRI02",
+        "currency": "USD"
+      },
+      {
+        "name": "Friday Only",
+        "description": "Kids [ 10 to 18 years ] Non-Veg",
+        "quantity": 0,
+        "price": 10,
+        "tax": 0.00,
+        "sku": "DP2021WOCFRI03",
+        "currency": "USD"
+      },
+      {
+        "name": "Friday Only",
+        "description": "Kids [ 10 to 18 years ] Veg",
+        "quantity": 0,
+        "price": 10,
+        "tax": 0.00,
+        "sku": "DP2021WOCFRI04",
+        "currency": "USD"
+      },
+    {
+      "name": "Friday Only",
+      "description": "kids [ 0 to 10 years ]",
+      "quantity": 0,
+      "price": 0,
+      "tax": 0.00,
+      "sku": "DP2021WOCFRI05",
+      "currency": "USD"
+    },
+    {
+        "name": "Friday Only",
+        "description": "Students and Visiting Parents Non-Veg",
+        "quantity": 0,
+        "price": 10,
+        "tax": 0.00,
+        "sku": "DP2021WOCFRI06",
+        "currency": "USD"
+    },
+    {
+        "name": "Friday Only",
+        "description": "Students and Visiting Parents Veg",
+        "quantity": 0,
+        "price": 10,
+        "tax": 0.00,
+        "sku": "DP2021WOCFRI07",
+        "currency": "USD"
+    },
+    {
+        "name": "Saturday Only",
+        "description": "Adult Non-Veg",
+        "quantity": 0,
+        "price": 35,
+        "tax": 0.00,
+        "sku": "DP2021WOCSAT01",
+        "currency": "USD"
+      },
+      {
+        "name": "Saturday Only",
+        "description": "Adult Veg",
+        "quantity": 0,
+        "price": 35,
+        "tax": 0.00,
+        "sku": "DP2021WOCSAT02",
+        "currency": "USD"
+      },
+      {
+        "name": "Saturday Only",
+        "description": "Kids [ 10 to 18 years ] Non-Veg",
+        "quantity": 0,
+        "price": 15,
+        "tax": 0.00,
+        "sku": "DP2021WOCSAT03",
+        "currency": "USD"
+      },
+      {
+        "name": "Saturday Only",
+        "description": "Kids [ 10 to 18 years ] Veg",
+        "quantity": 0,
+        "price": 15,
+        "tax": 0.00,
+        "sku": "DP2021WOCSAT04",
+        "currency": "USD"
+      },
+    {
+      "name": "Saturday Only",
+      "description": "kids [ 0 to 10 years ]",
+      "quantity": 0,
+      "price": 0,
+      "tax": 0.00,
+      "sku": "DP2021WOCSAT05",
+      "currency": "USD"
+    },
+    {
+        "name": "Saturday Only",
+        "description": "Students and Visiting Parents Non-Veg",
+        "quantity": 0,
+        "price": 15,
+        "tax": 0.00,
+        "sku": "DP2021WOCSAT06",
+        "currency": "USD"
+    },
+    {
+        "name": "Saturday Only",
+        "description": "Students and Visiting Parents Veg",
+        "quantity": 0,
+        "price": 15,
+        "tax": 0.00,
+        "sku": "DP2021WOCSAT07",
+        "currency": "USD"
+    },
+    {
+        "name": "Sunday Only",
+        "description": "Adult Non-Veg",
+        "quantity": 0,
+        "price": 35,
+        "tax": 0.00,
+        "sku": "DP2021WOCSUN01",
+        "currency": "USD"
+      },
+      {
+        "name": "Sunday Only",
+        "description": "Adult Veg",
+        "quantity": 0,
+        "price": 35,
+        "tax": 0.00,
+        "sku": "DP2021WOCSUN02",
+        "currency": "USD"
+      },
+      {
+        "name": "Sunday Only",
+        "description": "Kids [ 10 to 18 years ] Non-Veg",
+        "quantity": 0,
+        "price": 15,
+        "tax": 0.00,
+        "sku": "DP2021WOCSUN03",
+        "currency": "USD"
+      },
+      {
+        "name": "Sunday Only",
+        "description": "Kids [ 10 to 18 years ] Veg",
+        "quantity": 0,
+        "price": 15,
+        "tax": 0.00,
+        "sku": "DP2021WOCSUN04",
+        "currency": "USD"
+      },
+    {
+      "name": "Sunday Only",
+      "description": "kids [ 0 to 10 years ]",
+      "quantity": 0,
+      "price": 0,
+      "tax": 0.00,
+      "sku": "DP2021WOCSUN05",
+      "currency": "USD"
+    },
+    {
+        "name": "Sunday Only",
+        "description": "Students and Visiting Parents Non-Veg",
+        "quantity": 0,
+        "price": 15,
+        "tax": 0.00,
+        "sku": "DP2021WOCSUN06",
+        "currency": "USD"
+    },
+    {
+      "name": "Sunday Only",
+      "description": "Students and Visiting Parents Veg",
+      "quantity": 0,
+      "price": 15,
+      "tax": 0.00,
+      "sku": "DP2021WOCSUN07",
+      "currency": "USD"
+  }
+    
+      
+]    

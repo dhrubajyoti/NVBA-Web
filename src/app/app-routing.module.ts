@@ -18,6 +18,7 @@ import { SaraswatipujaComponent } from './pages/saraswatipuja/saraswatipuja.comp
 import { KobipronamComponent } from './pages/kobipronam/kobipronam.component';
 import { Kobipronam2020Component } from './pages/kobipronam2020/kobipronam2020.component';
 import { Durgapuja2020Component } from './pages/durgapuja2020/durgapuja2020.component';
+import { Durgapuja2021Component } from './pages/durgapuja2021/durgapuja2021.component';
 import { PresidentComponent } from './pages/president/president.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ChhotoderutsavComponent } from './pages/chhotoderutsav/chhotoderutsav.component';
@@ -34,11 +35,15 @@ import { AuthGuard } from './pages/auth/core/auth.guard';
 import { EmailarchiveComponent } from './pages/emailarchive/emailarchive.component';
 import { CheckoutComponent} from './pages/checkout/checkout.component';
 import { OrderTicketsComponent } from './pages/order-tickets/order-tickets.component';
-import { ReportsComponent } from './pages/ec/reports/reports.component';
 import { ResetpasswordComponent } from './pages/auth/resetpassword/resetpassword.component';
 import { CaresComponent } from './pages/cares/cares.component';
 import { ArtworksComponent } from './pages/archive/artworks/artworks.component';
 import { PicnicComponent } from './pages/picnic/picnic.component';
+import { EventticketsComponent } from './pages/tickets/eventtickets/eventtickets.component';
+
+import { AdminconsoleComponent } from './pages/ec/adminconsole/adminconsole.component';
+import { ReportsComponent } from './pages/ec/reports/reports.component';
+import { CountsComponent } from './pages/ec/counts/counts.component';
 import { from } from 'rxjs';
 
 
@@ -60,6 +65,7 @@ const routes: Routes = [
   { path: "kobipronam", component: KobipronamComponent, pathMatch: 'full'  },
   { path: "kobipronam2020", component: Kobipronam2020Component, pathMatch: 'full'  },
   { path: "durgapuja2020", component: Durgapuja2020Component, pathMatch: 'full'  },
+  { path: "durgapuja2021", component: Durgapuja2021Component, pathMatch: 'full'  },
   { path: "emailarchive", component:EmailarchiveComponent, pathMatch: 'full' },
   { path: "president", component: PresidentComponent, pathMatch: 'full' },
   { path: "chhotoderutsav", component: ChhotoderutsavComponent, pathMatch: 'full' },
@@ -78,9 +84,12 @@ const routes: Routes = [
   { path: "user", component: UserComponent,  resolve: { data: UserResolver} },
   { path: "resetpassword", component: ResetpasswordComponent, pathMatch: 'full' },
   { path: "checkout", component: CheckoutComponent,  pathMatch: 'full' },
-  { path: "orderfood", component: OrderTicketsComponent,  pathMatch: 'full' },
+  { path: "ordertickets", component: OrderTicketsComponent,  pathMatch: 'full', resolve: { data: UserResolver} },
+  { path: "eventtickets", component: EventticketsComponent,  pathMatch: 'full', resolve: { data: UserResolver} },
 
+  { path: "adminconsole", component: AdminconsoleComponent ,  pathMatch: 'full', resolve: { data: UserResolver}  },
   { path: "reports", component: ReportsComponent,  pathMatch: 'full', resolve: { data: UserResolver}  },
+  { path: "counts", component: CountsComponent,  pathMatch: 'full', resolve: { data: UserResolver}  },
   
   
 ];

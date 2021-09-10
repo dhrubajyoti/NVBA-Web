@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -77,6 +78,15 @@ import { CaresComponent } from './pages/cares/cares.component';
 import { ArtworksComponent } from './pages/archive/artworks/artworks.component';
 import { KobipronamComponent } from './pages/kobipronam/kobipronam.component';
 import { PicnicComponent } from './pages/picnic/picnic.component';
+import { Durgapuja2021Component } from './pages/durgapuja2021/durgapuja2021.component';
+import { EarlybirdComponent } from './pages/tickets/earlybird/earlybird.component';
+import { RegulargateComponent } from './pages/tickets/regulargate/regulargate.component';
+import { RegulargatewithoutculturalComponent } from './pages/tickets/regulargatewithoutcultural/regulargatewithoutcultural.component';
+import { EarlybirdwithoutculturalComponent } from './pages/tickets/earlybirdwithoutcultural/earlybirdwithoutcultural.component';
+import { EventticketsComponent } from './pages/tickets/eventtickets/eventtickets.component';
+import { AdminconsoleComponent } from './pages/ec/adminconsole/adminconsole.component';
+import { CountsComponent } from './pages/ec/counts/counts.component';
+
 
 @NgModule({
   declarations: [
@@ -119,7 +129,15 @@ import { PicnicComponent } from './pages/picnic/picnic.component';
     CaresComponent,
     ArtworksComponent,
     KobipronamComponent,
-    PicnicComponent
+    PicnicComponent,
+    Durgapuja2021Component,
+    EarlybirdComponent,
+    RegulargateComponent,
+    RegulargatewithoutculturalComponent,
+    EarlybirdwithoutculturalComponent,
+    EventticketsComponent,
+    AdminconsoleComponent,
+    CountsComponent
   ],
   imports: [
     BrowserModule,
@@ -141,7 +159,8 @@ import { PicnicComponent } from './pages/picnic/picnic.component';
     ToastrModule.forRoot(), // ToastrModule added
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([]),
+    AccordionModule.forRoot()
   ],
   providers: [AuthService, UserService, UserResolver, AuthGuard, MemberDetailsService], 
   bootstrap: [AppComponent]

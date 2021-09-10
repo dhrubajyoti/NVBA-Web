@@ -196,11 +196,13 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
       if( payment.transactions[0].item_list.items[0].name == 'NVBA Annual Membership' ){
           let newdate;
           if(this.member.expires){
-            newdate = new Date(new Date().setFullYear(new Date(this.member.expires).getFullYear() + 1))
-          //  alert(newdate);
+      //   newdate = new Date(new Date().setFullYear(new Date(this.member.expires).getFullYear() + 1))
+           newdate = new Date(new Date().setFullYear(new Date().getFullYear() + 1));
+       //     alert('If = '+newdate);
           }
           else{
           newdate = new Date(new Date().setFullYear(new Date().getFullYear() + 1));
+       //   alert('else = '+newdate);
           }
           this.member.expires = newdate.toISOString().split('T')[0];
           this.member.membershipstatus = 'Valid';

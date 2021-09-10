@@ -38,12 +38,12 @@ export class ForgetpasswordComponent  {
      .then(res => {
     //   console.log(res);
        this.errorMessage = "";
-       this.successMessage = "You will receive an email from noreply@novaba.firebaseapp.com a password reset link. Please click on the unique link and reset your password.";
+       this.successMessage = "You will receive an email from noreply@novaba.firebaseapp.com, for a password reset link. Click on the link to change your password.";
        
      }, err => {
     //   console.log(err);
     if(err.code == 'auth/user-not-found')
-        this.errorMessage = "Sorry, We not able to find your email in our records. Please check Or try different email address.";
+        this.errorMessage = "Sorry we are not able to find your email. Please check or try a different email address.";
 
       if(err.code == 'auth/wrong-password')
       this.errorMessage = "You might trying wrong password. Please try again. If not able to recall your password. Click Forgot your password.";

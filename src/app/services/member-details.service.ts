@@ -51,6 +51,10 @@ export class MemberDetailsService {
   allMembersDetails(){
     return this.items;
   }
+
+  allPaypalPayments(){
+    return this.pays;
+  }
  
   addPayments(pay:any){
 
@@ -70,7 +74,6 @@ export class MemberDetailsService {
       return true;
     });
 
-    
 
     // this.items = this.fdb.database()
 

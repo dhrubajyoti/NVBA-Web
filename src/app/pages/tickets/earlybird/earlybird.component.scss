@@ -1,0 +1,22 @@
+.panel-collapse .panel-body{
+    padding: 0px;
+}
+
+.customClass div{
+    padding: 0px;
+}
+
+accordion-group > div > div {
+    padding : 0px;
+}
+
+[role="tabpanel"] .card-body {
+    padding: 0rem !important;
+}
+
+.panel-body, .card-block, .card-body{
+    padding: 0rem;
+}
+
+.tickets button.btn.btn-link.ng-star-inserted{color: #ff8d00;}
+.tickets .singleDay button.btn.btn-link.ng-star-inserted{color: #ffc109;}

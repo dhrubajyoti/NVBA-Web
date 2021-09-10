@@ -91,10 +91,12 @@
           <hr class="style1">
           <a routerLink="contactus">Contact Us</a>
         </li>
-        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" (click)="sidenav.toggle()" >
+        <!-- <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" (click)="sidenav.toggle()" >
           <hr class="style1">
           <a routerLink="faq">FAQ</a>
-        </li>
+        </li> -->
+        <li *ngIf="member.usertype == 'admin'" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="reports" >Reports</a></li> 
       </ul>
     </nav>
     <!-- <app-sidenav ></app-sidenav>  -->
