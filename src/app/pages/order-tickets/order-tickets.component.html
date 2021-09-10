@@ -43,7 +43,7 @@
                     <li style="list-style: none; margin: 20px 0 20px 0;">
                         <span>
                             <label for="agree" style="margin-left: 10px; font-size: 1.1em;" >
-                                <input type="checkbox" id="agree" #agree   (click)="checkCheckBoxvalue(agree)" > I agree
+                                <input type="checkbox" id="agree" #agree [checked]="iAgree"  (click)="checkCheckBoxvalue(agree)" > I agree
                             </label>
                         </span>   
                         <span style="float: right;">

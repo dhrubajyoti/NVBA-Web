@@ -19,7 +19,7 @@ export class EarlybirdwithoutculturalComponent implements OnInit, OnChanges, Aft
   customClass = 'customClass';
 
 
-  addtoCartBtn: boolean = true;
+  addtoCartBtn: boolean = false;
   // kkAdultsCount: number = 0;
   // kkkidsCount: number = 0;
   // headCount: number = 0;
@@ -66,7 +66,7 @@ export class EarlybirdwithoutculturalComponent implements OnInit, OnChanges, Aft
     let headCount = 0;
     let ticketCount = 0;
     [...this.dataObject].forEach(value => {
-      console.log(value);
+   //   console.log(value);
       if(value.quantity > 0){ 
         tc += (value.price * value.quantity);
       }
