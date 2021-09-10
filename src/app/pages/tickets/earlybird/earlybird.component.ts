@@ -82,7 +82,7 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
       // Ticket Logic
       let n = value.name.replace(/\s+/g, '');
       if(n === 'All3days' ){
-        if(value.sku =='DP2021EBALL05KID' ){
+        if(value.sku =='DP2021EBALL06KID' ){
           this.kidsCount += value.quantity;
           console.log('addKids');
         }
