@@ -105,6 +105,9 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
         if(value.sku =='DP2021EBKKS01' ){
           this.kkticket += value.quantity;
         }
+        else{
+          this.kkticket = 0;
+        }
       }
 
     
