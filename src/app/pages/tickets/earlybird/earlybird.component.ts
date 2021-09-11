@@ -24,7 +24,7 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
   headCount: number;
   kidsCount: number;
 
-  kkticket:number;
+  kkticket:boolean = false;
   // kkAdultsCount: number = 0;
   // kkkidsCount: number = 0;
   // headCount: number = 0;
@@ -72,7 +72,6 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
     let ticketCount = 0;
     this.kidsCount = 0;
     let kidsTicketKK = 0;
-    this.kkticket = 0;
     
     [...this.dataObject].forEach(value => {
    //   console.log(value);
@@ -98,17 +97,19 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
         }
         else{
           ticketCount += value.quantity;
+          if(value.quantity){
+            this.kkticket = true ;
+          }
+          else{
+            this.kkticket = false;
+          }
+          
         }
+        
       }
 
-      if(n === 'KavitaKrishnamurtiConcert' ){
-        if(value.sku =='DP2021EBKKS01' ){
-          this.kkticket += value.quantity;
-        }
-        else{
-          this.kkticket = 0;
-        }
-      }
+      
+      
 
     
      
@@ -171,6 +172,9 @@ export class EarlybirdComponent implements OnInit, OnChanges, AfterViewChecked {
           // Do nothing!
           console.log('Please take KK tickets.');
         }
+    }
+    else{
+      this.router.navigate(['/checkout']);
     }
 
     
