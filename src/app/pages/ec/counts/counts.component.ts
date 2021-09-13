@@ -23,6 +23,15 @@ export class CountsComponent implements OnInit {
   vegHeadCount:number =0;
   kidHeadCount:number =0;
 
+  adultNon:number=0;
+  adultVeg:number=0;
+  tentoAdultNon:number=0;
+  tentoAdultVeg:number=0;
+  fourtoTen:number=0;
+  zerotoThree:number=0;
+  studentNon:number=0;
+  studentVeg:number=0;
+
   member:any;
   lastOrder:boolean;
   //public modules: Module[] = [ClientSideRowModelModule];
@@ -49,6 +58,21 @@ export class CountsComponent implements OnInit {
 
   checkDetails(){
     let couter = 0;
+
+    this.kkHeadCount= 0;
+
+    this.nonHeadCount=0;
+    this.vegHeadCount=0;
+    this.kidHeadCount=0;
+
+    this.adultNon=0;
+    this.adultVeg=0;
+    this.tentoAdultNon=0;
+    this.tentoAdultVeg=0;
+    this.fourtoTen=0;
+    this.zerotoThree=0;
+    this.studentNon=0;
+    this.studentVeg=0;
     
 
   //  console.log(this.rowData);
@@ -74,6 +98,31 @@ export class CountsComponent implements OnInit {
                 }
                 if(e.sku.includes("KID")){
                     this.kidHeadCount += e.quantity ;
+                }
+
+                if(e.sku.includes("DP2021EBALL01NON")){
+                  this.adultNon += e.quantity ;
+                }
+                if(e.sku.includes("DP2021EBALL02VEG")){
+                  this.adultVeg += e.quantity ;
+                }
+                if(e.sku.includes("DP2021EBALL03NON")){
+                  this.tentoAdultNon += e.quantity ;
+                }
+                if(e.sku.includes("DP2021EBALL04VEG")){
+                  this.tentoAdultVeg += e.quantity ;
+                }
+                if(e.sku.includes("DP2021EBALL05KID")){
+                  this.fourtoTen += e.quantity ;
+                }
+                if(e.sku.includes("DP2021EBALL06KID")){
+                  this.zerotoThree += e.quantity ;
+                }
+                if(e.sku.includes("DP2021EBALL07NON")){
+                  this.studentNon += e.quantity ;
+                }
+                if(e.sku.includes("DP2021EBALL08VEG")){
+                  this.studentVeg += e.quantity ;
                 }
                 
           });
