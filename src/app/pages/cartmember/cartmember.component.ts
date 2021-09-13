@@ -18,7 +18,7 @@ export class CartmemberComponent implements OnInit {
   currentDate:any;
   parts:any;
 
-
+  ticketData : any=[];
   dataObject :any=[];
   checkObject :any=[];
   cartObject : any=[];
@@ -38,7 +38,7 @@ export class CartmemberComponent implements OnInit {
   constructor(
     private userService: UserService, 
     private cs: CartService, 
-    public router: Router, 
+    public router: Router
   ) { 
     this.cs.currentCart.subscribe( cartCheck => this.cartCheck = cartCheck);
     this.dataObject = this.memberCart;
@@ -67,6 +67,7 @@ export class CartmemberComponent implements OnInit {
       // console.log(this.member.expires);
       // console.log(this.expired);
       // console.log(this.currentDate);
+      this.findTicketDetails();
    }) ;
   }
 
@@ -81,5 +82,79 @@ export class CartmemberComponent implements OnInit {
     console.log(this.memberCart);
     this.router.navigate(['/checkout']);
   }
+
+
+
+  ngAfterViewChecked(): void {
+
+  }
+  
+
+ kkHeadCount:number=0;
+ kkHeadCountkid:number=0;
+ nonHeadCount:number=0;
+ vegHeadCount:number=0;
+ kidHeadCount:number=0;
+ generalSeat:number=0;
+
+ addMoreKK:boolean=false;
+ addtoCartBtn: boolean = true;
+ kkticket:boolean = false;
+
+  findTicketDetails(){
+    this.kkHeadCount =0;
+    this.kkHeadCountkid =0;
+    this.nonHeadCount=0;
+    this.vegHeadCount=0;
+    this.kidHeadCount=0;
+    this.generalSeat=0;
+
+    [...this.member.purchase].forEach(ex => {
+    [...ex].forEach(e => {
+      console.log(e);
+      let n = e.name.replace(/\s+/g, '');
+      if(n =='All3days' ){
+
+          
+          if(e.sku.includes("NON")){
+              this.nonHeadCount += e.quantity ;
+              this.generalSeat  +=e.quantity;
+              console.log('element.quantity'+e.quantity);
+          }
+          if(e.sku.includes("VEG")){
+              this.vegHeadCount += e.quantity ;
+              this.generalSeat  +=e.quantity;
+          }
+          if(e.sku.includes("KID")){
+              this.kidHeadCount += e.quantity ;
+          }
+        }    
+          if(e.sku === 'DP2021EBKKS01'){
+              this.kkHeadCount += e.quantity ;
+                console.log(e.quantity);
+          }
+          if(e.sku === 'DP2021EBKKS02'){ 
+              this.kkHeadCountkid += e.quantity ;
+                console.log(e.quantity);
+          }
+      
+    });
+  });
+
+  
+  //  this.generalSeat = this.nonHeadCount + this.vegHeadCount;
+      console.log('Adult Count -'+ this.generalSeat );
+      console.log('Kids Count -'+this.kidHeadCount  );
+      console.log('KK Count -'+this.kkHeadCount  );
+      console.log('KK kids Count -'+this.kkHeadCountkid  );
+
+      if(this.kkHeadCount<this.generalSeat){
+        this.addMoreKK = true;
+        console.log('true'+this.generalSeat);
+      }
+  }
+ 
+ 
+
 
 }
