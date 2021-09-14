@@ -84,8 +84,8 @@ const routes: Routes = [
   { path: "forgetpassword", component: ForgetpasswordComponent, pathMatch: 'full' },
   { path: "user", component: UserComponent,  resolve: { data: UserResolver} },
   { path: "resetpassword", component: ResetpasswordComponent, pathMatch: 'full' },
-  { path: "checkout", component: CheckoutComponent,  pathMatch: 'full' },
-  { path: "ordertickets", component: OrderTicketsComponent,  pathMatch: 'full', resolve: { data: UserResolver} },
+  // { path: "checkout", component: CheckoutComponent,  pathMatch: 'full' },
+  // { path: "ordertickets", component: OrderTicketsComponent,  pathMatch: 'full', resolve: { data: UserResolver} },
   { path: "eventtickets", component: EventticketsComponent,  pathMatch: 'full', resolve: { data: UserResolver} },
   { path: "addmoretickets", component: AddmorekkticketsComponent,  pathMatch: 'full', resolve: { data: UserResolver} },
   
