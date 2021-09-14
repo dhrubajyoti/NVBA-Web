@@ -86,6 +86,7 @@ import { EarlybirdwithoutculturalComponent } from './pages/tickets/earlybirdwith
 import { EventticketsComponent } from './pages/tickets/eventtickets/eventtickets.component';
 import { AdminconsoleComponent } from './pages/ec/adminconsole/adminconsole.component';
 import { CountsComponent } from './pages/ec/counts/counts.component';
+import { AddmorekkticketsComponent } from './pages/tickets/addmorekktickets/addmorekktickets.component';
 
 
 @NgModule({
@@ -137,7 +138,8 @@ import { CountsComponent } from './pages/ec/counts/counts.component';
     EarlybirdwithoutculturalComponent,
     EventticketsComponent,
     AdminconsoleComponent,
-    CountsComponent
+    CountsComponent,
+    AddmorekkticketsComponent
   ],
   imports: [
     BrowserModule,
