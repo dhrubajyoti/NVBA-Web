@@ -10,7 +10,7 @@ import { Observable, from } from 'rxjs';
 })
 export class AdminconsoleComponent implements OnInit {
   
-  reportObject:any;
+  reportObject:any= [];
   payments:any;
   rowData:any;
   private gridApi;
