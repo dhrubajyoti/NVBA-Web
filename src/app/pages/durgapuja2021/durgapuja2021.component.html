@@ -26,16 +26,14 @@
             <!-- <a class="btn-get-started text-center " style="max-width: 300px; display: flex; justify-content: center; margin: 30px auto 30px auto;"  routerLink="/ordertickets" >Register for Durga Puja 2021</a> -->
             <!-- Thank you for your overwhelming support. As we have reached our early bird capacity the registration as of now is closed. Please be on the lookout for future email and website notifications, if and when additional capacity opens up. -->
             
-            <div class=" center " style="display: flex; justify-content: center;" >
-              <div *ngIf="this.member.membershipstatus === '' " >
-                <a class="btn-get-started text-center " routerLink="/user" >Buy Annual Membership ($20) & Enjoy All Programs </a>
-              </div>  
-              <div *ngIf="this.member.membershipstatus == 'Valid' " >
-                <a class="btn-get-started text-center " routerLink="/ordertickets" >Register for Durga Puja 2021</a>
-              </div> 
-            </div>
-
-
+          </div>
+          <div class=" center " style="display: flex; justify-content: center;" >
+            <div *ngIf="this.member.membershipstatus === '' " >
+              <a class="btn-get-started text-center " routerLink="/user" >Register for Durga Puja 2021</a>
+            </div>  
+            <div *ngIf="this.member.membershipstatus == 'Valid' " >
+              <a class="btn-get-started text-center " routerLink="/ordertickets" >Register for Durga Puja 2021</a>
+            </div> 
           </div>
           
           

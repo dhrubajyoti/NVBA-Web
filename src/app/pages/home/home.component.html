@@ -77,13 +77,14 @@
               
               <!-- <a class="btn-get-started text-center " routerLink="/ordertickets" >Register for Durga Puja 2021</a> -->
               
-                <a class="btn-get-started text-center " routerLink="/durgapuja2021" >More details Durga Puja 2021</a>
                 <div *ngIf="this.member.membershipstatus === '' " >
-                  <a class="btn-get-started text-center " routerLink="/user" >Buy Annual Membership ($20) & Enjoy All Programs </a>
+                  <a class="btn-get-started text-center " routerLink="/user" >Register for Durga Puja 2021</a>
                 </div>  
                 <div *ngIf="this.member.membershipstatus == 'Valid' " >
                   <a class="btn-get-started text-center " routerLink="/ordertickets" >Register for Durga Puja 2021</a>
                 </div> 
+
+                <a class="btn-get-started text-center " routerLink="/durgapuja2021" >More details Durga Puja 2021</a>
               
             </div>
             <!-- <app-cartmember></app-cartmember> -->
