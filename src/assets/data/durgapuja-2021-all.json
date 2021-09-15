@@ -1,0 +1,561 @@
+[
+  {
+      "name": "All 3 days",
+      "description": "Adult Non-Veg",
+      "quantity": 0,
+      "price": 60,
+      "tax": 0.00,
+      "sku": "DP2021EBALL01NON",
+      "currency": "USD"
+    },
+    {
+      "name": "All 3 days",
+      "description": "Adult Veg",
+      "quantity": 0,
+      "price": 60,
+      "tax": 0.00,
+      "sku": "DP2021EBALL02VEG",
+      "currency": "USD"
+    },
+    {
+      "name": "All 3 days",
+      "description": "Kids [ 11 to 18 years ] Non-Veg",
+      "quantity": 0,
+      "price": 35,
+      "tax": 0.00,
+      "sku": "DP2021EBALL03NON",
+      "currency": "USD"
+    },
+    {
+      "name": "All 3 days",
+      "description": "Kids [ 11 to 18 years ] Veg",
+      "quantity": 0,
+      "price": 35,
+      "tax": 0.00,
+      "sku": "DP2021EBALL04VEG",
+      "currency": "USD"
+    },
+  {
+    "name": "All 3 days ",
+    "description": "kids [ 4 to 10 years ]",
+    "quantity": 0,
+    "price": 0,
+    "tax": 0.00,
+    "sku": "DP2021EBALL05KID",
+    "currency": "USD"
+  },
+  {
+    "name": "All 3 days ",
+    "description": "kids [ 0 to 3 years ]",
+    "quantity": 0,
+    "price": 0,
+    "tax": 0.00,
+    "sku": "DP2021EBALL06KID",
+    "currency": "USD"
+  },
+  {
+      "name": "All 3 days",
+      "description": "Students and Visiting Parents Non-Veg ",
+      "quantity": 0,
+      "price": 35,
+      "tax": 0.00,
+      "sku": "DP2021EBALL07NON",
+      "currency": "USD"
+  },
+  {
+      "name": "All 3 days",
+      "description": "Students and Visiting Parents Veg",
+      "quantity": 0,
+      "price": 35,
+      "tax": 0.00,
+      "sku": "DP2021EBALL08VEG",
+      "currency": "USD"
+  },
+  {
+    "name": "Kavita Krishnamurti Concert",
+    "description": "General Admission - [ 4 years to Adult ]",
+    "quantity": 0,
+    "price": 35,
+    "tax": 0.00,
+    "sku": "DP2021EBKKS01",
+    "currency": "USD"
+  },
+  {
+    "name": "Kavita Krishnamurti Concert",
+    "description": "Kids[ 0 - 3 years if seat is required ]",
+    "quantity": 0,
+    "price": 25,
+    "tax": 0.00,
+    "sku": "DP2021EBKKS02",
+    "currency": "USD"
+  },
+  {
+      "name": "Friday Only",
+      "description": "Adult Non-Veg",
+      "quantity": 0,
+      "price": 35,
+      "tax": 0.00,
+      "sku": "DP2021EBFRI01NON",
+      "currency": "USD"
+    },
+    {
+      "name": "Friday Only",
+      "description": "Adult Veg",
+      "quantity": 0,
+      "price": 35,
+      "tax": 0.00,
+      "sku": "DP2021EBFRI02VEG",
+      "currency": "USD"
+    },
+    {
+      "name": "Friday Only",
+      "description": "Kids [ 11 to 18 years ] Non-Veg",
+      "quantity": 0,
+      "price": 20,
+      "tax": 0.00,
+      "sku": "DP2021EBFRI03NON",
+      "currency": "USD"
+    },
+    {
+      "name": "Friday Only",
+      "description": "Kids [ 11 to 18 years ] Veg",
+      "quantity": 0,
+      "price": 20,
+      "tax": 0.00,
+      "sku": "DP2021EBFRI04VEG",
+      "currency": "USD"
+    },
+  {
+    "name": "Friday Only",
+    "description": "kids [ 0 to 10 years ]",
+    "quantity": 0,
+    "price": 0,
+    "tax": 0.00,
+    "sku": "DP2021EBFRI05KID",
+    "currency": "USD"
+  },
+  {
+      "name": "Friday Only",
+      "description": "Students and Visiting Parents Non-Veg",
+      "quantity": 0,
+      "price": 20,
+      "tax": 0.00,
+      "sku": "DP2021EBFRI06NON",
+      "currency": "USD"
+  },
+  {
+      "name": "Friday Only",
+      "description": "Students and Visiting Parents Veg",
+      "quantity": 0,
+      "price": 20,
+      "tax": 0.00,
+      "sku": "DP2021EBFRI07VEG",
+      "currency": "USD"
+  },
+  {
+      "name": "Saturday Only",
+      "description": "Adult Non-Veg",
+      "quantity": 0,
+      "price": 60,
+      "tax": 0.00,
+      "sku": "DP2021EBSAT01NON",
+      "currency": "USD"
+    },
+    {
+      "name": "Saturday Only",
+      "description": "Adult Veg",
+      "quantity": 0,
+      "price": 60,
+      "tax": 0.00,
+      "sku": "DP2021EBSAT02VEG",
+      "currency": "USD"
+    },
+    {
+      "name": "Saturday Only",
+      "description": "Kids [ 11 to 18 years ] Non-Veg",
+      "quantity": 0,
+      "price": 30,
+      "tax": 0.00,
+      "sku": "DP2021EBSAT03NON",
+      "currency": "USD"
+    },
+    {
+      "name": "Saturday Only",
+      "description": "Kids [ 11 to 18 years ] Veg",
+      "quantity": 0,
+      "price": 30,
+      "tax": 0.00,
+      "sku": "DP2021EBSAT04VEG",
+      "currency": "USD"
+    },
+  {
+    "name": "Saturday Only",
+    "description": "kids [ 0 to 10 years ]",
+    "quantity": 0,
+    "price": 0,
+    "tax": 0.00,
+    "sku": "DP2021EBSAT05KID",
+    "currency": "USD"
+  },
+  {
+      "name": "Saturday Only",
+      "description": "Students and Visiting Parents Non-Veg",
+      "quantity": 0,
+      "price": 30,
+      "tax": 0.00,
+      "sku": "DP2021EBSAT06NON",
+      "currency": "USD"
+  },
+  {
+      "name": "Saturday Only",
+      "description": "Students and Visiting Parents Veg",
+      "quantity": 0,
+      "price": 30,
+      "tax": 0.00,
+      "sku": "DP2021EBSAT07VEG",
+      "currency": "USD"
+  },
+  {
+      "name": "Sunday Only - Without Kavita Krishnamurti Concert",
+      "description": "Adult Non-Veg",
+      "quantity": 0,
+      "price": 35,
+      "tax": 0.00,
+      "sku": "DP2021EBSUN01NON",
+      "currency": "USD"
+    },
+    {
+      "name": "Sunday Only - Without Kavita Krishnamurti Concert",
+      "description": "Adult Veg",
+      "quantity": 0,
+      "price": 35,
+      "tax": 0.00,
+      "sku": "DP2021EBSUN02VEG",
+      "currency": "USD"
+    },
+    {
+      "name": "Sunday Only - Without Kavita Krishnamurti Concert",
+      "description": "Kids [ 11 to 18 years ] Non-Veg",
+      "quantity": 0,
+      "price": 15,
+      "tax": 0.00,
+      "sku": "DP2021EBSUN03NON",
+      "currency": "USD"
+    },
+    {
+      "name": "Sunday Only - Without Kavita Krishnamurti Concert",
+      "description": "Kids [ 11 to 18 years ] Veg",
+      "quantity": 0,
+      "price": 15,
+      "tax": 0.00,
+      "sku": "DP2021EBSUN04VEG",
+      "currency": "USD"
+    },
+  {
+    "name": "Sunday Only - Without Kavita Krishnamurti Concert",
+    "description": "kids [ 0 to 10 years ]",
+    "quantity": 0,
+    "price": 0,
+    "tax": 0.00,
+    "sku": "DP2021EBSUN05KID",
+    "currency": "USD"
+  },
+  {
+      "name": "Sunday Only - Without Kavita Krishnamurti Concert",
+      "description": "Students and Visiting Parents Non-Veg",
+      "quantity": 0,
+      "price": 15,
+      "tax": 0.00,
+      "sku": "DP2021EBSUN06NON",
+      "currency": "USD"
+  },
+  {
+    "name": "Sunday Only - Without Kavita Krishnamurti Concert",
+    "description": "Students and Visiting Parents Veg",
+    "quantity": 0,
+    "price": 15,
+    "tax": 0.00,
+    "sku": "DP2021EBSUN07VEG",
+    "currency": "USD"
+  },
+  {
+    "name": "All 3 days regular",
+    "description": "Adult Non-Veg",
+    "quantity": 0,
+    "price": 70,
+    "tax": 0.00,
+    "sku": "DP2021RGALL01NON",
+    "currency": "USD"
+  },
+  {
+    "name": "All 3 days regular",
+    "description": "Adult Veg",
+    "quantity": 0,
+    "price": 70,
+    "tax": 0.00,
+    "sku": "DP2021RGALL02VEG",
+    "currency": "USD"
+  },
+  {
+    "name": "All 3 days regular",
+    "description": "Kids [ 11 to 18 years ] Non-Veg",
+    "quantity": 0,
+    "price": 40,
+    "tax": 0.00,
+    "sku": "DP2021RGALL03NON",
+    "currency": "USD"
+  },
+  {
+    "name": "All 3 days regular",
+    "description": "Kids [ 11 to 18 years ] Veg",
+    "quantity": 0,
+    "price": 40,
+    "tax": 0.00,
+    "sku": "DP2021RGALL04VEG",
+    "currency": "USD"
+  },
+  {
+    "name": "All 3 days regular",
+    "description": "kids [ 4 to 10 years ]",
+    "quantity": 0,
+    "price": 0,
+    "tax": 0.00,
+    "sku": "DP2021RGALL05KID",
+    "currency": "USD"
+  },
+  {
+    "name": "All 3 days regular",
+    "description": "kids [ 0 to 3 years ]",
+    "quantity": 0,
+    "price": 0,
+    "tax": 0.00,
+    "sku": "DP2021RGALL06KID",
+    "currency": "USD"
+  },
+  {
+      "name": "All 3 days regular",
+      "description": "Students and Visiting Parents Non-Veg ",
+      "quantity": 0,
+      "price": 40,
+      "tax": 0.00,
+      "sku": "DP2021RGALL07NON",
+      "currency": "USD"
+  },
+  {
+      "name": "All 3 days regular",
+      "description": "Students and Visiting Parents Veg",
+      "quantity": 0,
+      "price": 40,
+      "tax": 0.00,
+      "sku": "DP2021RGALL08VEG",
+      "currency": "USD"
+  },
+  {
+    "name": "Kavita Krishnamurti Concert - Regular ",
+    "description": "General Admission - [ 4 years to Adult ]",
+    "quantity": 0,
+    "price": 45,
+    "tax": 0.00,
+    "sku": "DP2021RGKKS01",
+    "currency": "USD"
+  },
+  {
+    "name": "Kavita Krishnamurti Concert - Regular",
+    "description": "Kids[ 0 - 3 years if seat is required ]",
+    "quantity": 0,
+    "price": 35,
+    "tax": 0.00,
+    "sku": "DP2021RGKKS02",
+    "currency": "USD"
+  },
+  {
+    "name": "Friday Only Regular",
+    "description": "Adult Non-Veg",
+    "quantity": 0,
+    "price": 50,
+    "tax": 0.00,
+    "sku": "DP2021RGFRI01NON",
+    "currency": "USD"
+  },
+  {
+    "name": "Friday Only Regular",
+    "description": "Adult Veg",
+    "quantity": 0,
+    "price": 50,
+    "tax": 0.00,
+    "sku": "DP2021RGFRI02VEG",
+    "currency": "USD"
+  },
+  {
+    "name": "Friday Only Regular",
+    "description": "Kids [ 11 to 18 years ] Non-Veg",
+    "quantity": 0,
+    "price": 25,
+    "tax": 0.00,
+    "sku": "DP2021RGFRI03NON",
+    "currency": "USD"
+  },
+  {
+    "name": "Friday Only Regular",
+    "description": "Kids [ 11 to 18 years ] Veg",
+    "quantity": 0,
+    "price": 25,
+    "tax": 0.00,
+    "sku": "DP2021RGFRI04VEG",
+    "currency": "USD"
+  },
+  {
+    "name": "Friday Only Regular",
+    "description": "kids [ 0 to 10 years ]",
+    "quantity": 0,
+    "price": 0,
+    "tax": 0.00,
+    "sku": "DP2021RGFRI05KID",
+    "currency": "USD"
+  },
+  {
+      "name": "Friday Only Regular",
+      "description": "Students and Visiting Parents Non-Veg",
+      "quantity": 0,
+      "price": 25,
+      "tax": 0.00,
+      "sku": "DP2021RGFRI06NON",
+      "currency": "USD"
+  },
+  {
+      "name": "Friday Only Regular",
+      "description": "Students and Visiting Parents Veg",
+      "quantity": 0,
+      "price": 25,
+      "tax": 0.00,
+      "sku": "DP2021RGFRI07VEG",
+      "currency": "USD"
+  },
+  {
+    "name": "Saturday Only Regular",
+    "description": "Adult Non-Veg",
+    "quantity": 0,
+    "price": 75,
+    "tax": 0.00,
+    "sku": "DP2021RGSAT01NON",
+    "currency": "USD"
+  },
+  {
+    "name": "Saturday Only Regular",
+    "description": "Adult Veg",
+    "quantity": 0,
+    "price": 75,
+    "tax": 0.00,
+    "sku": "DP2021RGSAT02VEG",
+    "currency": "USD"
+  },
+  {
+    "name": "Saturday Only Regular",
+    "description": "Kids [ 11 to 18 years ] Non-Veg",
+    "quantity": 0,
+    "price": 35,
+    "tax": 0.00,
+    "sku": "DP2021RGSAT03NON",
+    "currency": "USD"
+  },
+  {
+    "name": "Saturday Only Regular",
+    "description": "Kids [ 11 to 18 years ] Veg",
+    "quantity": 0,
+    "price": 35,
+    "tax": 0.00,
+    "sku": "DP2021RGSAT04VEG",
+    "currency": "USD"
+  },
+  {
+    "name": "Saturday Only Regular",
+    "description": "kids [ 0 to 10 years ]",
+    "quantity": 0,
+    "price": 0,
+    "tax": 0.00,
+    "sku": "DP2021RGSAT05KID",
+    "currency": "USD"
+  },
+  {
+      "name": "Saturday Only Regular",
+      "description": "Students and Visiting Parents Non-Veg",
+      "quantity": 0,
+      "price": 35,
+      "tax": 0.00,
+      "sku": "DP2021RGSAT06NON",
+      "currency": "USD"
+  },
+  {
+      "name": "Saturday Only Regular",
+      "description": "Students and Visiting Parents Veg",
+      "quantity": 0,
+      "price": 35,
+      "tax": 0.00,
+      "sku": "DP2021RGSAT07VEG",
+      "currency": "USD"
+  },
+  {
+    "name": "Sunday Only Regular - Without Kavita Krishnamurti Concert",
+    "description": "Adult Non-Veg",
+    "quantity": 0,
+    "price": 50,
+    "tax": 0.00,
+    "sku": "DP2021RGSUN01NON",
+    "currency": "USD"
+  },
+  {
+    "name": "Sunday Only Regular - Without Kavita Krishnamurti Concert",
+    "description": "Adult Veg",
+    "quantity": 0,
+    "price": 50,
+    "tax": 0.00,
+    "sku": "DP2021RGSUN02VEG",
+    "currency": "USD"
+  },
+  {
+    "name": "Sunday Only Regular - Without Kavita Krishnamurti Concert",
+    "description": "Kids [ 11 to 18 years ] Non-Veg",
+    "quantity": 0,
+    "price": 30,
+    "tax": 0.00,
+    "sku": "DP2021RGSUN03NON",
+    "currency": "USD"
+  },
+  {
+    "name": "Sunday Only Regular - Without Kavita Krishnamurti Concert",
+    "description": "Kids [ 11 to 18 years ] Veg",
+    "quantity": 0,
+    "price": 30,
+    "tax": 0.00,
+    "sku": "DP2021RGSUN04VEG",
+    "currency": "USD"
+  },
+  {
+    "name": "Sunday Only Regular - Without Kavita Krishnamurti Concert",
+    "description": "kids [ 0 to 10 years ]",
+    "quantity": 0,
+    "price": 0,
+    "tax": 0.00,
+    "sku": "DP2021RGSUN05KID",
+    "currency": "USD"
+  },
+  {
+      "name": "Sunday Only Regular - Without Kavita Krishnamurti Concert",
+      "description": "Students and Visiting Parents Non-Veg",
+      "quantity": 0,
+      "price": 30,
+      "tax": 0.00,
+      "sku": "DP2021RGSUN06NON",
+      "currency": "USD"
+  },
+  {
+    "name": "Sunday Only Regular - Without Kavita Krishnamurti Concert",
+    "description": "Students and Visiting Parents Veg",
+    "quantity": 0,
+    "price": 30,
+    "tax": 0.00,
+    "sku": "DP2021RGSUN07VEG",
+    "currency": "USD"
+  }
+  
+]    

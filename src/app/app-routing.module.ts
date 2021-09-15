@@ -89,6 +89,8 @@ const routes: Routes = [
   { path: "eventtickets", component: EventticketsComponent,  pathMatch: 'full', resolve: { data: UserResolver} },
   { path: "addmoretickets", component: AddmorekkticketsComponent,  pathMatch: 'full', resolve: { data: UserResolver} },
   
+  { path: "ticketscounts", component: AdminconsoleComponent,  pathMatch: 'full', resolve: { data: UserResolver} },
+  
 
   { path: "adminconsole", component: AdminconsoleComponent ,  pathMatch: 'full', resolve: { data: UserResolver}  },
   { path: "reports", component: ReportsComponent,  pathMatch: 'full', resolve: { data: UserResolver}  },

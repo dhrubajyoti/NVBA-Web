@@ -1,19 +1,58 @@
-<section id="" class="main-pages "  >
-    <div class="container">
-        <div class="topLineFix"></div>   
-      <div class="section-header">
-        <h2>Admin Console</h2>
-        <h3 style="text-align: center;">
-          You can see various reports.
-        </h3>
-      </div>
-      <div>
+<section id="reports" class="main-pages "  >
+  <div class="container">
+      <div class="topLineFix"></div>   
+    <div class="section-header">
+      <h2>Tickets Counts Reports</h2>
+      <h3 style="text-align: center;">
         
-      </div>
-      
-      
-        
-
-
+      </h3>
+      KK Concert current head count = {{kkHeadCount}} <br /><br />
+   
+      Non-Veg head count = {{nonHeadCount}} <br />
+     
+      Veg head count = {{vegHeadCount}} <br />
+  
+      Kids head count = {{kidHeadCount}} <br /> 
+  
+      Total Head Count = {{nonHeadCount+vegHeadCount+kidHeadCount }} <br /> <br /> 
     </div>
+
+    <table class="table table-bordered table-hover table-responsive" >
+      <thead>
+          <tr>
+            <th>
+              Ticket Name
+            </th>
+            <th>
+              Ticket Description
+            </th>
+            <th>
+              Ticket Price
+            </th>
+            <th>
+              Count
+            </th>
+            <th>
+              Revenue per ticket segment
+            </th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of reportObject; index as i" style="width: 100%;" >
+            <td>{{item.name}}</td>
+            <td>{{item.description}}</td>
+            <td>$ {{item.price}}</td>
+            <td>
+              <input type="number" disabled value="{{item.quantity}}"  >
+            </td>
+            <!-- <td> <button class="btn btn-warning" (click)="addToCartobj(item)" >Add to Cart</button></td> --> 
+             <td  >$ {{item.price * item.quantity}}</td> 
+        </tr>
+      </tbody>
+    </table>
+     
+      
+
+
+  </div>
 </section>    
