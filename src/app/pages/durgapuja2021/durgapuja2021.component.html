@@ -25,7 +25,17 @@
           <div class="d-flex flex-wrap mt-4 mb-5 col-md-8 marginCenter " >
             <!-- <a class="btn-get-started text-center " style="max-width: 300px; display: flex; justify-content: center; margin: 30px auto 30px auto;"  routerLink="/ordertickets" >Register for Durga Puja 2021</a> -->
             <!-- Thank you for your overwhelming support. As we have reached our early bird capacity the registration as of now is closed. Please be on the lookout for future email and website notifications, if and when additional capacity opens up. -->
-            <app-cartmember></app-cartmember>
+            
+            <div class=" center " style="display: flex; justify-content: center;" >
+              <div *ngIf="this.member.membershipstatus === '' " >
+                <a class="btn-get-started text-center " routerLink="/user" >Buy Annual Membership ($20) & Enjoy All Programs </a>
+              </div>  
+              <div *ngIf="this.member.membershipstatus == 'Valid' " >
+                <a class="btn-get-started text-center " routerLink="/ordertickets" >Register for Durga Puja 2021</a>
+              </div> 
+            </div>
+
+
           </div>
           
           
@@ -80,7 +90,21 @@
             </div>
 
             <hr />
-            <app-cartmember></app-cartmember>
+            
+          
+
+
+            <div class=" center " style="display: flex; justify-content: center;" >
+              <div *ngIf="this.member.membershipstatus === '' " >
+                <a class="btn-get-started text-center " routerLink="/user" >Buy Annual Membership ($20) & Enjoy All Programs </a>
+              </div>  
+              <div *ngIf="this.member.membershipstatus == 'Valid' " >
+                <a class="btn-get-started text-center " routerLink="/ordertickets" >Register for Durga Puja 2021</a>
+              </div> 
+            </div>
+
+
+            
             <!-- <button routerLink="/ordertickets" class="btn-get-started w-100 mb-5 mt-2 " > Register for Durga Puja 2021 </button> -->
             <!-- <div class="d-flex flex-wrap mt-4 mb-5 col-md-8 marginCenter " >Thank you for your overwhelming support. As we have reached our early bird capacity the registration as of now is closed. Please be on the lookout for future email and website notifications, if and when additional capacity opens up.</div> -->
 
