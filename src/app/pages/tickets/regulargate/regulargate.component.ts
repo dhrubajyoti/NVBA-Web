@@ -29,9 +29,10 @@ export class RegulargateComponent implements OnInit, OnChanges, AfterViewChecked
   // kkkidsCount: number = 0;
   // headCount: number = 0;
 
-  private _mail = '/assets/php/mail.php';
+  private _mail = '/assets/php/PHPMailer/mail.php';
   private _jsonURLcart = '/assets/data/durgapuja-2021-regulargate.json';
    constructor(private http: HttpClient, private cs: CartService, public router: Router, private cdr: ChangeDetectorRef) {
+    this.http.get(this._mail);
     console.log('Mail call'+ this.http.get(this._mail));
     this.cs.currentCart.subscribe( cartCheck => this.cartCheck = cartCheck);
     this.getJSON().subscribe(data => {
