@@ -11,4 +11,6 @@ $msg = wordwrap($msg,70);
 
 // send email
 mail("deydhrubajyoti@gmail.com","My subject",$msg);
+echo $msg;
+print_r('hello');
 ?>
