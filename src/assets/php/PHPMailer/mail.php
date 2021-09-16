@@ -8,16 +8,16 @@ function smtpmailer($to, $from, $from_name, $subject, $body)
         $mail->SMTPAuth = true; 
  
         $mail->SMTPSecure = 'ssl'; 
-        $mail->Host = 'smtp.gmail.com';
-        $mail->Port = 587;  
-        $mail->Username = 'it_secretary@novaba.org';
-        $mail->Password = 'Nvba@123';   
+        $mail->Host = 'send.one.com';
+        $mail->Port = 465;  
+        $mail->Username = 'test@dhrubajyoti.com';
+        $mail->Password = 'John@123';   
    
    //   $path = 'reseller.pdf';
    //   $mail->AddAttachment($path);
    
         $mail->IsHTML(true);
-        $mail->From="it_secretary@novaba.org";
+        $mail->From="test@dhrubajyoti.com";
         $mail->FromName=$from_name;
         $mail->Sender=$from;
         $mail->AddReplyTo($from, $from_name);
@@ -37,7 +37,7 @@ function smtpmailer($to, $from, $from_name, $subject, $body)
     }
     
     $to   = 'contact@dhrubajyoti.com';
-    $from = 'it_secretary@novaba.org';
+    $from = 'test@dhrubajyoti.com';
     $name = 'DJ';
     $subj = 'PHPMailer 5.2 testing from DomainRacer';
     $msg = 'This is mail about testing mailing using PHP.';
