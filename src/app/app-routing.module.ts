@@ -85,9 +85,11 @@ const routes: Routes = [
   { path: "user", component: UserComponent,  resolve: { data: UserResolver} },
   { path: "resetpassword", component: ResetpasswordComponent, pathMatch: 'full' },
   { path: "checkout", component: CheckoutComponent,  pathMatch: 'full' },
-  // { path: "ordertickets", component: OrderTicketsComponent,  pathMatch: 'full', resolve: { data: UserResolver} },
+  { path: "ordertickets", component: OrderTicketsComponent,  pathMatch: 'full', resolve: { data: UserResolver} },
   { path: "eventtickets", component: EventticketsComponent,  pathMatch: 'full', resolve: { data: UserResolver} },
   { path: "addmoretickets", component: AddmorekkticketsComponent,  pathMatch: 'full', resolve: { data: UserResolver} },
+  
+  { path: "ticketscounts", component: AdminconsoleComponent,  pathMatch: 'full', resolve: { data: UserResolver} },
   
 
   { path: "adminconsole", component: AdminconsoleComponent ,  pathMatch: 'full', resolve: { data: UserResolver}  },

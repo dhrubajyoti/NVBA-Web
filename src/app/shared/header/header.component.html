@@ -84,11 +84,21 @@
             <a routerLink="faq">FAQ</a>
           </li> -->
           <!-- <li>
-            Hello {{member.displayName}}
+            Hello {{member.displayName}} ticketscounts
           </li> -->
 
-          <li *ngIf="member.usertype == 'admin'" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
-            <a routerLink="reports" >Reports</a></li> 
+          <!-- <li *ngIf="member.usertype == 'admin'" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+            <a routerLink="reports" >Reports</a></li>  -->
+
+            <li *ngIf="member.usertype == 'admin'" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" class="drop-down">
+              <a routerLink="reports" >Admin</a>
+              <ul>
+                <li *ngIf="member.usertype == 'admin'" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" >
+                  <a routerLink="reports" >Reports</a></li>
+                <li *ngIf="member.usertype == 'admin'" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+                  <a routerLink="ticketscounts" >Tickets Counts Details</a></li>
+              </ul>
+            </li>  
 
         </ul>
       </nav><!-- .main-nav -->

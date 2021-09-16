@@ -96,10 +96,13 @@
           <a routerLink="faq">FAQ</a>
         </li> -->
         <li *ngIf="member.usertype == 'admin'" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
-          <a routerLink="reports" >Reports</a></li> 
+          <a routerLink="reports" >Reports</a></li>
+
+        <li *ngIf="member.usertype == 'admin'" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+            <a routerLink="ticketscounts" >Tickets Counts Details</a></li>   
       </ul>
     </nav>
-    <!-- <app-sidenav ></app-sidenav>  -->
+    <!-- <app-sidenav ></app-sidenav>   -->
   </mat-sidenav> 
 
   <!-- <app-sidenav></app-sidenav> -->
