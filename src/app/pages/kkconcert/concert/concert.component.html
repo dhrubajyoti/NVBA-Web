@@ -1,0 +1,85 @@
+<section id="concert">
+    <div class="container">
+        <div class="topLineFix mt-1"></div>   
+      
+      <div style="display: flex;" class=" justify-content-center mt-3 " >
+        <img src="assets/images/stocks/kkConcert-2021.jpg"  class="img-fluid dp" alt="Responsive image">
+      </div>
+    </div> 
+</section>   
+<section>
+    <div class="section-header mt-3">
+        <h2>Kavita Krishnamurti Concert Ticket</h2>
+        <h3 style="text-align: center;"></h3>
+    </div>
+
+    <div class="d-flex  justify-content-center mb-4 mt-4">
+        <div class="flex-column col-lg-6">
+            <h3 style="text-align: center; text-decoration: underline; ">ARBITRATION AND RELEASE & WAIVER OF LIABILITY AGREEMENT
+            </h3>
+            
+            <ol  style="margin: 10px auto;"> 
+                <!-- <li>
+                    Food is available for purchase for NVBA Members only.
+                </li> -->
+                <li>
+                    Registrant fully understands that the novel coronavirus SARS- CoV-2 and any resulting disease (together with any mutation, adaptation, or variation thereof, "COVID-19”) is an extremely contagious disease that can lead to severe illness and death, and there is an inherent danger and risk of exposure to COVID-19 in any place where people are present.
+                </li>
+                <li>
+                    Registrant fully acknowledges that all family members and relatives ages 12 and above are fully vaccinated and will abide by <a href="https://www.cdc.gov/" target="_blank" style="text-decoration: underline;" > Center for Disease Control</a> and <a style="text-decoration: underline;" href="https://www.vdh.virginia.gov/" target="_blank" > Virginia Department of Health</a> guidelines during the entire Kavita Krishnamurti Concert hosted by Northern Virginia Bengali Association on October 10th. 2021.
+                </li>
+                <li>
+                    Registrant and their family members and relatives accompanying the registrant agrees to wear a mask at all times inside the auditorium and maintain social distancing. Failure to do so may result in warning or eviction from the school property.
+                </li>
+                <!-- <li>
+                    Should the Durga Puja event get cancelled NVBA will refund the registration cost minus the PayPal processing fees via check to the registrant’s mailing address.
+                </li> -->
+                <li style="list-style: none; margin: 20px 0 20px 0;">
+                    BY COMPLETING THE REGISTRATION FOR THIS EVENT, I HAVE CAREFULLY READ AND FULLY UNDERSTAND ALL PROVISIONS OF THIS RELEASE. AND FREELY AND KNOWINGLY ASSUME THE RISK AND WAIVE MY RIGHTS CONCERNING LIABILITY AS DESCRIBED ABOVE AND AGREE NOT TO HOLD NORTHERN VIRGINIA BENGALI ASSOCIATION (NVBA) AND ITS EXECUTIVE COMMITTEE MEMBERS LIABLE FOR ANY ILLNESS OR INJURY DURING OR AFTER THE EVENT:
+                </li>
+                <li style="list-style: none; margin: 20px 0 20px 0;">
+                    <span>
+                        <label for="agree" style="margin-left: 10px; font-size: 1.1em;" >
+                            <input type="checkbox" id="agree" #agree [checked]="iAgree"  (click)="checkCheckBoxvalue(agree)" > AGREE
+                        </label>
+                    </span>   
+                    <span style="float: right;">
+                        <label for="disagree" style="margin-left: 10px; font-size: 1.1em;" >
+                            <input type="checkbox" #disagree id="disagree" name="disagree" value="disagree" (click)="redirectToHomepage()" > 
+                            DO NOT AGREE
+                        </label>
+                    </span>
+
+                            
+                        
+                    <br>
+                </li>
+                 
+            </ol>
+            
+        </div>
+    </div>
+    <div *ngIf="iAgree" [@inOutAnimation] class="d-flex  justify-content-center mb-4 mt-4" >
+        <div class="flex-column col-lg-6" >
+            <table>
+                <thead>
+                    <tr>
+                        <td width="50%" >
+                            General Admission
+                        </td>
+                        <td width="25%" >{{kkObject.price}}</td>
+                        <td width="25%" >
+                            <select  [(ngModel)]="selectedt" (change)="selected()"  >
+                                <option *ngFor="let item of tdata" [ngValue]="item" >{{ item.value }}</option>
+                            </select>
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        
+    </div>
+
+</section>  
+
+

@@ -42,6 +42,9 @@ import { PicnicComponent } from './pages/picnic/picnic.component';
 import { EventticketsComponent } from './pages/tickets/eventtickets/eventtickets.component';
 import { AddmorekkticketsComponent } from './pages/tickets/addmorekktickets/addmorekktickets.component';
 
+import { ConcertComponent } from './pages/kkconcert/concert/concert.component';
+import { ConcertcheckoutComponent } from './pages/kkconcert/concertcheckout/concertcheckout.component';
+
 import { AdminconsoleComponent } from './pages/ec/adminconsole/adminconsole.component';
 import { ReportsComponent } from './pages/ec/reports/reports.component';
 import { CountsComponent } from './pages/ec/counts/counts.component';
@@ -96,6 +99,10 @@ const routes: Routes = [
   { path: "reports", component: ReportsComponent,  pathMatch: 'full', resolve: { data: UserResolver}  },
   { path: "counts", component: CountsComponent,  pathMatch: 'full', resolve: { data: UserResolver}  },
   
+
+  // KK Tickets
+  { path: "concert", component: ConcertComponent, pathMatch: 'full' },
+  { path: "concertcheckout", component: ConcertcheckoutComponent, pathMatch: 'full' },
   
 ];
 
