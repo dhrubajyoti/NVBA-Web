@@ -41,7 +41,7 @@
                 <tbody *ngFor="let item of dataObject; index as i" style="background-color: #f9debe;" >
                     
                     <tr *ngIf="i > 7 && i < 10" >
-                    <th>{{item.description}}</th>
+                    <th>Kavita Krishnamurti Concert Ticket - {{item.description}}</th>
                     <td>$ {{item.price}}</td>
                     <td><input type="number" [(ngModel)]="item.quantity"  id="{{item.sku}}" style="width:50px" min="0" [max]="maxValue(item.sku)" ></td>
                     <!-- <td> <button class="btn btn-warning" (click)="addToCartobj(item)" >Add to Cart</button></td> -->
