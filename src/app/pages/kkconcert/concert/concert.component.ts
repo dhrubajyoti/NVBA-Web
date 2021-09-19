@@ -3,6 +3,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 import { IpServiceService } from './../../../services/ip-service.service';
 import { Router, Params } from '@angular/router';
 import { CartService } from './../../../services/cart.service';
+import { ConcertTicketsService } from './../../../services/concert-tickets.service';
 
 @Component({
   selector: 'app-concert',
@@ -44,31 +45,33 @@ export class ConcertComponent implements OnInit {
     alert(this.selectedt.value );
     this.kkObject.quantity = this.selectedt.value;
     console.log(this.kkObject);
+    this.router.navigate(['/concertcheckout']);
   }
 
   private  concertCart = {
-    "name": "Kavita Krishnamurti Concert Ticket",
-    "description": "Kavita Krishnamurti Concert Ticket Fee",
+    "name": "Kavita Krishnamurti Concert Public Ticket",
+    "description": "Kavita Krishnamurti Concert Public Ticket Fee",
     "quantity": 0,
     "price": 50,
     "tax": 0,
     "sku": "DP2021KKNONM",
     "currency": "USD",
-    "viwername":"",
-    "address":"",
-    "address1":"",
-    "city":"",
-    "state":"",
-    "zip":"",
-    "ipAddress":"",
-    "iAgree":"",
-    "iAgreeDateTime":""
+    // "viwername":"",
+    // "address":"",
+    // "address1":"",
+    // "city":"",
+    // "state":"",
+    // "zip":"",
+    // "ipAddress":"",
+    // "iAgree":"",
+    // "iAgreeDateTime":""
   }
 
   constructor(
     private ip:IpServiceService,
     private router: Router,
-    private cs: CartService,  ){
+    private cs: CartService,
+    private mds: ConcertTicketsService,  ){
       this.cs.currentCart.subscribe( cartCheck => this.cartCheck = cartCheck);
       this.kkObject = this.concertCart;
       console.log(this.kkObject)
