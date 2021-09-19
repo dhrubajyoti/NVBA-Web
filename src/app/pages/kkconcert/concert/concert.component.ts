@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { IpServiceService } from './../../../services/ip-service.service';
 import { Router, Params } from '@angular/router';
 import { CartService } from './../../../services/cart.service';
+
+declare let paypal:any;
 
 @Component({
   selector: 'app-concert',
@@ -32,11 +34,12 @@ import { CartService } from './../../../services/cart.service';
     )
   ]
 })
-export class ConcertComponent implements OnInit {
+export class ConcertComponent implements OnInit, AfterViewInit {
   iAgree: boolean = false;
   ipAddress:string;
   cartCheck: any;
   kkObject :any=[];
+  concertCartUser:any=[];
   selectedt;
   tdata:Array<Object> = [
     {value: 0},{value: 1},{value: 2},{value: 3},{value: 4},{value: 5},{value: 6},{value: 7},{value: 8},{value: 9},{value: 10}];
@@ -53,8 +56,11 @@ export class ConcertComponent implements OnInit {
     "price": 50,
     "tax": 0,
     "sku": "DP2021KKNONM",
-    "currency": "USD",
-    "viwername":"",
+    "currency": "USD"
+  };
+  private concertCartUserx = {
+    "viwerfirstname":"",
+    "viwerlastname":"",
     "address":"",
     "address1":"",
     "city":"",
@@ -71,6 +77,7 @@ export class ConcertComponent implements OnInit {
     private cs: CartService,  ){
       this.cs.currentCart.subscribe( cartCheck => this.cartCheck = cartCheck);
       this.kkObject = this.concertCart;
+      this.concertCartUser = this.concertCartUserx;
       console.log(this.kkObject)
     }
 
@@ -107,5 +114,135 @@ export class ConcertComponent implements OnInit {
       this.ipAddress=res.ip;
     });
   }
+
+  addToCheckout(){
+   //  this.concertCart = this.kkObject ;
+     
+     this.cs.items = [];
+     this.cs = this.kkObject;
+
+     console.log(this.cs);
+     console.log(this.concertCartUser);
+
+    // [...this.kkObject].forEach(value => {
+
+    //     this.cs.addToCart(value);
+    //  });
+  //   this.router.navigate(['/concertcheckout']);
+
+
+  this.addPaypalScript().then(() => {
+    paypal.Button.render(this.paypalConfig, '#paypal-button-containerkk');
+ //   this.paypalLoad = false;
+//    console.log(this.paypalConfig);  
+  }); 
+
+  }
+
+  ngAfterViewInit(){
+        if(this.iAgree){
+        alert();
+          
+
+        }
+        
+  }
+
+  addPaypalScript() {
+    return new Promise((resolve, reject) => {
+      let scripttagElement = document.createElement('script');    
+      scripttagElement.src = 'https://www.paypalobjects.com/api/checkout.js';
+      scripttagElement.onload = resolve;
+      document.body.appendChild(scripttagElement);
+   //   console.log(scripttagElement);
+    })
+  } // End of AddPaypalScript
+
+
+
+
+
+  paypalConfig = {
+    //  env: 'sandbox',
+      env: 'production',
+      client: {
+    //    sandbox: 'AeLhWUCfC2jHOZv7b-KDfZV6R6Mig-2FklW6iIxsuI0UROww652TU9SlVPHyW1ygMGohQo21TfXUVPrz',
+        production: 'AVBsfj0Jw-jl5_63BPGwuduCaKDsPvbz1pwyqECm7N5FzKEi1Q_o-xQAiM_BTzQhAW064uAPf1v9uZdS'
+      },
+      style: {
+        shape: 'rect',
+        color: 'gold',
+        layout: 'vertical',
+        label: 'paypal',
+      },
+      commit: true,
+      payment: (data, actions) => {
+        return actions.payment.create({
+          payment: {
+            transactions: [ 
+              {
+                "amount": {
+                  "total": (this.kkObject.quantity * this.kkObject.price),
+                  "currency": "USD",
+                  "details": {
+                    "subtotal": this.kkObject.quantity * this.kkObject.price,
+                    "tax": 0
+                  }
+                },
+                "description": "NVBA Website Payment.", 
+                "item_list": {
+                  "items": this.kkObject
+                }  
+              }
+            ]
+          }
+        });
+      },
+      onAuthorize: (data, actions) => {
+        return actions.payment.execute().then((payment) => {
+          let paymentTrans = {...payment};
+  
+          //Do something when payment is successful.
+           console.log(payment);
+     //      console.log(this.member);
+           
+  
+       //    this.toastr.success('Your payment is successful.');
+          
+      //      if(this.member.email){
+  
+      //       //   if(!this.member.payments){
+      //       // //    this.member.payments = [];
+      //       //     console.log('First Time');
+      //       //   }
+      //         // this.member.payments.unshift(paymentTrans);
+      //         // this.updateMemberDetailsFun(payment);
+      //         // if(!this.member.purchase){
+      //         //     this.member.purchase = [];
+      //         // //   console.log('First Time purchase');
+      //         // }
+      //         // this.member.purchase.unshift(this.cartCheck);
+      //         // this.mds.updateCustomer(this.member);
+      //         // this.mds.addPayments(payment) ;
+      //      }
+      //      else{
+      //       console.log('in Else');
+      // //      this.mds.addPayments(payment) ;
+      //      }
+          
+       
+        //     this.cart.clearCart();
+        //     this.cleanup();
+            // this.router.navigate(['/durgapuja2020']);
+  
+            setTimeout(()=>{                           
+              this.router.navigate(['/durgapuja2021']);
+            }, 6000);
+            
+  
+        })
+      }
+    };
+
 
 }

@@ -61,7 +61,7 @@
     </div>
     <div *ngIf="iAgree" [@inOutAnimation] class="d-flex  justify-content-center mb-4 mt-4" >
         <div class="flex-column col-lg-6" >
-            <table>
+            <table class="table table-bordered table-hover " >
                 <thead>
                     <tr>
                         <td width="50%" >
@@ -75,7 +75,82 @@
                         </td>
                     </tr>
                 </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="col-lg-6">
+                                <div class="form-group focused">
+                                  <label  >First name</label>
+                                  <input type="text" class="" placeholder="First name" [(ngModel)]="concertCartUser.viwerfirstname"  value="{{kkObject.viwerfirstname}}">
+                                </div>
+                            </div>
+                        </td>
+                        <td colspan="2" >
+                            <div class="col-lg-6">
+                                <div class="form-group focused">
+                                  <label  >Last name</label>
+                                  <input type="text" class="" placeholder="First name"  [(ngModel)]="concertCartUser.viwerlastname" value="{{kkObject.viwerlastname}}">
+                                </div>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="3" >
+                            <div class="col-lg-6">
+                                <div class="form-group focused">
+                                  <label  >Address</label><br>
+                                  <input type="text" class="" placeholder="Address" [(ngModel)]="concertCartUser.address"  >
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>    
+                        <td colspan="3" >
+                            <div class="col-lg-6">
+                                <div class="form-group focused">
+                                  <label  >Address</label><br>
+                                  <input type="text" class="" placeholder="Address"  [(ngModel)]="concertCartUser.address1" >
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>    
+                        <td colspan="1" >
+                            <div class="col-lg-6">
+                                <div class="form-group focused">
+                                  <label  >City</label>
+                                  <input type="text" class="" placeholder="City"  [(ngModel)]="concertCartUser.city" >
+                                </div>
+                            </div>
+                        </td>
+                        <td colspan="1" >
+                            <div class="col-lg-6">
+                                <div class="form-group focused">
+                                  <label  >State</label>
+                                  <input type="text" class="" placeholder="State"  [(ngModel)]="concertCartUser.state" >
+                                </div>
+                            </div>
+                        </td>
+                        <td colspan="1" >
+                            <div class="col-lg-6">
+                                <div class="form-group focused">
+                                  <label  >Zip</label>
+                                  <input type="text" class="" placeholder="zip"  [(ngModel)]="concertCartUser.zip" >
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                </tbody>
             </table>
+
+            <div id="paypal-button-containerkk"></div>
+             <button  class="btn btn-warning float-right " (click)="addToCheckout()" >Checkout</button> 
+            
+             
+
+
         </div>
         
     </div>
