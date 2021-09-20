@@ -43,11 +43,17 @@ export class ConcertcheckoutComponent implements OnInit, AfterViewInit {
         console.log(this.member);
       });
 
+      this.mds.allMembersDetails().subscribe(d => {
+          console.log(d);
+          console.log(d.length);
+          this.member.id = d.length;
+      });
+
     }
 
   ngOnInit(): void {
     this.cart.currentCart.subscribe( cartCheck => this.cartCheck = cartCheck);
-  //  console.log(this.cartCheck);
+    console.log(this.cartCheck);
     [...this.cartCheck].forEach(value => {
       // console.log(value.quantity);
       // console.log(value);
@@ -101,11 +107,11 @@ export class ConcertcheckoutComponent implements OnInit, AfterViewInit {
 
 
   paypalConfig = {
-  //  env: 'sandbox',
-    env: 'production',
+    env: 'sandbox',
+  //  env: 'production',
     client: {
-  //    sandbox: 'AeLhWUCfC2jHOZv7b-KDfZV6R6Mig-2FklW6iIxsuI0UROww652TU9SlVPHyW1ygMGohQo21TfXUVPrz',
-      production: 'AVBsfj0Jw-jl5_63BPGwuduCaKDsPvbz1pwyqECm7N5FzKEi1Q_o-xQAiM_BTzQhAW064uAPf1v9uZdS'
+      sandbox: 'AeLhWUCfC2jHOZv7b-KDfZV6R6Mig-2FklW6iIxsuI0UROww652TU9SlVPHyW1ygMGohQo21TfXUVPrz',
+  //    production: 'AVBsfj0Jw-jl5_63BPGwuduCaKDsPvbz1pwyqECm7N5FzKEi1Q_o-xQAiM_BTzQhAW064uAPf1v9uZdS'
     },
     style: {
       shape: 'rect',
@@ -160,6 +166,8 @@ export class ConcertcheckoutComponent implements OnInit, AfterViewInit {
             //   console.log('First Time purchase');
             }
             this.member.purchase.unshift(this.cartCheck);
+            this.member.purchase = this.cartCheck;
+            this.member.payments = payment;
             this.mds.updateCustomer(this.member);
             this.mds.addPayments(payment) ;
          }

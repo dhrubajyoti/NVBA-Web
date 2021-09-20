@@ -4,6 +4,9 @@ import { IpServiceService } from './../../../services/ip-service.service';
 import { Router, Params } from '@angular/router';
 import { CartService } from './../../../services/cart.service';
 import { ConcertTicketsService } from './../../../services/concert-tickets.service';
+import { MemberDetailsService } from './../../../services/member-details.service';
+import { UserService } from './../../auth/core/user.service';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-concert',
@@ -38,14 +41,13 @@ export class ConcertComponent implements OnInit {
   ipAddress:string;
   cartCheck: any;
   kkObject :any=[];
-  selectedt;
-  tdata:Array<Object> = [
-    {value: 0},{value: 1},{value: 2},{value: 3},{value: 4},{value: 5},{value: 6},{value: 7},{value: 8},{value: 9},{value: 10}];
-  selected(){
-    alert(this.selectedt.value );
-    this.kkObject.quantity = this.selectedt.value;
-    console.log(this.kkObject);
-    this.router.navigate(['/concertcheckout']);
+  member: any;
+  showAdd:boolean = false;
+
+
+
+  addadd(){
+    this.showAdd = true;
   }
 
   private  concertCart = {
@@ -56,30 +58,50 @@ export class ConcertComponent implements OnInit {
     "tax": 0,
     "sku": "DP2021KKNONM",
     "currency": "USD",
-    // "viwername":"",
-    // "address":"",
-    // "address1":"",
-    // "city":"",
-    // "state":"",
-    // "zip":"",
-    // "ipAddress":"",
-    // "iAgree":"",
-    // "iAgreeDateTime":""
+  }
+
+  public concertViewer = {
+    "firstname":"",
+    "lastname": "",
+    "email":"",
+    "address":"",
+    "address1":"",
+    "city":"",
+    "state":"",
+    "zipcode":"",
+    "ipAddress":"",
+    "iAgree":"",
+    "iAgreeDateTime":""
   }
 
   constructor(
     private ip:IpServiceService,
     private router: Router,
     private cs: CartService,
-    private mds: ConcertTicketsService,  ){
+    public userService: UserService, 
+    private fb: FormBuilder,
+    private mds: ConcertTicketsService,
+      ){
       this.cs.currentCart.subscribe( cartCheck => this.cartCheck = cartCheck);
+      this.cs.clearCart;
       this.kkObject = this.concertCart;
       console.log(this.kkObject)
+      this.userService.cast.subscribe( m => {
+        this.member = m;
+        //  console.log(this.member);
+        this.member.firstname = '';
+        this.member.lastname = '';
+      });
+
+      
+
     }
 
   ngOnInit(): void {
     this.getIP();
   }
+
+
 
   checkCheckBoxvalue(event){
     console.log(event.checked);
@@ -94,11 +116,12 @@ export class ConcertComponent implements OnInit {
 
   //  console.log(this.ipAddress);
     const d = new Date();
-    this.kkObject.iAgree = 'agree';
-    this.kkObject.iAgreeDateTime = d.toString();
-    this.kkObject.ipAddress = this.ipAddress;
+    this.member.iAgree = 'agree';
+    this.member.iAgreeDateTime = d.toString();
+    this.member.ipAddress = this.ipAddress;
+    this.member.usertype = "guest";
     // this.mds.updateCustomer(this.member);
-    console.log(this.kkObject);
+    
   }
 
   redirectToHomepage(){
@@ -110,5 +133,38 @@ export class ConcertComponent implements OnInit {
       this.ipAddress=res.ip;
     });
   }
+
+  
+
+  emailval:boolean = true;
+  onSubmit(){
+    
+    this.cs.clearCart();
+    console.log(this.kkObject);
+    this.cs.addToCart(this.kkObject);
+    // this.member = this.concertViewer;
+    this.mds.updateCustomer(this.member);
+    console.log(this.member);
+  //  this.mds.createCustomer(this.concertViewer);
+   // if(this.validateEmail(this.member)){
+      this.router.navigate(['/concertcheckout']);
+   // }
+   // else{
+   //     this.emailval = false;
+   // }
+    
+  }
+
+  validateEmail(mail) 
+  {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(this.member.email.match(mailformat))
+    {
+      return (true)
+    }
+      alert("You have entered an invalid email address!")
+      return (false)
+  }
+  
 
 }
