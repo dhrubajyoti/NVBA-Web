@@ -151,7 +151,7 @@ export class ConcertcheckoutComponent implements OnInit, AfterViewInit {
          console.log(this.member);
          
 
-         this.toastr.success('Your payment is successful.');
+         this.toastr.success('Your payment is successful. Will get email form Paypal.');
         
          if(this.member.email){
 
@@ -182,7 +182,7 @@ export class ConcertcheckoutComponent implements OnInit, AfterViewInit {
           // this.router.navigate(['/durgapuja2020']);
 
           setTimeout(()=>{                           
-            this.router.navigate(['/durgapuja2021']);
+            this.router.navigate(['/home']);
           }, 6000);
           
 

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MemberModel } from './../pages/auth/core/user.model';
 
+
 import { AngularFireDatabase, AngularFireList, AngularFireDatabaseModule, AngularFireAction, AngularFireObject } from '@angular/fire/database';
 import { Observable, Subscription, BehaviorSubject } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
@@ -66,6 +67,7 @@ export class ConcertTicketsService {
       this.payId = id ;
     });
 
+    
     this.fdb.object('/PaypalPayments/'+  this.payId ).set({ pay }).catch(error => {
       console.log(error);
       return false;

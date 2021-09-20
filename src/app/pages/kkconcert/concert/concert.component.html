@@ -73,10 +73,10 @@
                         <table class="table  " style="margin: 0px;" >
                             <thead>
                                 <tr>
-                                    <td width="50%" style="border: none;"  >
+                                    <td width="50%" style="border: none;padding-top: 20px;"  >
                                         {{kkObject.name}}
                                     </td>
-                                    <td width="25%" style="border: none;"  >${{kkObject.price}}</td>
+                                    <td width="25%" style="border: none; padding-top: 20px;"  >${{kkObject.price}}</td>
                                     <td width="25%" style="border: none;"  >
                                         <input type="number" class="" (click)="addadd()"  [(ngModel)]="kkObject.quantity" style="margin-bottom: 0px;" >
                                         <!-- <select  [(ngModel)]="selectedt" (change)="selected()"  >
@@ -105,14 +105,15 @@
                 <fieldset>
                 <legend><span class="number">0</span> Guest Info</legend>
                 <input type="email" required [(ngModel)]="member.email" name="email" placeholder="Your Email *">
+                <div *ngIf="!emailval">Please enter valid email.</div>
                 <input type="text" [(ngModel)]="member.firstname" name="firstname" placeholder="Your First Name *">
                 <input type="text" [(ngModel)]="member.lastname" name="lastname" placeholder="Your Last Name *">
                 
-                <textarea name="field3" [(ngModel)]="member.address"  placeholder="Address"></textarea>
+                <textarea name="address" [(ngModel)]="member.address"  placeholder="Address"></textarea>
                 <input type="text" [(ngModel)]="member.city" name="city" placeholder="Your City *">
                 <input type="text" [(ngModel)]="member.state" name="state" placeholder="Your state *">
                 <input type="number" [(ngModel)]="member.zipcode" name="zipcode" placeholder="Your zip  *">
-                <button type="button"  class="btn btn-warning float-right " (click)="onSubmit()"  >Checkout</button>
+                <button type="submit"  class="btn btn-warning float-right "  (click)="onSubmit()"  >Checkout</button>
                 </fieldset>
                 </form>
               </div>

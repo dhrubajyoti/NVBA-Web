@@ -51,8 +51,8 @@ export class ConcertComponent implements OnInit {
   }
 
   private  concertCart = {
-    "name": "Kavita Krishnamurti Concert Public Ticket",
-    "description": "Kavita Krishnamurti Concert Public Ticket Fee",
+    "name": "Kavita Krishnamurti Concert Ticket",
+    "description": "Kavita Krishnamurti Concert Ticket Fee",
     "quantity": 0,
     "price": 50,
     "tax": 0,
@@ -146,25 +146,22 @@ export class ConcertComponent implements OnInit {
     this.mds.updateCustomer(this.member);
     console.log(this.member);
   //  this.mds.createCustomer(this.concertViewer);
-   // if(this.validateEmail(this.member)){
+    if(this.validateEmail(this.member)){
       this.router.navigate(['/concertcheckout']);
-   // }
-   // else{
-   //     this.emailval = false;
-   // }
+    }
+    else{
+        this.emailval = false;
+        alert('Please enter valid email.');
+    }
     
   }
 
-  validateEmail(mail) 
-  {
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if(this.member.email.match(mailformat))
-    {
-      return (true)
-    }
-      alert("You have entered an invalid email address!")
-      return (false)
-  }
+  validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    console.log('email validate'+ re.test(String(email).toLowerCase()));
+   // return re.test(String(email).toLowerCase());
+   return true;
+}
   
 
 }
