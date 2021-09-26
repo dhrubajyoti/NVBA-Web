@@ -1,0 +1,77 @@
+<div id="earlyBirdWithoutcul" class="table-responsive mb-5 tickets">
+   
+            <!-- <p class="ml-3 mt-3 yellow " >
+                Note:- Kavita Krishnamurti Concert tickets and all cultural programs are currently available to members registering for all 3 days.
+  
+            </p> -->
+            <h2 class="ml-3 mt-3 red" >
+              Kavita Krishnamurti ticket needs to be added to the cart to watch Kavita Krishnamurti Concert.
+            </h2>
+            <p>
+              <button class="btn-small rounded btn-warning float-right mr-2 mb-2" (click)="clearCart()" >Clear Order</button>
+            </p>
+            <table class="table table-bordered table-hover" >
+                <thead>
+                  <tr>
+                    <th scope="col"  >Items</th>
+                    <th scope="col">Cost</th>
+                    <th scope="col">Quantity</th>
+                    <!-- <th scope="col">Add</th> -->
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let items of dataObject; index as i" >
+                  
+                  <tr *ngIf="i < 8">
+                      <th>{{items.description}}</th>
+                      <td>$ {{items.price}}</td>
+                      <td><input type="number" [(ngModel)]="items.quantity" style="width:50px" min="0" max="10" ></td>
+                      <!-- <td> <button class="btn btn-warning" (click)="addToCartobj(items)" >Add to Cart</button></td> -->
+                      <td  >$ {{items.price * items.quantity}}</td>
+                  </tr>
+                </tbody>
+                
+                <tbody *ngFor="let items of dataObject; index as i" style="background-color: #f9debe;" >
+                    
+                    <tr *ngIf="i > 7 && i < 10" >
+                    <th>Kavita Krishnamurti Concert Ticket - {{items.description}}</th>
+                    <td>$ {{items.price}}</td>
+                    <td><input type="number" [(ngModel)]="items.quantity"  id="{{items.sku}}" style="width:50px" min="0" [max]="maxValue(items.sku)" ></td>
+                    <!-- <td> <button class="btn btn-warning" (click)="addToCartobj(items)" >Add to Cart</button></td> -->
+                    <td  >$ {{items.price * items.quantity}}</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col" ><div class="d-flex justify-content-end">Total</div></th>
+                    <!-- <th scope="col">Add</th> -->
+                    <th  scope="col">$ {{totalCost}}</th> 
+                    </tr>
+                </thead>
+            </table>
+  
+        
+            <div id="singleDay" class="singleDay" >
+                
+                    
+                   
+                
+                    <div class="float-right mb-3 mr-3">
+                        <!-- <span class=" red " *ngIf="!addtoCartBtn"  >Please decrease concert headcount.</span> -->
+                        <button [disabled]="addtoCartBtn === false" class="btn btn-warning" (click)="addToCartobj()" >Add to Cart</button>
+                    </div>
+            </div>
+        
+    
+  
+  
+  
+   
+    <!-- <div>
+        {{ dataObject | json }}
+    </div> -->
+    
+  </div>
+  
