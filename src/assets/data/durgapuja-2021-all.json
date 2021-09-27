@@ -1,5 +1,32 @@
 [
   {
+    "name": "Saturday Visit Only",
+    "description": "Saturday Visit Only",
+    "quantity": 0,
+    "price": 1,
+    "tax": 0.00,
+    "sku": "DP2021SATVISIT01",
+    "currency": "USD"
+  },
+  {
+    "name": "Sunday Visit Only",
+    "description": "Sunday Visit Only",
+    "quantity": 0,
+    "price": 1,
+    "tax": 0.00,
+    "sku": "DP2021SUNVISIT02",
+    "currency": "USD"
+  },
+  {
+    "name": "Kavita Krishnamurti Concert - Regular",
+    "description": "Kavita Krishnamurti Concert - General Admission - [ 4 years to Adult ]",
+    "quantity": 0,
+    "price": 45,
+    "tax": 0.00,
+    "sku": "DP2021RGKKS01EXTRA",
+    "currency": "USD"
+  },
+  {
       "name": "All 3 days",
       "description": "Adult Non-Veg",
       "quantity": 0,

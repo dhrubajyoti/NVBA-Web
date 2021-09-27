@@ -87,6 +87,7 @@ import { EventticketsComponent } from './pages/tickets/eventtickets/eventtickets
 import { AdminconsoleComponent } from './pages/ec/adminconsole/adminconsole.component';
 import { CountsComponent } from './pages/ec/counts/counts.component';
 import { AddmorekkticketsComponent } from './pages/tickets/addmorekktickets/addmorekktickets.component';
+import { MemberonlykkticketsComponent } from './pages/tickets/memberonlykktickets/memberonlykktickets.component';
 
 
 @NgModule({
@@ -139,7 +140,8 @@ import { AddmorekkticketsComponent } from './pages/tickets/addmorekktickets/addm
     EventticketsComponent,
     AdminconsoleComponent,
     CountsComponent,
-    AddmorekkticketsComponent
+    AddmorekkticketsComponent,
+    MemberonlykkticketsComponent
   ],
   imports: [
     BrowserModule,
