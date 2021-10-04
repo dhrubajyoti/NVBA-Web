@@ -3,19 +3,19 @@
 // The list of file replacements can be found in `angular.json`.
 
 
-// export const environment = {
-//   production: false,
-//   firebase: {
-//     apiKey: "AIzaSyDR90ComUId7DKFdXumxWXTfbYFKeH_neg",
-//     authDomain: "novaba.firebaseapp.com",
-//     databaseURL: "https://novaba.firebaseio.com",
-//     projectId: "novaba",
-//     storageBucket: "novaba.appspot.com",
-//     messagingSenderId: "253964137737",
-//     appId: "1:253964137737:web:f438052db1faa48568cfd8",
-//     measurementId: "G-96GP6RS4JF"
-//   }
-// };
+export const environment = {
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyDR90ComUId7DKFdXumxWXTfbYFKeH_neg",
+    authDomain: "novaba.firebaseapp.com",
+    databaseURL: "https://novaba.firebaseio.com",
+    projectId: "novaba",
+    storageBucket: "novaba.appspot.com",
+    messagingSenderId: "253964137737",
+    appId: "1:253964137737:web:f438052db1faa48568cfd8",
+    measurementId: "G-96GP6RS4JF"
+  }
+};
 
 export const paypalKey = 'AeLhWUCfC2jHOZv7b-KDfZV6R6Mig-2FklW6iIxsuI0UROww652TU9SlVPHyW1ygMGohQo21TfXUVPrz';
 
