@@ -14,9 +14,13 @@ export class CheckinComponent implements OnInit {
 
   members:any;
   rowData:any;
+ // visitor:any;
+  visitorTable: any = [ ];
   private gridApi;
   private gridColumnApi;
   public defaultColDef;
+
+  
   
   //public modules: Module[] = [ClientSideRowModelModule];
 
@@ -27,7 +31,8 @@ export class CheckinComponent implements OnInit {
     this.mds.allMembersDetails().subscribe(m=> {
       this.members = m;
       console.log(this.members);
-      this.rowData = this.members;
+    //  this.rowData = this.members;
+      this.checkDetails();
     });
 
     this.defaultColDef = {
@@ -35,6 +40,8 @@ export class CheckinComponent implements OnInit {
       resizable: true,
       editable: true,
     };
+
+    
 
    }
 
@@ -49,16 +56,15 @@ export class CheckinComponent implements OnInit {
 		{ field: 'lastname', sortable: true, filter: true, cellClass: 'center' },
     { field: 'email', sortable: true, filter: true },
     { field: 'phone', sortable: true, filter: true },
-    { field: 'joined', sortable: true, filter: true},
     { field: 'expires', sortable: true, filter: true},
     { field: 'membershipstatus', sortable: true , filter: true},
-    { field: 'address1', sortable: true , filter: true},
-    { field: 'address2', sortable: true , filter: true},
-    { field: 'city', sortable: true , filter: true},
-    { field: 'zipcode', sortable: true , filter: true},
-    { field: 'iAgree', sortable: true , filter: true},
-    { field: 'iAgreeDateTime', sortable: true , filter: true},
-    { field: 'iAgreeIP', sortable: true , filter: true}
+    { field: 'ticket', sortable: true, filter: true},
+    { field: 'sku', sortable: true, filter: true},
+    { field: 'quantity', sortable: true , filter: true},
+    { field: 'fridayCheckin', sortable: true , filter: true},
+    { field: 'SaturdayCheckin', sortable: true , filter: true},
+    { field: 'SundayCheckin', sortable: true , filter: true}
+    
 	];
   
 
@@ -74,6 +80,50 @@ export class CheckinComponent implements OnInit {
   onCellValueChanged(event) {
     console.log('Data after change is', event.data);
   }
+
+
+  checkDetails(){
+    let couter = 0;
+
+
+    console.log(this.rowData);
+    [...this.members].forEach( m =>{ 
+       if(m.purchase? true : false){
+         couter++;
+         [...m.purchase].forEach(element => {
+
+          [...element].forEach(e => {
+                
+    
+            this.visitorTable.push({
+              id : m.id,
+              firstname : m.firstname,
+              lastname : m.lastname,
+              email : m.email,
+              phone : m.phone,
+              joined : m.joined,
+              expires : m.expires,
+              membershipstatus : m.membershipstatus,
+              ticket : e.name,
+              sku : e.sku,
+              quantity : e.quantity
+            });
+            
+          });
+          
+          
+        });
+       }
+
+
+    });
+ //   console.log(couter);
+  //  this.lastOrder = this.rowData.purchase? true : false ;
+
+    console.log( this.visitorTable);
+    this.rowData = this.visitorTable;
+  }
+
 
 }
 

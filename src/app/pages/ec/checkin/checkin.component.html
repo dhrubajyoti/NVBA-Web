@@ -1,4 +1,4 @@
-<section id="reports" class="main-pages "  >
+<section id="reportsCheckin" class="main-pages "  >
     <div class="container">
         <div class="topLineFix"></div>   
       <div class="section-header">
@@ -6,7 +6,7 @@
         <h3 style="text-align: center;">
           You can filter Records from header and Export Reorts as per your need.
         </h3>
-        <app-counts></app-counts>
+        
       </div>
 
 
@@ -16,7 +16,7 @@
                   style="width: 100%; height: 550px; "
                   class="ag-theme-alpine table-light table-responsive agGridTable"
                   #agGrid
-                  id="myGrid"
+                  id="myGridCheckIn"
                   class="ag-theme-alpine"
                   (gridReady)="onGridReady($event)"
                   [rowData]="rowData"
