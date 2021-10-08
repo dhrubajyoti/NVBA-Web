@@ -54,7 +54,7 @@ export class HomeComponent implements OnInit {
 
   showPosition(position) {
    console.log( position.coords.latitude);
-   window.open('https://www.google.com/maps/dir/'+position.coords.latitude+','+position.coords.longitude+'/Shelter+8+at+Bull+Run,+7700+Bull+Run+Dr,+Centreville,+VA+20121/@38.8407556,-77.4949552,11z/data=!3m1!4b1!4m17!1m6!3m5!1s0x0:0xbbb15a81fedc1de6!2sShelter+8+at+Bull+Run!8m2!3d38.8018248!4d-77.4915098!4m9!1m1!4e1!1m5!1m1!1s0x89b65d2758542381:0xbbb15a81fedc1de6!2m2!1d-77.4915098!2d38.8018248!3e0?hl=en', "_blank");
+   window.open('https://www.google.com/maps/dir/'+position.coords.latitude+','+position.coords.longitude+'/Freedom+High+School,+25450+Riding+Center+Dr,+Chantilly,+VA+20152/@38.8657757,-77.4574371,12z/data=!3m1!4b1!4m16!1m6!3m5!1s0x89b6419385f7acb7:0xdfcafaf31ad1c442!2sFreedom+High+School!8m2!3d38.9141482!4d-77.535041!4m8!1m1!4e1!1m5!1m1!1s0x89b6419385f7acb7:0xdfcafaf31ad1c442!2m2!1d-77.535041!2d38.9141482', "_blank");
   }
 
 
