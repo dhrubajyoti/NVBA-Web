@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MemberDetailsService } from './../../../services/member-details.service';
+import { UserService } from './../../auth/core/user.service';
 import { HttpClient } from '@angular/common/http';
 import { Observable, from } from 'rxjs';
 import 'ag-grid-community';
@@ -13,6 +14,7 @@ import 'ag-grid-community';
 export class CheckinComponent implements OnInit {
 
   members:any;
+  member: any;
   rowData:any;
  // visitor:any;
   visitorTable: any = [ ];
@@ -25,7 +27,8 @@ export class CheckinComponent implements OnInit {
   //public modules: Module[] = [ClientSideRowModelModule];
 
   constructor( 
-    private mds: MemberDetailsService
+    private mds: MemberDetailsService,
+    public userService: UserService, 
   ) {
 
     this.mds.allMembersDetails().subscribe(m=> {
@@ -40,6 +43,11 @@ export class CheckinComponent implements OnInit {
       resizable: true,
       editable: true,
     };
+
+    this.userService.cast.subscribe( m => {
+        this.member = m;
+      //  console.log(this.member);
+    });
 
     
 
@@ -61,9 +69,9 @@ export class CheckinComponent implements OnInit {
     { field: 'ticket', sortable: true, filter: true},
     { field: 'sku', sortable: true, filter: true},
     { field: 'quantity', sortable: true , filter: true},
-    { field: 'fridayCheckin', sortable: true , filter: true},
-    { field: 'SaturdayCheckin', sortable: true , filter: true},
-    { field: 'SundayCheckin', sortable: true , filter: true}
+    // { field: 'fridayCheckin', sortable: true , filter: true},
+    // { field: 'SaturdayCheckin', sortable: true , filter: true},
+    // { field: 'SundayCheckin', sortable: true , filter: true}
     
 	];
   
@@ -85,7 +93,6 @@ export class CheckinComponent implements OnInit {
   checkDetails(){
     let couter = 0;
 
-
     console.log(this.rowData);
     [...this.members].forEach( m =>{ 
        if(m.purchase? true : false){
@@ -106,7 +113,8 @@ export class CheckinComponent implements OnInit {
               membershipstatus : m.membershipstatus,
               ticket : e.name,
               sku : e.sku,
-              quantity : e.quantity
+              quantity : e.quantity,
+              fridayCheckin: m.fridayCheckin
             });
             
           });
