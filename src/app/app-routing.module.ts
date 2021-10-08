@@ -45,6 +45,7 @@ import { AddmorekkticketsComponent } from './pages/tickets/addmorekktickets/addm
 import { AdminconsoleComponent } from './pages/ec/adminconsole/adminconsole.component';
 import { ReportsComponent } from './pages/ec/reports/reports.component';
 import { CountsComponent } from './pages/ec/counts/counts.component';
+import { CheckinComponent } from './pages/ec/checkin/checkin.component';
 import { from } from 'rxjs';
 
 
@@ -95,6 +96,7 @@ const routes: Routes = [
   { path: "adminconsole", component: AdminconsoleComponent ,  pathMatch: 'full', resolve: { data: UserResolver}  },
   { path: "reports", component: ReportsComponent,  pathMatch: 'full', resolve: { data: UserResolver}  },
   { path: "counts", component: CountsComponent,  pathMatch: 'full', resolve: { data: UserResolver}  },
+  { path: "checkin", component: CheckinComponent,  pathMatch: 'full', resolve: { data: UserResolver}  },
   
   
 ];

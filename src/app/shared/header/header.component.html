@@ -97,6 +97,9 @@
                   <a routerLink="reports" >Reports</a></li>
                 <li *ngIf="member.usertype == 'admin'" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
                   <a routerLink="ticketscounts" >Tickets Counts Details</a></li>
+                <li *ngIf="member.usertype == 'admin'" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+                    <a routerLink="checkin" >Check In</a></li>  
+                  
               </ul>
             </li>  
 
