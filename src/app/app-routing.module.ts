@@ -50,7 +50,7 @@ import { from } from 'rxjs';
 
 
 const routes: Routes = [
-  { path: "", component: Durgapuja2021Component, pathMatch: 'full' }, 
+  { path: "", component: HomeComponent, pathMatch: 'full' }, 
   { path: "home", component: HomeComponent },
   { path: "about", component: AboutComponent, pathMatch: 'full'  },
   { path: "contactus", component: ContactusComponent, pathMatch: 'full'  },
