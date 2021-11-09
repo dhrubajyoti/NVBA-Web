@@ -24,6 +24,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ChhotoderutsavComponent } from './pages/chhotoderutsav/chhotoderutsav.component';
 import { RangamanchaComponent } from './pages/rangamancha/rangamancha.component';
 import { NvbatvComponent } from './pages/nvbatv/nvbatv.component';
+import { AgmComponent } from './pages/agm/agm.component';
 
 import { LoginComponent } from './pages/auth/login/login.component';
 import { UserComponent } from './pages/auth/user/user.component';
@@ -77,6 +78,7 @@ const routes: Routes = [
   { path: "cares", component: CaresComponent, pathMatch: 'full' }, 
   { path: "artworks", component: ArtworksComponent, pathMatch: 'full' }, 
   { path: "picnic", component: PicnicComponent, pathMatch: 'full' }, 
+  { path: "agm", component: AgmComponent, pathMatch: 'full' }, 
   // { path: '404', component: NotFoundComponent},
   // { path: '**', redirectTo: '/404'},
 
