@@ -89,6 +89,7 @@ import { CountsComponent } from './pages/ec/counts/counts.component';
 import { AddmorekkticketsComponent } from './pages/tickets/addmorekktickets/addmorekktickets.component';
 import { MemberonlykkticketsComponent } from './pages/tickets/memberonlykktickets/memberonlykktickets.component';
 import { CheckinComponent } from './pages/ec/checkin/checkin.component';
+import { AgmComponent } from './pages/agm/agm.component';
 
 
 @NgModule({
@@ -143,7 +144,8 @@ import { CheckinComponent } from './pages/ec/checkin/checkin.component';
     CountsComponent,
     AddmorekkticketsComponent,
     MemberonlykkticketsComponent,
-    CheckinComponent
+    CheckinComponent,
+    AgmComponent
   ],
   imports: [
     BrowserModule,
