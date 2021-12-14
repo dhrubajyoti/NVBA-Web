@@ -51,8 +51,7 @@
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" >
                 <a href="https://www.facebook.com/nvbayouth/" target="_blank" >NVBA Youth</a></li>
 
-                <li *ngIf="member.usertype == 'admin'" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
-                  <a routerLink="reports" >Reports</a></li>   
+                  
               <!-- <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" >
                 <a routerLink="nvbayouth">NVBA Youth</a></li> -->
               <!-- <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
@@ -81,12 +80,29 @@
           <li [routerLinkActive]="['active']"  [routerLinkActiveOptions]="{exact: true}" >
             <a routerLink="contactus">Contact Us</a>
           </li>
-          <li [routerLinkActive]="['active']"  [routerLinkActiveOptions]="{exact: true}" >
+          <!-- <li [routerLinkActive]="['active']"  [routerLinkActiveOptions]="{exact: true}" >
             <a routerLink="faq">FAQ</a>
-          </li>
-          <!-- <li>
-            Hello {{member.displayName}}
           </li> -->
+          <!-- <li>
+            Hello {{member.displayName}} ticketscounts
+          </li> -->
+
+          <!-- <li *ngIf="member.usertype == 'admin'" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+            <a routerLink="reports" >Reports</a></li>  -->
+
+            <li *ngIf="member.usertype == 'admin'" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" class="drop-down">
+              <a routerLink="reports" >Admin</a>
+              <ul>
+                <li *ngIf="member.usertype == 'admin'" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" >
+                  <a routerLink="reports" >Reports</a></li>
+                <li *ngIf="member.usertype == 'admin'" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+                  <a routerLink="ticketscounts" >Tickets Counts Details</a></li>
+                <li *ngIf="member.usertype == 'admin'" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+                    <a routerLink="checkin" >Check In</a></li>  
+                  
+              </ul>
+            </li>  
+
         </ul>
       </nav><!-- .main-nav -->
 
