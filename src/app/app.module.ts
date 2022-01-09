@@ -90,6 +90,7 @@ import { AddmorekkticketsComponent } from './pages/tickets/addmorekktickets/addm
 import { MemberonlykkticketsComponent } from './pages/tickets/memberonlykktickets/memberonlykktickets.component';
 import { CheckinComponent } from './pages/ec/checkin/checkin.component';
 import { AgmComponent } from './pages/agm/agm.component';
+import { Team20to21Component } from './pages/archive/team20to21/team20to21.component';
 
 
 @NgModule({
@@ -145,7 +146,8 @@ import { AgmComponent } from './pages/agm/agm.component';
     AddmorekkticketsComponent,
     MemberonlykkticketsComponent,
     CheckinComponent,
-    AgmComponent
+    AgmComponent,
+    Team20to21Component
   ],
   imports: [
     BrowserModule,

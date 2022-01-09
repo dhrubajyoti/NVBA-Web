@@ -1,0 +1,136 @@
+[
+    {
+        "id": "1",
+        "img_url": "assets/images/ecm/RuchirGhosh.jpg",
+        "img_xurl": "",
+        "designation":"President",
+        "tag": "",
+        "description": "",
+        "display_name": "Ruchir Ghosh",
+        "facebook": "https://www.facebook.com/ruchirghosh",
+        "linkedin": "",
+        "website":""
+    },
+    {
+        "id": "2",
+        "img_url": "assets/images/ecm/Sundar.png", 
+        "img_xurl": "",
+        "designation":"General Secretary",
+        "tag": "",
+        "description": "0",
+        "display_name": "Sundar Majumdar",
+        "facebook": "https://www.facebook.com/sundar.maj",
+        "linkedin": "",
+        "website":""
+    },
+    {
+        "id": "3",
+        "img_url": "assets/images/ecm/arijit.jpg",
+        "img_xurl": "",
+        "designation":"Treasurer",
+        "tag": "",
+        "description": "",
+        "display_name": "Arijit Auddy",
+        "facebook": "https://www.facebook.com/arijit.auddy",
+        "linkedin": "",
+        "website":""
+    },
+    {
+        "id": "4",
+        "img_url": "assets/images/ecm/MridulGop.jpeg",
+        "img_xurl": "",
+        "designation":"Secretary - Food, Branding & Promotion",
+        "tag": "",
+        "description": "",
+        "display_name": "Mridul Gop",
+        "facebook": "https://www.facebook.com/mridul.gop",
+        "linkedin": "",
+        "website":""
+    },
+    {
+        "id": "5",
+        "img_url": "assets/images/ecm/DebikaDas.jpg",
+        "img_xurl": "",
+        "designation":"Cultural Secretary",
+        "tag": "",
+        "description": "",
+        "display_name": "Debika Das",
+        "facebook": "https://www.facebook.com/debika.das.58",
+        "linkedin": "",
+        "website":""
+    },
+    {
+        "id": "6",
+        "img_url": "assets/images/ecm/deb.jpg",
+        "img_xurl": "",
+        "designation":"Facility / Logistics",
+        "tag": "",
+        "description": "",
+        "display_name": "Debjyoti Bhattacharya",
+        "facebook": "https://www.facebook.com/debjyoti.bhattacharya.16",
+        "linkedin": "",
+        "website":""
+    },
+    {
+        "id": "7",
+        "img_url": "assets/images/ecm/KingshukChatterjee.jpeg",
+        "img_xurl": "",
+        "designation":"Facility / Logistics",
+        "tag": "",
+        "description": "",
+        "display_name": "Kingshuk Chatterjee",
+        "facebook": "",
+        "linkedin": "",
+        "website":""
+    },
+    {
+        "id": "8",
+        "img_url": "assets/images/ecm/saurav.jpg",
+        "img_xurl": "",
+        "designation":"Outreach & Event Planning",
+        "tag": "",
+        "description": "",
+        "display_name": "Saurav Bhattacharya",
+        "facebook": "https://www.facebook.com/saurav.bhattacharyya.338",
+        "linkedin": "",
+        "website":""
+    },
+    {
+        "id": "9",
+        "img_url": "assets/images/ecm/SumonaDas.jpeg",
+        "img_xurl": "",
+        "designation":"Communications & Magazine Publication",
+        "tag": "",
+        "description": "",
+        "display_name": "Sumona Das",
+        "facebook": "https://www.facebook.com/SumonaGhoshDas",
+        "linkedin": "",
+        "website":""
+    },
+    {
+        "id": "10",
+        "img_url": "assets/images/ecm/swapan.jpg",
+        "img_xurl": "",
+        "designation":"Puja & Festivals",
+        "tag": "",
+        "description": "",
+        "display_name": "Swapan Acharya",
+        "facebook": "",
+        "linkedin": "",
+        "website":""
+    },
+    {
+        "id": "11",
+        "img_url": "assets/images/ecm/dj.png",
+        "img_xurl": "",
+        "designation":"Web & App Management",
+        "tag": "",
+        "description": "",
+        "display_name": "Dhruba Jyoti Dey",
+        "facebook": "https://www.facebook.com/dhrubajyotidey",
+        "linkedin": "",
+        "website":""
+    }
+    
+
+]
