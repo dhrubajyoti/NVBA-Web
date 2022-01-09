@@ -1,0 +1,53 @@
+<!--==========================
+      Team Section
+    ============================-->
+    <section id="team">
+        <div class="container">
+            <div class="topLineFix"></div>   
+          <div class="section-header">
+            <h2>Our Team</h2>
+            <h3 style="text-align: center;">EXECUTIVE TEAM of 2020-21</h3>
+          </div>
+  
+          
+
+            <div class="d-flex flex-wrap">
+              <div *ngFor="let item of dataObject " class="col-lg-4 col-md-6 col-sm-12 my-3 " s>
+              
+                <div class="card rounded shadow"  >
+                  <img class="card-img-top " src="{{item.img_url}}"  alt="Card image cap">
+                  <div class="card-body">
+                    <h1 class="card-title">{{item.display_name}}</h1>
+                    <h2 class="card-title gray">{{item.designation}}</h2>
+                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                    
+                      
+                      <a *ngIf="item.facebook" href="{{item.facebook}}" target="_blank" class="blue" ><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+                      <!-- <a href="#" class="card-link">Another link</a> -->
+                    
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          
+
+             
+  
+        </div>
+    </section><!-- #team -->
+
+    <div class="floatDonate">
+      <a class="" target="_blank" href="https://www.paypal.com/us/fundraiser/charity/2511674" style="cursor: pointer;"><strong>Donate</strong></a>
+  </div>
+  
+  <div class="floatfb">
+    <a class="" target="_blank" href="https://www.facebook.com/novaba" style="cursor: pointer;">
+      <img src="assets/images/logo/fb-Logo_new.png" style="height: 40px; " >
+    </a>
+    <br />
+    <a class="" target="_blank" href="https://www.youtube.com/channel/UCbvbSyIiBYbP_vuB3qzD0Tw" style="cursor: pointer;">
+      <img src="assets/images/logo/youtube_logo.png" style="height: 44px; " >
+    </a>
+  </div>

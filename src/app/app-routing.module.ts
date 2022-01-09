@@ -8,6 +8,7 @@ import { ImagegalleryComponent } from './pages/imagegallery/imagegallery.compone
 import { MagazineComponent } from './pages/magazine/magazine.component';
 import { Ameyaa2020Component } from './magazine/ameyaa2020/ameyaa2020.component';
 import { FaqComponent } from './magazine/faq/faq.component';
+import { Team20to21Component } from './pages/archive/team20to21/team20to21.component';
 
 
 import { HistoryComponent } from './pages/history/history.component';
@@ -79,6 +80,7 @@ const routes: Routes = [
   { path: "artworks", component: ArtworksComponent, pathMatch: 'full' }, 
   { path: "picnic", component: PicnicComponent, pathMatch: 'full' }, 
   { path: "agm", component: AgmComponent, pathMatch: 'full' }, 
+  { path: "team2020to21", component: Team20to21Component, pathMatch: 'full' },
   // { path: '404', component: NotFoundComponent},
   // { path: '**', redirectTo: '/404'},
 
