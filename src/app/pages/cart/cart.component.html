@@ -6,11 +6,11 @@
         <thead>
           <tr >
             <th colspan="4" style="color:#ff8d00; background-color: #fafafa;" >
-              Saturday ( October 24, 2020 )
+              Saturday ( May 21, 2022 )
             </th>
           </tr>
           <tr>
-            <th scope="col"  >Items</th>
+            <th scope="col"  >Menu Items</th>
             <th scope="col">Cost</th>
             <th scope="col">Quantity</th>
             <!-- <th scope="col">Add</th> -->
@@ -36,7 +36,7 @@
               <th scope="col">$ {{totalCost}}</th> 
             </tr>
         </thead> -->
-        <thead>
+        <!-- <thead>
           <tr>
             <th style="color:#ff8d00; background-color: #fafafa;" colspan="4" >
               Sunday ( October 25, 2020 )
@@ -46,7 +46,7 @@
             <th scope="col" >Items</th>
             <th scope="col">Cost</th>
             <th scope="col">Quantity</th>
-            <!-- <th scope="col">Add</th> -->
+             <th scope="col">Add</th> 
             <th scope="col">Total</th>
           </tr>
         </thead>
@@ -56,10 +56,10 @@
               <th>{{item.description}}</th>
               <td>$ {{item.price}}</td>
               <td><input type="number" [(ngModel)]="item.quantity" style="width:50px" min="0" max="10" ></td>
-              <!-- <td> <button class="btn btn-warning" (click)="addToCartobj(item)" >Add to Cart</button></td> -->
+              <td> <button class="btn btn-warning" (click)="addToCartobj(item)" >Add to Cart</button></td> 
               <td  >$ {{item.price * item.quantity}}</td>
             </tr>
-        </tbody>
+        </tbody> -->
         <thead>
             <tr>
               <!-- <th scope="col"></th>

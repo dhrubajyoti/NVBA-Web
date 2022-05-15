@@ -19,7 +19,7 @@ export class CartComponent implements OnInit, OnChanges, AfterViewChecked {
 
 
 
-  private _jsonURLcart = '/assets/data/products.json';
+  private _jsonURLcart = '/assets/data/kobiPronam-2022.json';
    constructor(private http: HttpClient, private cs: CartService, public router: Router, private cdr: ChangeDetectorRef) {
     this.cs.currentCart.subscribe( cartCheck => this.cartCheck = cartCheck);
     this.getJSON().subscribe(data => {

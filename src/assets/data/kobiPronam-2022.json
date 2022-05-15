@@ -1,0 +1,20 @@
+[
+    {
+      "name": "Kobi Pronam - 2022 Non-Veg",
+      "description": "Non-Veg ( Daalpuri, Goat Meat, Misti )",
+      "quantity": 0,
+      "price": 10,
+      "tax": 0.00,
+      "sku": "KP202201",
+      "currency": "USD"
+    },
+    {
+        "name": "Kobi Pronam - 2022 Veg",
+        "description": "Veg ( Daalpuri, Matar Panneer, Misti)",
+        "quantity": 0,
+        "price": 8,
+        "tax": 0.00,
+        "sku": "KP202202",
+        "currency": "USD"
+    }
+]
