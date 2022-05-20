@@ -27,7 +27,12 @@ export class KobipronamComponent implements OnInit {
     
    }
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      if(params['mode'] == "resetPassword"){
+        this.router.navigate(['/resetpassword', params]);
+      }
+    });
   }
 
 }
