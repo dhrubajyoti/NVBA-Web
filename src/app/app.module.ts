@@ -91,6 +91,7 @@ import { MemberonlykkticketsComponent } from './pages/tickets/memberonlykkticket
 import { CheckinComponent } from './pages/ec/checkin/checkin.component';
 import { AgmComponent } from './pages/agm/agm.component';
 import { Team20to21Component } from './pages/archive/team20to21/team20to21.component';
+import { DurgapujaComponent } from './pages/durgapuja/durgapuja.component';
 
 
 @NgModule({
@@ -147,7 +148,8 @@ import { Team20to21Component } from './pages/archive/team20to21/team20to21.compo
     MemberonlykkticketsComponent,
     CheckinComponent,
     AgmComponent,
-    Team20to21Component
+    Team20to21Component,
+    DurgapujaComponent
   ],
   imports: [
     BrowserModule,
