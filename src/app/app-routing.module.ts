@@ -20,6 +20,7 @@ import { KobipronamComponent } from './pages/kobipronam/kobipronam.component';
 import { Kobipronam2020Component } from './pages/kobipronam2020/kobipronam2020.component';
 import { Durgapuja2020Component } from './pages/durgapuja2020/durgapuja2020.component';
 import { Durgapuja2021Component } from './pages/durgapuja2021/durgapuja2021.component';
+import { DurgapujaComponent } from './pages/durgapuja/durgapuja.component';
 import { PresidentComponent } from './pages/president/president.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ChhotoderutsavComponent } from './pages/chhotoderutsav/chhotoderutsav.component';
@@ -70,6 +71,7 @@ const routes: Routes = [
   { path: "kobipronam2020", component: Kobipronam2020Component, pathMatch: 'full'  },
   { path: "durgapuja2020", component: Durgapuja2020Component, pathMatch: 'full'  },
   { path: "durgapuja2021", component: Durgapuja2021Component, pathMatch: 'full'  },
+  { path: "durgapuja", component: DurgapujaComponent, pathMatch: 'full'  },
   { path: "emailarchive", component:EmailarchiveComponent, pathMatch: 'full' },
   { path: "president", component: PresidentComponent, pathMatch: 'full' },
   { path: "chhotoderutsav", component: ChhotoderutsavComponent, pathMatch: 'full' },
