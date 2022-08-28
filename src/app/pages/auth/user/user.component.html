@@ -253,21 +253,26 @@
                       <div class="pl-lg-4 mt-3">
                         <div class="form-group focused">
                           <label>Recent Order</label>
-                          <div *ngFor="let items of member.purchase " >
-
-                            <table class="table table-hover table-borderless mb-2"  >
-                              <tbody>
-                              <tr *ngFor="let item of items ">
-                                  <th><div class="smallOrangeHeader">{{item.name}}</div>{{item.description}}</th>
-                                  <td>$ {{item.price}}</td>
-                                  <td>{{ item.quantity}}</td>
-                                  <!-- <td> <button class="btn btn-warning" (click)="addToCartobj(item)" >Add to Cart</button></td> -->
-                                  <td  >$ {{item.price * item.quantity}}</td>
-                              </tr>
-                              </tbody>
-                          </table>
-
+                          <div *ngIf="member.purchase">
+                              <div *ngFor="let items of member.purchase " >
+                                <table class="table table-hover table-borderless mb-2"  >
+                                  <tbody>
+                                  <tr *ngFor="let item of items ">
+                                      <th><div class="smallOrangeHeader">{{item.name}}</div>{{item.description}}</th>
+                                      <td>$ {{item.price}}</td>
+                                      <td>{{ item.quantity}}</td>
+                                      <!-- <td> <button class="btn btn-warning" (click)="addToCartobj(item)" >Add to Cart</button></td> -->
+                                      <td  >$ {{item.price * item.quantity}}</td>
+                                  </tr>
+                                  </tbody>
+                              </table>
+    
+                              </div>
                           </div>
+                          <div *ngIf="!member.purchase">
+                              You can start purchasing ticket from us.
+                          </div>
+                          
                         </div>
                       </div>
                   </div>

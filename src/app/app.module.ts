@@ -92,6 +92,7 @@ import { CheckinComponent } from './pages/ec/checkin/checkin.component';
 import { AgmComponent } from './pages/agm/agm.component';
 import { Team20to21Component } from './pages/archive/team20to21/team20to21.component';
 import { DurgapujaComponent } from './pages/durgapuja/durgapuja.component';
+import { Durgapujatickets2022Component } from './pages/tickets/durgapujatickets2022/durgapujatickets2022.component';
 
 
 @NgModule({
@@ -149,7 +150,8 @@ import { DurgapujaComponent } from './pages/durgapuja/durgapuja.component';
     CheckinComponent,
     AgmComponent,
     Team20to21Component,
-    DurgapujaComponent
+    DurgapujaComponent,
+    Durgapujatickets2022Component
   ],
   imports: [
     BrowserModule,

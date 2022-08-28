@@ -27,11 +27,11 @@ export class CartmemberComponent implements OnInit {
 
   private  memberCart = {
     "name": "NVBA Annual Membership",
-    "description": "NVBA Annual Membership Fee",
+    "description": "NVBA Annual Membership Fee Year 2022",
     "quantity": 1,
     "price": 20,
     "tax": 0,
-    "sku": "MM2020YY",
+    "sku": "MM2022YY",
     "currency": "USD" 
   }
 
