@@ -163,19 +163,7 @@ export class Durgapujatickets2022Component implements OnInit, OnChanges, AfterVi
     });
     
    
-    if(!this.kkticket){
-        if (confirm('Are you sure you don\'t want to watch Kavita Krishnamurti concert?')) {
-          // Save it!
-          console.log('Go to checkout page.');
-          this.router.navigate(['/checkout']);
-        } else {
-          // Do nothing!
-          console.log('Please take KK tickets.');
-        }
-    }
-    else{
-      this.router.navigate(['/checkout']);
-    }
+    this.router.navigate(['/checkout']);
 
     
 
