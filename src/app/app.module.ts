@@ -93,6 +93,9 @@ import { AgmComponent } from './pages/agm/agm.component';
 import { Team20to21Component } from './pages/archive/team20to21/team20to21.component';
 import { DurgapujaComponent } from './pages/durgapuja/durgapuja.component';
 import { Durgapujatickets2022Component } from './pages/tickets/durgapujatickets2022/durgapujatickets2022.component';
+import { NewheaderComponent } from './shared/newheader/newheader.component';
+import { NewfooterComponent } from './shared/newfooter/newfooter.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -151,7 +154,10 @@ import { Durgapujatickets2022Component } from './pages/tickets/durgapujatickets2
     AgmComponent,
     Team20to21Component,
     DurgapujaComponent,
-    Durgapujatickets2022Component
+    Durgapujatickets2022Component,
+    NewheaderComponent,
+    NewfooterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
