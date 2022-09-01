@@ -2,6 +2,7 @@
 @import 'assets/lib/bootstrap/css/bootstrap.min.css';
 @import 'assets/css/style.css';
 @import 'assets/css/carousel.css';
+@import 'assets/css/newStyle.css';
 
 // For grid
 @import "~ag-grid-community/dist/styles/ag-grid.css";
@@ -448,3 +449,32 @@ h1, H1 {
   justify-content: center; 
   display: flex;
 }
+
+
+#header {
+  min-height: 55px;
+  transition: all 0.5s;
+  z-index: 997;
+  transition: all 0.5s;
+  padding: 10px 0;
+  background: #0d0d0d;
+  box-shadow: 0px 0px 30px rgb(127 137 161 / 30%);
+  opacity: 0.9;
+
+ .main-nav, .main-nav * {
+    margin: 2px 10px 0 0;
+    padding: 0;
+    list-style: none;
+
+    ul li ul{
+      padding: 10px;
+    }
+
+  }
+
+  .logoText{
+    display: none;
+  }
+
+}
+

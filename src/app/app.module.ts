@@ -97,6 +97,14 @@ import { NewheaderComponent } from './shared/newheader/newheader.component';
 import { NewfooterComponent } from './shared/newfooter/newfooter.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 
+import { ThreecolComponent } from './helper/home/threecol/threecol.component';
+import { DonationsComponent } from './helper/home/donations/donations.component';
+
+import { LatesteventsComponent } from './helper/home/latestevents/latestevents.component';
+import { VolunteerComponent } from './helper/home/volunteer/volunteer.component';
+import { SponsersComponent } from './helper/home/sponsers/sponsers.component';
+
+
 
 @NgModule({
   declarations: [
@@ -157,7 +165,12 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     Durgapujatickets2022Component,
     NewheaderComponent,
     NewfooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    ThreecolComponent,
+    DonationsComponent,
+    LatesteventsComponent,
+    VolunteerComponent,
+    SponsersComponent
   ],
   imports: [
     BrowserModule,
